@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vue base PLU</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --text: #16202a;
+      --muted: #667085;
+      --line: #d8dee7;
+      --accent: #0f766e;
+      --accent-soft: #e6f4f1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+    }
+
+    .bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 14px 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 9px 12px;
+      color: var(--text);
+      background: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-link:hover {
+      border-color: #98a7bd;
+      background: #f8fafc;
+    }
+
+    .pager {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .pager button {
+      display: inline-grid;
+      place-items: center;
+      width: 38px;
+      min-width: 38px;
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .pager button:hover {
+      border-color: #98a7bd;
+      background: #f8fafc;
+    }
+
+    .pager button:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .pager input {
+      width: 78px;
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 8px 9px;
+      color: var(--text);
+      background: #fff;
+      font: inherit;
+    }
+
+    .search {
+      margin-left: auto;
+      width: min(360px, 42vw);
+      min-width: 180px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px 12px;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 32px));
+      margin: 22px auto 40px;
+    }
+
+    .table-wrap {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 10px 28px rgba(22, 32, 42, 0.06);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      min-width: 760px;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 11px 12px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: var(--accent-soft);
+      color: #123c36;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    td:first-child,
+    th:first-child {
+      width: 290px;
+      font-weight: 700;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    tr:nth-child(even) td {
+      background: #fbfcfd;
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .empty,
+    .error {
+      padding: 24px;
+      color: var(--muted);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .file-input {
+      display: block;
+      margin-top: 14px;
+      max-width: 100%;
+    }
+
+    .error {
+      color: #9f1239;
+      background: #fff1f2;
+      border-color: #fecdd3;
+    }
+
+    @media (max-width: 720px) {
+      .bar {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .meta,
+      h1 {
+        white-space: normal;
+      }
+
+      .search {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .nav-link {
+        width: 100%;
+      }
+
+      .pager {
+        flex-wrap: wrap;
+        white-space: normal;
+      }
+
+      main {
+        width: calc(100% - 20px);
+        margin-top: 12px;
+      }
+
+      table {
+        min-width: 680px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <h1>Base resultats PLU</h1>
+      <div class="meta" id="meta">Chargement...</div>
+      <div class="pager" aria-label="Navigation des resultats">
+        <button id="prevResult" type="button" title="Resultat precedent">&larr;</button>
+        <span id="resultRange">Resultat 0 / 0</span>
+        <label for="goResult">Aller au</label>
+        <input id="goResult" type="number" min="1" value="1">
+        <button id="nextResult" type="button" title="Resultat suivant">&rarr;</button>
+      </div>
+      <a class="nav-link" href="cartomax.html">Cartomax</a>
+      <a class="nav-link" href="carte_plu.html">Carte PLU</a>
+      <input class="search" id="search" type="search" placeholder="Rechercher un champ ou une valeur">
+    </div>
+  </header>
+
+  <main id="app">
+    <div class="empty">Chargement du CSV...</div>
+  </main>
+
+  <script>
+    const CSV_FILES = ["data/base_resultats_plu.csv"];
+    const EXCLUDED_FIELDS = new Set(["lettre_zone_chercher"]);
+    const app = document.getElementById("app");
+    const meta = document.getElementById("meta");
+    const search = document.getElementById("search");
+    const prevResult = document.getElementById("prevResult");
+    const nextResult = document.getElementById("nextResult");
+    const goResult = document.getElementById("goResult");
+    const resultRange = document.getElementById("resultRange");
+    let rowsForFilter = [];
+    let recordCountForFilter = 0;
+    let rightmostResultIndex = 0;
+
+    function parseCsv(text) {
+      const rows = [];
+      let row = [];
+      let value = "";
+      let inQuotes = false;
+
+      for (let i = 0; i < text.length; i += 1) {
+        const char = text[i];
+        const next = text[i + 1];
+
+        if (char === '"') {
+          if (inQuotes && next === '"') {
+            value += '"';
+            i += 1;
+          } else {
+            inQuotes = !inQuotes;
+          }
+        } else if (char === "," && !inQuotes) {
+          row.push(value);
+          value = "";
+        } else if ((char === "\n" || char === "\r") && !inQuotes) {
+          if (char === "\r" && next === "\n") {
+            i += 1;
+          }
+          row.push(value);
+          if (row.some((cell) => cell !== "")) {
+            rows.push(row);
+          }
+          row = [];
+          value = "";
+        } else {
+          value += char;
+        }
+      }
+
+      row.push(value);
+      if (row.some((cell) => cell !== "")) {
+        rows.push(row);
+      }
+
+      return rows;
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function formatCellPart(value) {
+      const texte = String(value ?? "").trim();
+      if (/^https?:\/\/\S+$/i.test(texte)) {
+        const url = escapeHtml(texte);
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`;
+      }
+      return escapeHtml(value);
+    }
+
+    function formatCell(value) {
+      return String(value ?? "")
+        .split(/\s*\|\s*/g)
+        .map(formatCellPart)
+        .join("<br>");
+    }
+
+    function buildRows(csvRows) {
+      const headers = csvRows[0] || [];
+      const records = csvRows.slice(1);
+
+      return headers
+        .map((field, index) => ({
+          field,
+          values: records.map((record) => record[index] || "")
+        }))
+        .filter((row) => !EXCLUDED_FIELDS.has(row.field));
+    }
+
+    function clampResultIndex(index, recordCount) {
+      if (recordCount <= 0) return 0;
+      return Math.max(0, Math.min(recordCount - 1, index));
+    }
+
+    function updatePager(recordCount, visibleStart, visibleEnd) {
+      const hasRecords = recordCount > 0;
+      prevResult.disabled = !hasRecords || rightmostResultIndex <= 0;
+      nextResult.disabled = !hasRecords || rightmostResultIndex >= recordCount - 1;
+      goResult.disabled = !hasRecords;
+      goResult.max = String(Math.max(recordCount, 1));
+      goResult.value = hasRecords ? String(rightmostResultIndex + 1) : "0";
+      resultRange.textContent = hasRecords
+        ? `Resultats ${visibleStart + 1}-${visibleEnd} / ${recordCount}`
+        : "Resultat 0 / 0";
+    }
+
+    function render(rows, recordCount) {
+      rightmostResultIndex = clampResultIndex(rightmostResultIndex, recordCount);
+      const query = search.value.trim().toLowerCase();
+      const filtered = rows.filter((row) => {
+        if (!query) return true;
+        return [row.field, ...row.values].join(" ").toLowerCase().includes(query);
+      });
+
+      meta.textContent = `${filtered.length} champs - ${recordCount} ligne${recordCount > 1 ? "s" : ""} de donnees`;
+
+      if (!filtered.length) {
+        updatePager(recordCount, 0, 0);
+        app.innerHTML = '<div class="empty">Aucun resultat.</div>';
+        return;
+      }
+
+      const colCount = Math.min(3, recordCount);
+      let visibleEnd = Math.min(recordCount, rightmostResultIndex + 1);
+      let visibleStart = Math.max(0, visibleEnd - colCount);
+      if (visibleEnd - visibleStart < colCount) {
+        visibleEnd = Math.min(recordCount, visibleStart + colCount);
+      }
+      updatePager(recordCount, visibleStart, visibleEnd);
+
+      const columns = ["Champ"];
+      for (let i = visibleStart; i < visibleEnd; i += 1) {
+        columns.push(String(i + 1));
+      }
+
+      const thead = columns.map((column) => `<th>${escapeHtml(column)}</th>`).join("");
+      const tbody = filtered.map((row) => {
+        const cells = [row.field, ...row.values.slice(visibleStart, visibleEnd)]
+          .map((value) => `<td>${formatCell(value)}</td>`)
+          .join("");
+        return `<tr>${cells}</tr>`;
+      }).join("");
+
+      app.innerHTML = `
+        <div class="table-wrap">
+          <table>
+            <thead><tr>${thead}</tr></thead>
+            <tbody>${tbody}</tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    async function loadCsv() {
+      let lastError;
+
+      for (const file of CSV_FILES) {
+        try {
+          const response = await fetch(file, { cache: "no-store" });
+          if (!response.ok) {
+            throw new Error(`${file}: ${response.status}`);
+          }
+          return await response.text();
+        } catch (error) {
+          lastError = error;
+        }
+      }
+
+      throw lastError;
+    }
+
+    function useCsvText(text) {
+      const csvRows = parseCsv(text);
+      rowsForFilter = buildRows(csvRows);
+      recordCountForFilter = csvRows.length - 1;
+      rightmostResultIndex = clampResultIndex(recordCountForFilter - 1, recordCountForFilter);
+      render(rowsForFilter, recordCountForFilter);
+    }
+
+    search.addEventListener("input", () => render(rowsForFilter, recordCountForFilter));
+    prevResult.addEventListener("click", () => {
+      rightmostResultIndex = clampResultIndex(rightmostResultIndex - 1, recordCountForFilter);
+      render(rowsForFilter, recordCountForFilter);
+    });
+    nextResult.addEventListener("click", () => {
+      rightmostResultIndex = clampResultIndex(rightmostResultIndex + 1, recordCountForFilter);
+      render(rowsForFilter, recordCountForFilter);
+    });
+    goResult.addEventListener("change", () => {
+      const requested = Number.parseInt(goResult.value, 10);
+      if (Number.isNaN(requested)) return;
+      rightmostResultIndex = clampResultIndex(requested - 1, recordCountForFilter);
+      render(rowsForFilter, recordCountForFilter);
+    });
+
+    function showFileFallback(error) {
+      meta.textContent = "CSV introuvable";
+      app.innerHTML = `
+        <div class="error">
+          Impossible de charger le CSV automatiquement: ${escapeHtml(error.message)}
+          <input class="file-input" id="csvFile" type="file" accept=".csv,text/csv">
+        </div>
+      `;
+
+      document.getElementById("csvFile").addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        file.text()
+          .then(useCsvText)
+          .catch((fileError) => {
+            app.innerHTML = `<div class="error">Impossible de lire le fichier: ${escapeHtml(fileError.message)}</div>`;
+          });
+      });
+    }
+
+    loadCsv()
+      .then(useCsvText)
+      .catch((error) => {
+        showFileFallback(error);
+      });
+  </script>
+</body>
+</html>
