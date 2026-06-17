@@ -12,6 +12,8 @@ from urllib.parse import parse_qs, unquote, urlparse
 
 from PIL import Image
 
+from plu import backend as plu_backend
+
 PORT = 5000
 
 def get_base_dir():
@@ -172,6 +174,25 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
     def do_POST(self):
         parsed_url = urlparse(self.path)
         path = parsed_url.path
+        if path.startswith("/api/nouveau/") or path in (
+            "/api/charger-plu",
+            "/api/charger-plu-nomfic",
+            "/api/analyser-zone",
+        ):
+            try:
+                payload = plu_backend.read_json_request(self)
+                result = plu_backend.handle_api(path, payload)
+                if result is None:
+                    self.send_json(404, {"erreur": "Endpoint PLU introuvable."})
+                else:
+                    self.send_json(200, result)
+            except Exception as error:
+                self.send_json(500, {
+                    "erreur": str(error),
+                    "categorie_erreur": getattr(error, "categorie", "erreur_inconnue"),
+                })
+            return
+
         if path == "/api/france-transparent":
             try:
                 content_length = int(self.headers.get("Content-Length", "0"))
