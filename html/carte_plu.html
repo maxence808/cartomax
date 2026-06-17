@@ -1410,7 +1410,8 @@
         const data = await postBackend('/api/nouveau/telecharger-pdf', {
           nomfic,
           proprietes: point.pluFeature.properties || {},
-          zone: getPluZoneCode(point.pluFeature)
+          zone: getPluZoneCode(point.pluFeature),
+          ville: getVillePoint(point)
         });
         if (data.source_resultat === 'base_csv') {
           point.pdfPath = '';

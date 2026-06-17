@@ -6,6 +6,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from urllib.request import Request, urlopen
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,15 +30,41 @@ def normalize_zone(value):
     return re.sub(r"[^0-9A-Za-z]+", "", str(value or "")).upper()
 
 
+def normalize_text(value):
+    text = unicodedata.normalize("NFKD", str(value or ""))
+    text = "".join(char for char in text if not unicodedata.combining(char))
+    text = re.sub(r"[^0-9A-Za-z]+", " ", text).strip().upper()
+    return re.sub(r"\s+", " ", text)
+
+
 def extract_insee(value):
     match = re.search(r"\b\d{5}\b", str(value or ""))
     return match.group(0) if match else ""
+
+
+def extract_plu_date(value):
+    text = str(value or "")
+    iso_match = re.search(r"\b(20\d{2})-(\d{2})-(\d{2})\b", text)
+    if iso_match:
+        return "-".join(iso_match.groups())
+    compact_match = re.search(r"\b(20\d{2})(\d{2})(\d{2})\b", text)
+    if compact_match:
+        return "-".join(compact_match.groups())
+    return ""
 
 
 def clean_nomfic(value):
     raw = str(value or "").strip().split("#", 1)[0].split("?", 1)[0]
     match = re.search(r"([^/\\]+?\.pdf)\b", raw, re.IGNORECASE)
     return match.group(1) if match else raw
+
+
+def first_value(source, *keys):
+    for key in keys:
+        value = source.get(key) if isinstance(source, dict) else None
+        if value not in (None, ""):
+            return str(value).strip()
+    return ""
 
 
 def safe_join(base_dir, *parts):
@@ -64,46 +91,65 @@ def row_to_plu_payload(row, source="base_csv"):
         "url_pdf": row.get("url_pdf", ""),
         "modele_ia": row.get("modele_ia", row.get("modele", "")),
         "reponse_brute": row,
+        "controle_cache": "ville_insee_zone_lettre_plu_ok",
     })
     return payload
 
 
-def find_plu_base_row(nomfic="", zone="", proprietes=None, latitude="", longitude=""):
+def find_plu_base_row(nomfic="", zone="", proprietes=None, latitude="", longitude="", ville=""):
     rows = read_plu_base_rows()
     if not rows:
         return None
 
     proprietes = proprietes or {}
-    zone_key = normalize_zone(zone or proprietes.get("libelle") or proprietes.get("zone") or proprietes.get("typezone"))
-    nomfic_clean = clean_nomfic(nomfic or proprietes.get("nomfic") or proprietes.get("nom_fichier"))
+    zone_key = normalize_zone(
+        zone
+        or first_value(proprietes, "libelle", "libelong", "zone", "typezone", "type_zone")
+    )
+    nomfic_clean = clean_nomfic(nomfic or first_value(proprietes, "nomfic", "nom_fichier", "fichier"))
+    nomfic_lower = nomfic_clean.lower()
+    expected_date = extract_plu_date(nomfic_clean) or extract_plu_date(first_value(proprietes, "date_edition", "date_edition_plu", "datappro", "date"))
     insee = (
         extract_insee(nomfic_clean)
-        or extract_insee(proprietes.get("insee"))
-        or extract_insee(proprietes.get("code_insee"))
-        or extract_insee(proprietes.get("partition"))
-        or extract_insee(proprietes.get("idurba"))
+        or extract_insee(first_value(proprietes, "insee", "code_insee", "codeinsee"))
+        or extract_insee(first_value(proprietes, "partition", "idurba", "id_document", "gpu_doc_id"))
+    )
+    expected_city = normalize_text(
+        ville
+        or first_value(proprietes, "ville", "commune", "nom_com", "nom_commune", "nomcom", "libelle_commune")
     )
 
-    best = None
-    best_score = -1
     for row in rows:
-        row_zone = normalize_zone(row.get("zone") or row.get("lettre_zone_envoyer"))
+        row_zone = normalize_zone(row.get("zone"))
+        row_requested_zone = normalize_zone(row.get("lettre_zone_envoyer"))
         row_insee = extract_insee(row.get("code_insee") or row.get("url_pdf") or row.get("fichier_source"))
         row_url = row.get("url_pdf", "")
-        score = 0
-        if zone_key and row_zone == zone_key:
-            score += 3
-        if insee and row_insee == insee:
-            score += 3
-        if nomfic_clean and nomfic_clean.lower() in row_url.lower():
-            score += 4
-        if latitude and longitude and row.get("lat") == str(latitude) and row.get("long") == str(longitude):
-            score += 2
-        if score > best_score:
-            best = row
-            best_score = score
+        row_city = normalize_text(row.get("ville"))
+        row_date = extract_plu_date(row.get("date_edition_plu")) or extract_plu_date(row_url)
 
-    return best if best_score >= 3 else None
+        if insee and row_insee != insee:
+            continue
+        if expected_city and row_city and row_city != expected_city:
+            continue
+
+        if zone_key:
+            if row_zone != zone_key:
+                continue
+            if row_requested_zone and row_requested_zone != zone_key:
+                continue
+
+        # Garde-fou "PLU a jour" : si le GPU donne un nomfic/date, la base doit
+        # pointer vers le meme fichier ou au minimum la meme date d'edition.
+        if nomfic_lower:
+            if nomfic_lower not in row_url.lower():
+                if not expected_date or row_date != expected_date:
+                    continue
+        elif expected_date and row_date != expected_date:
+            continue
+
+        return row
+
+    return None
 
 
 def guess_pdf_urls(nomfic, proprietes=None):
@@ -272,6 +318,7 @@ def local_ai_response(payload, retry=False):
         latitude=payload.get("latitude", ""),
         longitude=payload.get("longitude", ""),
         proprietes={"url_pdf": payload.get("url_pdf") or payload.get("pdf", "")},
+        ville=payload.get("ville", ""),
     )
     if row:
         return row_to_plu_payload(row)
@@ -312,7 +359,12 @@ def handle_api(path, payload):
         nomfic = payload.get("nomfic")
         proprietes = payload.get("proprietes") or {}
         zone = payload.get("zone") or proprietes.get("libelle") or proprietes.get("zone")
-        cached = find_plu_base_row(nomfic=nomfic, zone=zone, proprietes=proprietes)
+        cached = find_plu_base_row(
+            nomfic=nomfic,
+            zone=zone,
+            proprietes=proprietes,
+            ville=payload.get("ville", ""),
+        )
         if cached:
             return row_to_plu_payload(cached)
         return download_pdf(nomfic, proprietes)
