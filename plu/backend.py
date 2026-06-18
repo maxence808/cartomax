@@ -43,6 +43,18 @@ def zones_compatibles(zone_ligne, zone_demandee):
     return bool(suffixe and suffixe[0].isdigit())
 
 
+def zone_localisation_compatible(zone_demandee, zone_effective):
+    demandee = normalize_zone(zone_demandee)
+    effective = normalize_zone(zone_effective)
+    if not demandee or not effective:
+        return False
+    if demandee == effective:
+        return True
+    if zones_compatibles(effective, demandee):
+        return True
+    return effective in ("A", "N") and demandee.startswith(effective)
+
+
 def normalize_text(value):
     text = unicodedata.normalize("NFKD", str(value or ""))
     text = "".join(char for char in text if not unicodedata.combining(char))
@@ -110,11 +122,40 @@ def first_pdf_reference(source):
     )
 
 
+def is_http_url(value):
+    return bool(re.match(r"^https?://", str(value or "").strip(), re.IGNORECASE))
+
+
+def first_http_url(*values):
+    for value in values:
+        text = str(value or "").strip()
+        if is_http_url(text):
+            return text
+    return ""
+
+
+def url_pdf_depuis_nomfic(value):
+    nomfic = clean_nomfic(value)
+    if not nomfic.lower().endswith(".pdf"):
+        return ""
+    try:
+        urls = pdf_gpu.build_download_urls({"nomfic": nomfic})
+    except Exception:
+        return ""
+    return first_http_url(*urls)
+
+
 def safe_join(base_dir, *parts):
     path = os.path.abspath(os.path.join(base_dir, *parts))
     if os.path.commonpath([os.path.abspath(base_dir), path]) != os.path.abspath(base_dir):
         raise ValueError("Chemin refuse.")
     return path
+
+
+def document_id_from_path(path):
+    filename = os.path.basename(str(path or ""))
+    document_id = filename.split("_reglement_", 1)[0]
+    return re.sub(r"[^0-9A-Za-z_-]+", "_", document_id).strip("_") or "document"
 
 
 def read_plu_base_rows():
@@ -182,14 +223,28 @@ def serialiser_cellule(value):
 
 
 def payload_pdf_reference(payload, result):
-    return (
-        result.get("url_pdf")
-        or payload.get("url_pdf")
+    url_pdf = first_http_url(
+        result.get("url_pdf"),
+        payload.get("url_pdf"),
+        result.get("url"),
+        payload.get("url"),
+        result.get("pdf"),
+        payload.get("pdf"),
+    )
+    if url_pdf:
+        return url_pdf
+
+    reference_locale = (
+        result.get("pdf")
         or payload.get("pdf")
-        or result.get("pdf")
+        or result.get("url_pdf")
+        or payload.get("url_pdf")
         or result.get("markdown_zone")
+        or payload.get("markdown_section")
+        or payload.get("markdown_complet")
         or ""
     )
+    return url_pdf_depuis_nomfic(reference_locale) or reference_locale
 
 
 def ligne_csv_depuis_resultat(result, payload):
@@ -221,7 +276,10 @@ def ligne_csv_depuis_resultat(result, payload):
         "zone": serialiser_cellule(zone),
         "lettre_zone_envoyer": serialiser_cellule(payload.get("zone") or result.get("lettre_zone_envoyer") or result.get("zone")),
         "modele_ia": serialiser_cellule(result.get("modele_ia") or result.get("modele") or payload.get("fournisseur_ia")),
-        "url_pdf": serialiser_cellule(result.get("url_pdf") or payload.get("url_pdf") or result.get("pdf") or payload.get("pdf")),
+        "url_pdf": serialiser_cellule(
+            first_http_url(result.get("url_pdf"), payload.get("url_pdf"), result.get("url"), payload.get("url"))
+            or url_pdf_depuis_nomfic(result.get("pdf") or payload.get("pdf") or result.get("url_pdf") or payload.get("url_pdf"))
+        ),
         "hauteur_maximale.valeur": serialiser_cellule(nested_value(result, "hauteur_maximale.valeur", result.get("hauteur_maximale.valeur", ""))),
         "hauteur_maximale.condition": serialiser_cellule(nested_value(result, "hauteur_maximale.condition", result.get("hauteur_maximale.condition", ""))),
         "hauteur_maximale.page": serialiser_cellule(nested_value(result, "hauteur_maximale.page", result.get("hauteur_maximale.page", ""))),
@@ -494,8 +552,13 @@ def localiser_zone_par_sommaire(payload):
     if not sommaire.strip():
         raise RuntimeError("Sommaire introuvable dans le markdown complet.")
 
-    pages, zone_effective = ia_module.localiser_pages_zone(client, sommaire, zone)
-    pages = sorted({int(page) for page in pages if str(page).isdigit()})
+    localisation_detail = ia_module.localiser_pages_zone_detail(client, sommaire, zone)
+    pages_ia = sorted({int(page) for page in localisation_detail["pages"] if str(page).isdigit()})
+    zone_effective = localisation_detail["zone"]
+    pages = list(pages_ia)
+    localisation_rejetee = bool(pages_ia) and not zone_localisation_compatible(zone, zone_effective)
+    if localisation_rejetee:
+        pages = []
     lines = text.splitlines()
     if pages:
         page_start, page_end = min(pages), max(pages)
@@ -508,7 +571,8 @@ def localiser_zone_par_sommaire(payload):
         content = text.strip()
         pages_localisees = []
 
-    safe_zone = re.sub(r"[^0-9A-Za-z_-]+", "_", str(zone_effective or zone or "zone")).strip("_") or "zone"
+    zone_section = zone if localisation_rejetee else (zone_effective or zone)
+    safe_zone = re.sub(r"[^0-9A-Za-z_-]+", "_", str(zone_section or "zone")).strip("_") or "zone"
     page_suffix = f"_p{page_start}-{page_end}" if page_start and page_end else ""
     os.makedirs(TMP_MARKDOWN_SELECTION_DIR, exist_ok=True)
     output_path = safe_join(
@@ -516,28 +580,83 @@ def localiser_zone_par_sommaire(payload):
         f"{os.path.splitext(os.path.basename(markdown_path))[0]}_{safe_zone}{page_suffix}.md",
     )
     header = [
-        f"# Selection zone {zone_effective or zone}",
+        f"# Selection zone {zone_section}",
         "",
         f"- Fichier source : `{os.path.basename(markdown_path)}`",
         f"- Zone demandee : `{zone}`",
         f"- Zone trouvee par IA : `{zone_effective or zone}`",
     ]
+    if localisation_rejetee:
+        header.append("- Localisation IA rejetee : `true`")
     if page_start and page_end:
         header.append(f"- Pages : {page_start}-{page_end}")
     header += ["", "---", ""]
     with open(output_path, "w", encoding="utf-8") as file:
         file.write("\n".join(header) + content + "\n")
 
+    os.makedirs(TMP_OUTPUT_AI_DIR, exist_ok=True)
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+    document_id = document_id_from_path(markdown_path)
+    localisation_prefix = f"{document_id}_localisation_sommaire_{timestamp}"
+    prompt_localisation = safe_join(TMP_OUTPUT_AI_DIR, f"{localisation_prefix}_prompt_envoye.md")
+    sommaire_envoye = safe_join(TMP_OUTPUT_AI_DIR, f"{localisation_prefix}_sommaire_envoye.md")
+    sortie_localisation = safe_join(TMP_OUTPUT_AI_DIR, f"{localisation_prefix}_reponse_ia.txt")
+    json_localisation = safe_join(TMP_OUTPUT_AI_DIR, f"{localisation_prefix}.json")
+    with open(prompt_localisation, "w", encoding="utf-8") as file:
+        file.write(localisation_detail.get("prompt_envoye_texte", ""))
+    with open(sommaire_envoye, "w", encoding="utf-8") as file:
+        file.write(
+            "\n".join([
+                f"# Sommaire envoye a l'IA",
+                "",
+                f"- Fichier source : `{os.path.basename(markdown_path)}`",
+                f"- Zone demandee : `{zone}`",
+                "",
+                "---",
+                "",
+                sommaire,
+                "",
+            ])
+        )
+    with open(sortie_localisation, "w", encoding="utf-8") as file:
+        file.write(localisation_detail.get("texte_reponse", ""))
+    trace_localisation = {
+        "source_resultat": "localisation_sommaire",
+        "fournisseur_ia": client.get("fournisseur", ""),
+        "modele_ia": client.get("modele", ""),
+        "zone_demandee": zone,
+        "zone_effective": zone_section,
+        "zone_ia": zone_effective or zone,
+        "pages_ia": pages_ia,
+        "pages_localisees": pages_localisees,
+        "localisation_rejetee": localisation_rejetee,
+        "markdown_complet": markdown_path,
+        "markdown_section": output_path,
+        "prompt_envoye": prompt_localisation,
+        "sommaire_envoye": sommaire_envoye,
+        "reponse_json": localisation_detail.get("json", {}),
+        "sortie_ia": sortie_localisation,
+    }
+    with open(json_localisation, "w", encoding="utf-8") as file:
+        json.dump(trace_localisation, file, ensure_ascii=False, indent=2)
+
     return {
         "source_resultat": "localisation_sommaire",
         "markdown_complet": markdown_path,
         "markdown_section": output_path,
         "zone": zone,
-        "zone_effective": zone_effective or zone,
+        "zone_effective": zone_section,
+        "zone_ia": zone_effective or zone,
         "pages_localisees": pages_localisees,
-        "pages_ia": pages,
+        "pages_ia": pages_ia,
         "lignes_localisees": [start + 1, end],
         "match_parfait": bool(pages),
+        "localisation_rejetee": localisation_rejetee,
+        "prompt_envoye": prompt_localisation,
+        "sommaire_envoye": sommaire_envoye,
+        "sortie_localisation_sommaire": sortie_localisation,
+        "json_localisation_sommaire": json_localisation,
+        "reponse_localisation_sommaire": localisation_detail.get("json", {}),
     }
 
 
@@ -614,12 +733,18 @@ def ai_response(payload, retry=False):
         resultat["retry_donnees_insuffisantes"] = bool(retry)
         os.makedirs(TMP_OUTPUT_AI_DIR, exist_ok=True)
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-        output = safe_join(TMP_OUTPUT_AI_DIR, f"analyse_ia_{timestamp}.json")
-        sortie_brute = safe_join(TMP_OUTPUT_AI_DIR, f"analyse_ia_{timestamp}_reponse_ia.txt")
+        analyse_prefix = f"{document_id_from_path(markdown_path)}_analyse_ia_{timestamp}"
+        output = safe_join(TMP_OUTPUT_AI_DIR, f"{analyse_prefix}.json")
+        prompt_envoye = safe_join(TMP_OUTPUT_AI_DIR, f"{analyse_prefix}_prompt_envoye.md")
+        sortie_brute = safe_join(TMP_OUTPUT_AI_DIR, f"{analyse_prefix}_reponse_ia.txt")
+        with open(prompt_envoye, "w", encoding="utf-8") as file:
+            file.write(resultat.get("prompt_envoye_texte", ""))
         with open(sortie_brute, "w", encoding="utf-8") as file:
             file.write(resultat.get("reponse_brute_texte", ""))
+        resultat["prompt_envoye"] = prompt_envoye
         resultat["sortie_ia"] = sortie_brute
         resultat["json_final"] = output
+        resultat.pop("prompt_envoye_texte", None)
         if not resultat.get("donnees_insuffisantes"):
             resultat["nouvelle_ligne_base"] = enregistrer_recherche_dans_base(resultat, payload, "analyse_ia")
         resultat["reponse_brute"] = dict(resultat)

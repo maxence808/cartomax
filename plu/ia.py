@@ -223,12 +223,23 @@ def _messages_localisation(sommaire: str, zone: str) -> list[dict]:
     prompt = (
         "Dans ce sommaire de reglement PLU, trouve les pages correspondant a la zone demandee. "
         "Reponds uniquement en JSON valide avec: {\"pages\": [1, 2], \"zone\": \"...\"}. "
+        "Ne retourne pas une autre zone sans lien direct. "
+        "Si la zone demandee est absente, retourne {\"pages\": [], \"zone\": \"zone demandee\"}. "
         f"Zone demandee: {zone}\n\nSommaire:\n{sommaire[:30000]}"
     )
     return [
         {"role": "system", "content": "Tu localises une zone PLU dans un sommaire. JSON uniquement."},
         {"role": "user", "content": prompt},
     ]
+
+
+def messages_vers_markdown(messages: list[dict]) -> str:
+    blocs = []
+    for index, message in enumerate(messages, start=1):
+        role = message.get("role", "message")
+        content = message.get("content", "")
+        blocs.append(f"## Message {index} - {role}\n\n{content}")
+    return "\n\n---\n\n".join(blocs).strip() + "\n"
 
 
 def extraire_json_depuis_texte(contenu: str):
@@ -313,6 +324,16 @@ def appeler_ia_json(client: dict, messages: list[dict]):
     else:
         raise ErreurConfigurationIa(f"Fournisseur IA inconnu: {client['fournisseur']}")
     return extraire_json_depuis_texte(contenu)
+
+
+def appeler_ia_json_avec_texte(client: dict, messages: list[dict]) -> tuple[dict, str]:
+    if client["fournisseur"] == "openrouter":
+        contenu = _appel_openrouter(client, messages)
+    elif client["fournisseur"] == "aistudio":
+        contenu = _appel_aistudio(client, messages)
+    else:
+        raise ErreurConfigurationIa(f"Fournisseur IA inconnu: {client['fournisseur']}")
+    return extraire_json_depuis_texte(contenu), contenu
 
 
 def appeler_ia(client_ia: dict, prompt: str, systeme: str | None = None) -> str:
@@ -428,12 +449,37 @@ def localiser_pages_zone(client: dict, sommaire: str, zone: str) -> tuple[list[i
     return pages, str(data.get("zone") or zone)
 
 
+def localiser_pages_zone_detail(client: dict, sommaire: str, zone: str) -> dict:
+    messages = _messages_localisation(sommaire, zone)
+    data, texte_reponse = appeler_ia_json_avec_texte(client, messages)
+    pages = [int(page) for page in data.get("pages", []) if str(page).isdigit()]
+    return {
+        "pages": pages,
+        "zone": str(data.get("zone") or zone),
+        "json": data,
+        "texte_reponse": texte_reponse,
+        "prompt_envoye_texte": messages_vers_markdown(messages),
+    }
+
+
 def analyser_markdown(client: dict, markdown: str, zone: str, contexte: dict | None = None) -> dict:
     contexte = contexte or {}
     nom_fichier = Path(
         contexte.get("markdown_section") or contexte.get("markdown") or contexte.get("markdown_complet") or "markdown.md"
     ).name
     prompt = construire_prompt_utilisateur(nom_fichier, markdown, zone=zone)
+    if str(contexte.get("analyse_markdown_complet") or "").lower() == "true":
+        prompt = (
+            "IMPORTANT : tu recois le Markdown complet du reglement PLU, pas seulement une section.\n"
+            f"Zone cherchee : {zone or 'zone non precisee'}.\n"
+            "Tu dois extraire uniquement les regles applicables a cette zone cherchee.\n"
+            "Ignore les autres zones, sauf si elles sont citees comme exceptions ou renvois applicables a la zone cherchee.\n\n"
+            f"{prompt}"
+        )
+    messages = [
+        {"role": "system", "content": PROMPT_SYSTEME},
+        {"role": "user", "content": prompt},
+    ]
     texte_reponse = appeler_ia(client, prompt)
     resultat_json = extraire_json_depuis_texte(texte_reponse)
     data = adapter_resultat_standalone(resultat_json, zone)
@@ -451,6 +497,7 @@ def analyser_markdown(client: dict, markdown: str, zone: str, contexte: dict | N
         "pdf": contexte.get("pdf", ""),
         "archive": contexte.get("archive", ""),
         "markdown_zone": contexte.get("markdown_section") or contexte.get("markdown") or contexte.get("markdown_complet") or "",
+        "prompt_envoye_texte": messages_vers_markdown(messages),
         "reponse_brute_texte": texte_reponse,
     })
     return data
