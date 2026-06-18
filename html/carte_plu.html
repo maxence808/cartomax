@@ -1210,7 +1210,17 @@
 
     function getReglementFilename(feature) {
       const props = feature?.properties || {};
-      const nomfic = props.nomfic || props.nom_fichier || props.fichier || '';
+      const nomfic = (
+        props.nomfic ||
+        props.nom_fichier ||
+        props.fichier ||
+        props.url_pdf ||
+        props.url ||
+        props.idurba ||
+        props.id_document ||
+        props.gpu_doc_id ||
+        ''
+      );
       const raw = String(nomfic || '').trim();
       const clean = raw.split('#')[0].split('?')[0];
       const match = clean.match(/([^/\\]+?\.pdf)\b/i);
@@ -1411,13 +1421,17 @@
           nomfic,
           proprietes: point.pluFeature.properties || {},
           zone: getPluZoneCode(point.pluFeature),
-          ville: getVillePoint(point)
+          ville: getVillePoint(point),
+          adresse_point: point.label,
+          latitude: point.coords[1],
+          longitude: point.coords[0]
         });
         if (data.source_resultat === 'base_csv') {
-          point.pdfPath = '';
-          point.archivePath = '';
-          point.markdownCompletPath = '';
-          point.markdownSectionPath = '';
+          // Nettoyage automatique des chemins temporairement desactive.
+          // point.pdfPath = '';
+          // point.archivePath = '';
+          // point.markdownCompletPath = '';
+          // point.markdownSectionPath = '';
           point.iaOutputPath = data.base_csv || point.iaOutputPath;
           point.iaResult = data;
           point.iaStatus = 'Repris base CSV';
@@ -1516,6 +1530,70 @@
       }
     }
 
+    function formatPagesEnvoyees(pages) {
+      if (!Array.isArray(pages) || !pages.length) return 'pages inconnues';
+      const debut = pages[0];
+      const fin = pages.length > 1 ? pages[pages.length - 1] : pages[0];
+      return debut === fin ? `page ${debut}` : `pages ${debut}-${fin}`;
+    }
+
+    async function localiserZoneSommaire(point, fournisseurIa, zone) {
+      modifierEtapePoint(point, 'ia_sommaire', 'running', `Zone ${zone || '?'} - envoi table des matieres a l'IA...`);
+      setEtatIaModele(point, fournisseurIa, 'running', `Zone ${zone || '?'} - sommaire`);
+      setAiStatus(`Mode auto - localisation de la zone ${zone || '?'} dans le sommaire...`);
+
+      const localisation = await postBackend('/api/nouveau/localiser-zone-sommaire', {
+        markdown_complet: point.markdownCompletPath,
+        zone,
+        fournisseur_ia: fournisseurIa,
+        ville: getVillePoint(point),
+        adresse_point: point.label,
+        latitude: point.coords[1],
+        longitude: point.coords[0],
+        pdf: point.pdfPath || '',
+        archive: point.archivePath || '',
+        markdown_section: point.markdownSectionPath || '',
+      });
+
+      point.markdownSectionPath = localisation.markdown_section || point.markdownSectionPath;
+      point.matchParfait = localisation.match_parfait !== false;
+      const pages = localisation.pages_localisees || [];
+      const zoneEff = localisation.zone_effective && localisation.zone_effective !== zone
+        ? `${localisation.zone_effective} (variante de ${zone})`
+        : (zone || '?');
+      modifierEtapePoint(point, 'ia_sommaire', pages.length ? 'done' : 'error',
+        pages.length
+          ? `Zone ${zoneEff} - pages identifiees : ${formatPagesEnvoyees(pages)}`
+          : `Zone ${zone || '?'} - aucune page trouvee dans le sommaire`
+      );
+      modifierEtapePoint(point, 'markdown', 'done', localisation.markdown_section || 'Zone localisee par sommaire');
+      return localisation;
+    }
+
+    async function analyserMarkdownZoneLocalisee(point, fournisseurIa, zone, localisation, retry = false) {
+      const pagesLabel = formatPagesEnvoyees(localisation?.pages_localisees || []);
+      modifierEtapePoint(point, retry ? 'ia_retry' : 'ia', 'running', `Envoi de la zone - ${pagesLabel}`);
+      setEtatIaModele(point, fournisseurIa, 'running', `Envoi zone ${zone || '?'} - ${pagesLabel}`);
+      setAiStatus(`Envoi de la zone ${zone || '?'} a l'IA (${pagesLabel})...`);
+      const data = await postBackend('/api/nouveau/traitement-ia', {
+        markdown_section: localisation?.markdown_section || point.markdownSectionPath || '',
+        zone,
+        fournisseur_ia: fournisseurIa,
+        ville: getVillePoint(point),
+        adresse_point: point.label,
+        latitude: point.coords[1],
+        longitude: point.coords[0],
+        pdf: point.pdfPath || '',
+        archive: point.archivePath || '',
+        markdown_complet: point.markdownCompletPath || '',
+        match_parfait: localisation?.match_parfait === false ? 'false' : 'true',
+        url_pdf: point.pdfUrl || ''
+      });
+      data.pages_localisees = data.pages_localisees?.length ? data.pages_localisees : (localisation?.pages_localisees || []);
+      data.zone_effective = data.zone_effective || localisation?.zone_effective || zone;
+      return data;
+    }
+
     async function lancerZoneAuto(point) {
       const zone = getPluZoneCode(point.pluFeature);
       point.awaitingZoneChoice = false;
@@ -1531,20 +1609,10 @@
 
       try {
         const { premier, erreurs } = await executerFournisseursIaEnSequence(fournisseursIa, (fournisseurIa) => {
-          setEtatIaModele(point, fournisseurIa, 'running', `Zone ${zone || '?'} — sommaire`);
-          return postBackend('/api/nouveau/traitement-ia-retry', {
-            markdown_complet: point.markdownCompletPath,
-            zone,
-            fournisseur_ia: fournisseurIa,
-            ville: getVillePoint(point),
-            adresse_point: point.label,
-            latitude: point.coords[1],
-            longitude: point.coords[0],
-            pdf: point.pdfPath || '',
-            archive: point.archivePath || '',
-            markdown_section: point.markdownSectionPath || '',
-          }).then((data) => {
-            setEtatIaModele(point, fournisseurIa, 'done', `Zone ${zone || '?'} — réponse reçue`, data);
+          return localiserZoneSommaire(point, fournisseurIa, zone)
+          .then((localisation) => analyserMarkdownZoneLocalisee(point, fournisseurIa, zone, localisation, false))
+          .then((data) => {
+            setEtatIaModele(point, fournisseurIa, 'done', `Zone ${zone || '?'} - reponse recue`, data);
             return data;
           }).catch((error) => {
             setEtatIaModele(point, fournisseurIa, 'error', error.message || 'Erreur IA');
@@ -1557,7 +1625,7 @@
         const zoneEff = data.zone_effective && data.zone_effective !== zone ? `${data.zone_effective} (variante de ${zone})` : (zone || '?');
         modifierEtapePoint(point, 'ia_sommaire', 'done',
           pages.length
-            ? `Zone ${zoneEff} — pages identifiées : ${pages.join(', ')}`
+            ? `Zone ${zoneEff} — pages identifiées : ${formatPagesEnvoyees(pages)}`
             : `Zone ${zone || '?'} — aucune variante trouvée, fichier complet envoyé`
         );
         point.iaOutputPath = data.base_csv || data.sortie_ia || point.iaOutputPath;
@@ -1664,19 +1732,10 @@
               modifierEtapePoint(point, 'ia_sommaire', 'running', `Zone ${zone || '?'} — relocalisation via table des matières...`);
               setAiStatus(`Zone ${zone || '?'} — données insuffisantes, relocalisation via sommaire...`);
 
-              const dataRetry = await postBackend('/api/nouveau/traitement-ia-retry', {
-                markdown_complet: point.markdownCompletPath,
-                zone,
-                fournisseur_ia: fournisseurIa,
-                ville: getVillePoint(point),
-                adresse_point: point.label,
-                latitude: point.coords[1],
-                longitude: point.coords[0],
-                pdf: point.pdfPath || '',
-                archive: point.archivePath || '',
-                markdown_section: point.markdownSectionPath || '',
-              });
-              setEtatIaModele(point, fournisseurIa, 'done', `Zone ${zone || '?'} — Réponse retry reçue`, dataRetry);
+              const localisationRetry = await localiserZoneSommaire(point, fournisseurIa, zone);
+              const dataRetry = await analyserMarkdownZoneLocalisee(point, fournisseurIa, zone, localisationRetry, true);
+              dataRetry.retry_donnees_insuffisantes = true;
+              setEtatIaModele(point, fournisseurIa, 'done', `Zone ${zone || '?'} - Reponse retry recue`, dataRetry);
               return dataRetry;
             }
             setEtatIaModele(point, fournisseurIa, 'done', data.source_resultat === 'base_csv' ? 'Repris base CSV' : `Zone ${zone || '?'} — Réponse reçue`, data);
@@ -1693,7 +1752,7 @@
         if (!estMatchParfait && !data.retry_donnees_insuffisantes) {
           const pages = data.pages_localisees || [];
           if (pages.length) {
-            modifierEtapePoint(point, 'ia_sommaire', 'done', `Zone ${zone || '?'} — pages identifiées : ${pages.join(', ')}`);
+            modifierEtapePoint(point, 'ia_sommaire', 'done', `Zone ${zone || '?'} — pages identifiées : ${formatPagesEnvoyees(pages)}`);
           } else {
             modifierEtapePoint(point, 'ia_sommaire', 'error', `Zone ${zone || '?'} — aucune page trouvée dans le sommaire`);
           }
@@ -1704,23 +1763,23 @@
           const pagesRetry = data.pages_localisees || [];
           modifierEtapePoint(point, 'ia_sommaire', 'done',
             pagesRetry.length
-              ? `Zone ${zone || '?'} — relocalisation — pages : ${pagesRetry.join(', ')}`
+              ? `Zone ${zone || '?'} — relocalisation — pages : ${formatPagesEnvoyees(pagesRetry)}`
               : `Zone ${zone || '?'} — relocalisation — sommaire sans résultat, fichier complet envoyé`
           );
           modifierEtapePoint(point, 'ia_retry', 'done', `Zone ${zone || '?'} — réponse finale reçue`);
         }
 
-        point.pdfPath = data.base_csv ? '' : point.pdfPath;
-        point.archivePath = data.base_csv ? '' : point.archivePath;
-        point.markdownCompletPath = data.base_csv ? '' : point.markdownCompletPath;
-        point.markdownSectionPath = data.base_csv ? '' : point.markdownSectionPath;
+        // Nettoyage automatique des chemins/fichiers temporairement desactive :
+        // on garde les PDF/Markdown disponibles apres l'analyse pour controle manuel.
+        // point.pdfPath = data.base_csv ? '' : point.pdfPath;
+        // point.archivePath = data.base_csv ? '' : point.archivePath;
+        // point.markdownCompletPath = data.base_csv ? '' : point.markdownCompletPath;
+        // point.markdownSectionPath = data.base_csv ? '' : point.markdownSectionPath;
         point.iaOutputPath = data.base_csv || data.sortie_ia || point.iaOutputPath;
         point.iaResult = data;
         point.iaStatus = 'IA OK';
         modifierEtapePoint(point, 'ia', 'done', data.source_resultat === 'base_csv' ? 'Repris base CSV' : `Zone ${zone || '?'} — Réponse reçue`);
-        setAiStatus(data.fichiers_supprimes?.length
-          ? `Sortie IA enregistree dans la base CSV. Fichiers temporaires supprimes.`
-          : `Sortie IA recue (${premier.fournisseurIa}).`);
+        setAiStatus(`Sortie IA recue (${premier.fournisseurIa}). Fichiers temporaires conserves.`);
         setAiResult(data.reponse_brute || data);
         return data;
       } catch (error) {

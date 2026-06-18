@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
 import fitz
 
 from common import RACINE
+from pdf_gpu import telecharger_pdf_gpu
 
 
 DOSSIER_PDF = RACINE / "tmp" / "pdf"
@@ -63,22 +65,46 @@ def convertir_pdf_en_md_natif(chemin_pdf: Path, chemin_md: Path) -> dict:
     }
 
 
-def fichiers_a_traiter(pdf: str | None) -> list[Path]:
+def charger_json_proprietes(chemin: str) -> dict:
+    if not chemin:
+        return {}
+    path = Path(chemin)
+    if not path.is_absolute():
+        path = RACINE / path
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def fichiers_a_traiter(pdf: str | None, proprietes: dict | None = None) -> list[Path]:
     if pdf:
         chemin = Path(pdf)
         if not chemin.is_absolute():
             chemin = RACINE / chemin
-        return [chemin]
+        if chemin.exists():
+            return [chemin]
+        resultat = telecharger_pdf_gpu(pdf, proprietes=proprietes, dossier_sortie=DOSSIER_PDF)
+        return [Path(resultat["pdf"])]
+    if proprietes:
+        resultat = telecharger_pdf_gpu("", proprietes=proprietes, dossier_sortie=DOSSIER_PDF)
+        return [Path(resultat["pdf"])]
     DOSSIER_PDF.mkdir(exist_ok=True)
     return sorted(DOSSIER_PDF.glob("*.pdf"))
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="1 - Convertit PDF texte en Markdown.")
-    parser.add_argument("pdf", nargs="?", help="PDF a convertir. Par defaut: tous les PDF de tmp/pdf/")
+    parser.add_argument("pdf", nargs="?", help="PDF local, nomfic GPU ou URL contenant un PDF. Par defaut: tous les PDF de tmp/pdf/")
+    parser.add_argument("--props", default="", help="Fichier JSON de proprietes GPU.")
+    parser.add_argument("--code-insee", default="", help="Code INSEE si le nom du PDF est inconnu.")
+    parser.add_argument("--partition", default="", help="Partition GPU, exemple: DU_200039907_A.")
     args = parser.parse_args()
 
-    fichiers = fichiers_a_traiter(args.pdf)
+    proprietes = charger_json_proprietes(args.props)
+    if args.code_insee:
+        proprietes["code_insee"] = args.code_insee
+    if args.partition:
+        proprietes["partition"] = args.partition
+
+    fichiers = fichiers_a_traiter(args.pdf, proprietes=proprietes)
     if not fichiers:
         print("Aucun PDF trouve dans tmp/pdf/.")
         return 1

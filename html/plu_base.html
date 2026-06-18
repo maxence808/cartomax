@@ -438,6 +438,10 @@
     }
 
     async function loadCsv() {
+      if (window.location.protocol === "file:") {
+        throw new Error("Cette page doit etre ouverte via l'application locale pour charger le CSV automatiquement.");
+      }
+
       let lastError;
 
       for (const file of CSV_FILES) {
@@ -483,7 +487,8 @@
       meta.textContent = "CSV introuvable";
       app.innerHTML = `
         <div class="error">
-          Impossible de charger le CSV automatiquement: ${escapeHtml(error.message)}
+          Impossible de charger le CSV automatiquement: ${escapeHtml(error.message)}<br>
+          Lance app.py puis ouvre http://127.0.0.1:5000/base.html, ou selectionne le fichier data/base_resultats_plu.csv ci-dessous.
           <input class="file-input" id="csvFile" type="file" accept=".csv,text/csv">
         </div>
       `;

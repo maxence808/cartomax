@@ -132,8 +132,14 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
         relative_path = os.path.normpath(unquote(path).lstrip("/\\"))
         if relative_path in ("", "."):
             relative_path = DEFAULT_HTML_FILE
-        if relative_path == "plu.html":
-            relative_path = "carte_plu.html"
+        html_aliases = {
+            "plu.html": "carte_plu.html",
+            "base.html": "plu_base.html",
+            "plu-base.html": "plu_base.html",
+            "base_plu.html": "plu_base.html",
+        }
+        if relative_path in html_aliases:
+            relative_path = html_aliases[relative_path]
 
         candidates = []
         if (
