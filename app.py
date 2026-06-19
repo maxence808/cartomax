@@ -183,7 +183,6 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
         if path.startswith("/api/nouveau/") or path in (
             "/api/charger-plu",
             "/api/charger-plu-nomfic",
-            "/api/analyser-zone",
         ):
             try:
                 payload = plu_backend.read_json_request(self)

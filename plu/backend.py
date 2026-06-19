@@ -16,7 +16,6 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 TMP_DIR = os.path.join(BASE_DIR, "tmp")
 TMP_PDF_DIR = os.path.join(TMP_DIR, "pdf")
 TMP_MARKDOWN_DIR = os.path.join(TMP_DIR, "markdown")
-TMP_MARKDOWN_SELECTION_DIR = os.path.join(TMP_DIR, "markdown_selection")
 TMP_OUTPUT_AI_DIR = os.path.join(TMP_DIR, "output_ai")
 PLU_BASE_CSV = os.path.join(DATA_DIR, "base_resultats_plu.csv")
 
@@ -410,253 +409,12 @@ def extract_pdf_text_to_markdown(pdf_path):
     return markdown_path
 
 
-def page_for_line(lines, line_index):
-    page = None
-    for line in lines[:line_index + 1]:
-        match = re.match(r"^# Page\s+(\d+)\b", line.strip(), re.IGNORECASE)
-        if match:
-            page = int(match.group(1))
-    return page
-
-
-def line_range_for_pages(lines, page_start, page_end):
-    page_start = int(page_start)
-    page_end = int(page_end)
-    start = 0
-    end = len(lines)
-    for index, line in enumerate(lines):
-        match = re.match(r"^# Page\s+(\d+)\b", line.strip(), re.IGNORECASE)
-        if not match:
-            continue
-        page = int(match.group(1))
-        if page == page_start:
-            start = index
-        elif page > page_end:
-            end = index
-            break
-    return start, end
-
-
-def detect_zone_sections(text):
-    try:
-        sys.path.insert(0, os.path.dirname(__file__))
-        from detection_zones import detecter_sections_zones
-        return detecter_sections_zones(text)
-    except Exception:
-        return []
-
-
-def markdown_section(pdf_path, zone):
+def markdown_complet(pdf_path):
     markdown_path = extract_pdf_text_to_markdown(pdf_path)
-    with open(markdown_path, encoding="utf-8") as file:
-        text = file.read()
-    lines = text.splitlines()
-    zone_key = normalize_zone(zone)
-    sections = detect_zone_sections(text)
-
-    def section_key(section):
-        return normalize_zone(getattr(section, "zone", "")) or getattr(section, "cle", "")
-
-    def meme_famille(section_cle, cle):
-        if not section_cle or not cle:
-            return False
-        return section_cle == cle or section_cle.startswith(cle)
-
-    def fin_section_elargie(position, cle):
-        for suivante in sections[position + 1:]:
-            suivante_cle = section_key(suivante)
-            if not meme_famille(suivante_cle, cle):
-                return suivante.debut_ligne
-        return len(lines)
-
-    def candidats_pour_cle(cle):
-        candidats = []
-        for position, section in enumerate(sections):
-            if section_key(section) != cle:
-                continue
-            fin = fin_section_elargie(position, cle)
-            candidats.append((fin - section.debut_ligne, section.debut_ligne, fin, section))
-        return candidats
-
-    matches = candidats_pour_cle(zone_key)
-    if matches:
-        longueur, start, end, section = max(matches, key=lambda item: (item[0], item[1]))
-        detected_zone = section.zone
-        match_perfect = True
-    else:
-        longueur, start, end, section = (0, 0, min(len(lines), 900), None)
-
-    if (
-        zone_key
-        and (not matches or longueur < 250)
-        and len(zone_key) > 1
-        and zone_key[0] in ("A", "N")
-    ):
-        parent_matches = candidats_pour_cle(zone_key[0])
-        if parent_matches:
-            parent_longueur, parent_start, parent_end, parent_section = max(parent_matches, key=lambda item: (item[0], item[1]))
-            if parent_longueur > max(longueur * 2, 250):
-                longueur, start, end, section = parent_longueur, parent_start, parent_end, parent_section
-                detected_zone = parent_section.zone
-                match_perfect = False
-
-    if not section:
-        start, end = 0, min(len(lines), 900)
-        detected_zone = zone or "zone"
-        match_perfect = False
-
-    page_start = page_for_line(lines, start)
-    page_end = page_for_line(lines, max(start, end - 1))
-    content = "\n".join(lines[start:end]).strip()
-    safe_zone = re.sub(r"[^0-9A-Za-z_-]+", "_", str(detected_zone or zone or "zone")).strip("_") or "zone"
-    page_suffix = f"_p{page_start}-{page_end}" if page_start and page_end else ""
-    os.makedirs(TMP_MARKDOWN_SELECTION_DIR, exist_ok=True)
-    output_path = safe_join(TMP_MARKDOWN_SELECTION_DIR, f"{os.path.splitext(os.path.basename(markdown_path))[0]}_{safe_zone}{page_suffix}.md")
-
-    header = [
-        f"# Selection zone {detected_zone}",
-        "",
-        f"- Fichier source : `{os.path.basename(markdown_path)}`",
-        f"- Zone demandee : `{zone}`",
-        f"- Match parfait : `{str(match_perfect).lower()}`",
-    ]
-    if page_start and page_end:
-        header.append(f"- Pages : {page_start}-{page_end}")
-    header += ["", "---", ""]
-
-    with open(output_path, "w", encoding="utf-8") as file:
-        file.write("\n".join(header) + content + "\n")
-
     return {
         "markdown_complet": markdown_path,
-        "markdown_section": output_path,
-        "match_parfait": match_perfect,
-        "zone_effective": detected_zone,
-        "pages_localisees": [page for page in (page_start, page_end) if page],
-        "zones_detectees": [section.zone for section in sections[:80]],
-        "avertissement": "" if match_perfect else "Zone exacte non trouvee automatiquement. Une section large a ete extraite.",
+        "markdown": markdown_path,
         "pdf_scanne": False,
-    }
-
-
-def localiser_zone_par_sommaire(payload):
-    markdown_path = payload.get("markdown_complet") or payload.get("markdown") or payload.get("markdown_section")
-    zone = payload.get("zone", "")
-    if not markdown_path or not os.path.exists(markdown_path):
-        raise RuntimeError("Markdown complet introuvable pour localiser la zone via le sommaire.")
-
-    client = ia_module.creer_client_ia(payload.get("fournisseur_ia"))
-    with open(markdown_path, encoding="utf-8", errors="replace") as file:
-        text = file.read()
-    sommaire = ia_module.extraire_sommaire_markdown(text)
-    if not sommaire.strip():
-        raise RuntimeError("Sommaire introuvable dans le markdown complet.")
-
-    localisation_detail = ia_module.localiser_pages_zone_detail(client, sommaire, zone)
-    pages_ia = sorted({int(page) for page in localisation_detail["pages"] if str(page).isdigit()})
-    zone_effective = localisation_detail["zone"]
-    pages = list(pages_ia)
-    localisation_rejetee = bool(pages_ia) and not zone_localisation_compatible(zone, zone_effective)
-    if localisation_rejetee:
-        pages = []
-    lines = text.splitlines()
-    if pages:
-        page_start, page_end = min(pages), max(pages)
-        start, end = line_range_for_pages(lines, page_start, page_end)
-        content = "\n".join(lines[start:end]).strip()
-        pages_localisees = [page_start, page_end]
-    else:
-        page_start = page_end = None
-        start, end = 0, len(lines)
-        content = text.strip()
-        pages_localisees = []
-
-    zone_section = zone if localisation_rejetee else (zone_effective or zone)
-    safe_zone = re.sub(r"[^0-9A-Za-z_-]+", "_", str(zone_section or "zone")).strip("_") or "zone"
-    page_suffix = f"_p{page_start}-{page_end}" if page_start and page_end else ""
-    os.makedirs(TMP_MARKDOWN_SELECTION_DIR, exist_ok=True)
-    output_path = safe_join(
-        TMP_MARKDOWN_SELECTION_DIR,
-        f"{os.path.splitext(os.path.basename(markdown_path))[0]}_{safe_zone}{page_suffix}.md",
-    )
-    header = [
-        f"# Selection zone {zone_section}",
-        "",
-        f"- Fichier source : `{os.path.basename(markdown_path)}`",
-        f"- Zone demandee : `{zone}`",
-        f"- Zone trouvee par IA : `{zone_effective or zone}`",
-    ]
-    if localisation_rejetee:
-        header.append("- Localisation IA rejetee : `true`")
-    if page_start and page_end:
-        header.append(f"- Pages : {page_start}-{page_end}")
-    header += ["", "---", ""]
-    with open(output_path, "w", encoding="utf-8") as file:
-        file.write("\n".join(header) + content + "\n")
-
-    os.makedirs(TMP_OUTPUT_AI_DIR, exist_ok=True)
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-    document_id = document_id_from_path(markdown_path)
-    localisation_prefix = f"{document_id}_localisation_sommaire_{timestamp}"
-    prompt_localisation = safe_join(TMP_OUTPUT_AI_DIR, f"{localisation_prefix}_prompt_envoye.md")
-    sommaire_envoye = safe_join(TMP_OUTPUT_AI_DIR, f"{localisation_prefix}_sommaire_envoye.md")
-    sortie_localisation = safe_join(TMP_OUTPUT_AI_DIR, f"{localisation_prefix}_reponse_ia.txt")
-    json_localisation = safe_join(TMP_OUTPUT_AI_DIR, f"{localisation_prefix}.json")
-    with open(prompt_localisation, "w", encoding="utf-8") as file:
-        file.write(localisation_detail.get("prompt_envoye_texte", ""))
-    with open(sommaire_envoye, "w", encoding="utf-8") as file:
-        file.write(
-            "\n".join([
-                f"# Sommaire envoye a l'IA",
-                "",
-                f"- Fichier source : `{os.path.basename(markdown_path)}`",
-                f"- Zone demandee : `{zone}`",
-                "",
-                "---",
-                "",
-                sommaire,
-                "",
-            ])
-        )
-    with open(sortie_localisation, "w", encoding="utf-8") as file:
-        file.write(localisation_detail.get("texte_reponse", ""))
-    trace_localisation = {
-        "source_resultat": "localisation_sommaire",
-        "fournisseur_ia": client.get("fournisseur", ""),
-        "modele_ia": client.get("modele", ""),
-        "zone_demandee": zone,
-        "zone_effective": zone_section,
-        "zone_ia": zone_effective or zone,
-        "pages_ia": pages_ia,
-        "pages_localisees": pages_localisees,
-        "localisation_rejetee": localisation_rejetee,
-        "markdown_complet": markdown_path,
-        "markdown_section": output_path,
-        "prompt_envoye": prompt_localisation,
-        "sommaire_envoye": sommaire_envoye,
-        "reponse_json": localisation_detail.get("json", {}),
-        "sortie_ia": sortie_localisation,
-    }
-    with open(json_localisation, "w", encoding="utf-8") as file:
-        json.dump(trace_localisation, file, ensure_ascii=False, indent=2)
-
-    return {
-        "source_resultat": "localisation_sommaire",
-        "markdown_complet": markdown_path,
-        "markdown_section": output_path,
-        "zone": zone,
-        "zone_effective": zone_section,
-        "zone_ia": zone_effective or zone,
-        "pages_localisees": pages_localisees,
-        "pages_ia": pages_ia,
-        "lignes_localisees": [start + 1, end],
-        "match_parfait": bool(pages),
-        "localisation_rejetee": localisation_rejetee,
-        "prompt_envoye": prompt_localisation,
-        "sommaire_envoye": sommaire_envoye,
-        "sortie_localisation_sommaire": sortie_localisation,
-        "json_localisation_sommaire": json_localisation,
-        "reponse_localisation_sommaire": localisation_detail.get("json", {}),
     }
 
 
@@ -778,13 +536,10 @@ def handle_api(path, payload):
         commune = payload.get("commune") or {}
         raise RuntimeError(f"Recherche automatique par commune non disponible sans nomfic. Commune recue: {commune.get('nom') or commune.get('code') or commune}")
 
-    if path == "/api/nouveau/markdown-section":
-        return markdown_section(payload.get("pdf", ""), payload.get("zone", ""))
+    if path == "/api/nouveau/markdown-complet":
+        return markdown_complet(payload.get("pdf", ""))
 
-    if path == "/api/nouveau/localiser-zone-sommaire":
-        return localiser_zone_par_sommaire(payload)
-
-    if path in ("/api/nouveau/traitement-ia", "/api/analyser-zone"):
+    if path == "/api/nouveau/traitement-ia":
         return ai_response(payload, retry=False)
 
     if path == "/api/nouveau/traitement-ia-retry":

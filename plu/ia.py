@@ -27,7 +27,7 @@ Priorite d'analyse : immobilier d'activite, entrepots, locaux d'activite,
 logistique, acces, livraison, stationnement, exploitation et contraintes
 operationnelles liees a ces usages.
 Tu ne dois pas inventer.
-Si une information n'est pas presente dans le PDF ou le Markdown, indique "non precise".
+Si une information n'est pas presente dans le PDF ou le Markdown, indique "non precisee".
 Si le bloc ne contient aucune reglementation applicable a un champ demande,
 ecris exactement "pas de reglementation" pour ce champ ou dans les alertes.
 Tu dois citer la page source quand elle est disponible dans le Markdown.
@@ -39,7 +39,7 @@ Regles imperatives :
 - N'utilise pas de bloc Markdown.
 - N'utilise pas ```json.
 - Les cles doivent toujours etre entre guillemets doubles.
-- Les valeurs inconnues doivent etre "non precise", pas null.
+- Les valeurs inconnues doivent etre "non precisee", pas null.
 - Les champs sans reglementation dans le bloc doivent contenir "pas de reglementation".
 - Si le texte recu est trop incomplet pour extraire des regles, ajoute exactement
   "donnees insuffisantes" dans le premier element du champ "alertes".

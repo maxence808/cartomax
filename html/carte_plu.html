@@ -227,81 +227,6 @@
       line-height: 1.5;
     }
 
-    .switch-list {
-      display: grid;
-      gap: 7px;
-      margin-top: 10px;
-    }
-
-    .switch-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 8px 10px;
-      border: 1px solid var(--input-border);
-      border-radius: 7px;
-      background: rgba(255,255,255,0.035);
-    }
-
-    .switch-copy {
-      display: grid;
-      gap: 2px;
-      min-width: 0;
-    }
-
-    .switch-title {
-      color: var(--text);
-      font-size: 0.74rem;
-      font-weight: 700;
-    }
-
-    .switch-desc {
-      color: var(--text-dim);
-      font-size: 0.66rem;
-      line-height: 1.35;
-    }
-
-    .switch-input {
-      position: absolute;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .switch-control {
-      position: relative;
-      width: 42px;
-      min-width: 42px;
-      height: 24px;
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
-    }
-
-    .switch-control::after {
-      content: "";
-      position: absolute;
-      top: 3px;
-      left: 3px;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: #cbd5e1;
-      transition: transform 0.15s, background 0.15s;
-    }
-
-    .switch-input:checked + .switch-control {
-      background: rgba(59,130,246,0.38);
-      border-color: rgba(59,130,246,0.75);
-    }
-
-    .switch-input:checked + .switch-control::after {
-      transform: translateX(18px);
-      background: #fff;
-    }
-
     .status {
       margin-top: 7px;
       min-height: 16px;
@@ -481,20 +406,6 @@
     }
 
     /* ── Zone picker ── */
-    .zone-picker {
-      margin: 10px 0 4px;
-      padding: 12px 14px;
-      border: 1px solid rgba(251,146,60,0.35);
-      border-radius: 8px;
-      background: rgba(251,146,60,0.07);
-    }
-    .zone-picker-title {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: #fb923c;
-      margin-bottom: 10px;
-    }
-    .zone-picker-title strong { color: #fdba74; }
     .mode-switch {
       display: inline-flex;
       border: 1px solid rgba(255,255,255,0.12);
@@ -535,7 +446,6 @@
     }
     .zone-btn:hover { border-color: rgba(59,130,246,0.5); color: #93c5fd; }
     .zone-btn.selected { background: rgba(59,130,246,0.2); border-color: rgba(59,130,246,0.6); color: #93c5fd; }
-    .zone-picker-actions { display: flex; align-items: center; gap: 8px; }
     .btn-lancer-zone {
       padding: 6px 16px;
       border-radius: 6px;
@@ -707,7 +617,7 @@
         <a class="nav-link" href="cartomax.html">Cartomax</a>
         <a class="nav-link" href="plu_base.html">Base CSV →</a>
       </div>
-      <p class="subtitle">Satellite · Adresses · Cadastre · Zones PLU · Analyse IA</p>
+      <p class="subtitle">Satellite ? Adresses ? Cadastre ? Zones PLU</p>
     </header>
 
     <div class="panel-scroll">
@@ -736,7 +646,7 @@
           <button class="primary" id="load-cadastre-btn">Charger visibles</button>
           <button class="danger" id="clear-cadastre-btn">Vider</button>
         </div>
-        <p class="hint">Disponible à partir du zoom 15. Clic sur une parcelle pour ses infos.</p>
+        <p class="hint">Disponible a partir du zoom 15. Clic sur une parcelle pour ses infos.</p>
         <div id="cadastre-status" class="status"></div>
       </section>
 
@@ -749,34 +659,8 @@
           <button class="primary" id="load-plu-btn">Charger visibles</button>
           <button class="danger" id="clear-plu-btn">Vider</button>
         </div>
-        <p class="hint">Disponible à partir du zoom 12. Clic sur une zone pour ses infos.</p>
+        <p class="hint">Disponible a partir du zoom 12. Clic sur une zone pour ses infos.</p>
         <div id="plu-status" class="status"></div>
-      </section>
-
-      <section>
-        <div class="section-header">
-          <h2>Analyse IA</h2>
-          <div class="section-line"></div>
-        </div>
-        <label for="ia-provider">Moteur</label>
-        <select id="ia-provider">
-          <option value="both">Les deux</option>
-          <option value="openrouter" selected>OpenRouter</option>
-          <option value="aistudio">AI Studio / Gemini</option>
-        </select>
-        <div class="switch-list">
-          <label class="switch-row" for="full-ia-mode">
-            <span class="switch-copy">
-              <span class="switch-title">Mode full IA</span>
-              <span class="switch-desc">Envoie automatiquement le Markdown complet du reglement a l'IA pour la zone cherchee.</span>
-            </span>
-            <input class="switch-input" id="full-ia-mode" type="checkbox">
-            <span class="switch-control" aria-hidden="true"></span>
-          </label>
-        </div>
-        <p class="hint">Cascade automatique dès qu'un point est ajouté : cadastre → PLU → PDF → Markdown → IA.</p>
-        <div id="ai-status" class="status"></div>
-        <pre id="ai-result" class="result-box">Aucune analyse lancée.</pre>
       </section>
 
       <section>
@@ -836,11 +720,7 @@
       if (!el) return;
       el.textContent = message || '';
       el.classList.toggle('error', Boolean(isError));
-      el.classList.toggle('running', Boolean(message) && !isError && id === 'ai-status');
-    }
-
-    function setAiStatus(message, isError = false) {
-      setStatus('ai-status', message, isError);
+      el.classList.toggle('running', Boolean(message) && !isError);
     }
 
     function afficherAvertissementZone(message) {
@@ -854,23 +734,8 @@
       window.setTimeout(() => popup.remove(), 12000);
     }
 
-    function setAiResult(value) {
-      const el = document.getElementById('ai-result');
-      if (!el) return;
-      el.textContent = typeof value === 'string' ? value : JSON.stringify(value, null, 2);
-    }
-
-    function getIaProvider() {
-      return $('#ia-provider')?.value || 'openrouter';
-    }
-
     function getIaProviders() {
-      const provider = getIaProvider();
-      return provider === 'both' ? ['openrouter', 'aistudio'] : [provider];
-    }
-
-    function isFullIaMode() {
-      return Boolean($('#full-ia-mode')?.checked);
+      return ['openrouter'];
     }
 
     async function attendrePremierSucces(promesses) {
@@ -1044,11 +909,9 @@
 
     function afficherJsonPoint(point) {
       if (!point.iaResult) {
-        setAiStatus('Aucune sortie IA disponible pour ce point.', true);
         return;
       }
       point.showIaJson = !point.showIaJson;
-      setAiResult(point.iaResult);
       renderPoints();
     }
 
@@ -1390,114 +1253,8 @@
       );
     }
 
-    async function traiterPointAvecIa(point) {
-      if (!point.pluFeature) {
-        modifierEtapePoint(point, 'ia', 'error', 'Pas de zone PLU');
-        setAiStatus('Aucune zone PLU trouvee pour ce point.', true);
-        setAiResult('Aucune zone PLU trouvee pour ce point.');
-        return;
-      }
-
-      const zone = getPluZoneCode(point.pluFeature);
-      const codeInsee = getInseeFromPluFeature(point.pluFeature);
-      const nomfic = getReglementFilename(point.pluFeature);
-
-      if (!zone) {
-        modifierEtapePoint(point, 'ia', 'error', 'Libelle de zone vide');
-        setAiStatus('Zone PLU detectee, mais son libelle est vide.', true);
-        setAiResult(point.pluFeature.properties || {});
-        return;
-      }
-
-      if (!nomfic && !codeInsee) {
-        modifierEtapePoint(point, 'commune', 'error', 'Code INSEE introuvable');
-        setAiStatus('Zone PLU detectee, mais ni nomfic ni code INSEE ne sont disponibles.', true);
-        setAiResult(point.pluFeature.properties || {});
-        return;
-      }
-
-      const fournisseursIa = getIaProviders();
-      point.iaStatus = 'Traitement IA...';
-      modifierEtapePoint(point, 'commune', nomfic ? 'done' : 'running', nomfic ? `nomfic ${nomfic}` : `INSEE ${codeInsee}`);
-      setAiResult('');
-
-      try {
-        let pluCharge;
-        let commune = null;
-        modifierEtapePoint(point, 'reglement', 'running', 'Telechargement');
-
-        if (nomfic) {
-          setAiStatus(`Zone ${zone}. Telechargement direct du reglement ${nomfic}...`);
-          pluCharge = await postBackend('/api/charger-plu-nomfic', {
-            nomfic,
-            proprietes: point.pluFeature.properties || {}
-          });
-        } else {
-          setAiStatus(`Point ${point.label} : commune INSEE ${codeInsee}, zone ${zone}. Recherche commune...`);
-          commune = await fetchCommuneByInsee(codeInsee);
-          modifierEtapePoint(point, 'commune', 'done', `${commune.nom} (${commune.code})`);
-          setAiStatus(`Telechargement du reglement pour ${commune.nom} (${commune.code})...`);
-          pluCharge = await postBackend('/api/charger-plu', { commune });
-        }
-
-        modifierEtapePoint(point, 'reglement', 'done', pluCharge.pdf || 'PDF recupere');
-        modifierEtapePoint(point, 'markdown', 'running', `Extraction zone ${zone}`);
-
-        setAiStatus(`Reglement telecharge. Markdown cree. Extraction de la zone ${zone}...`);
-        modifierEtapePoint(point, 'ia', 'running', `Envoi a l'IA...`);
-        setAiStatus(`Envoi a l'IA (${fournisseursIa.join(' puis ')}) pour la zone ${zone}...`);
-        point.iaModelStates = {};
-        const { premier, erreurs } = await executerFournisseursIaEnSequence(fournisseursIa, (fournisseurIa) => {
-          setEtatIaModele(point, fournisseurIa, 'running', `Zone ${zone}`);
-          return postBackend('/api/analyser-zone', {
-            markdown: pluCharge.markdown,
-            zone,
-            fournisseur_ia: fournisseurIa,
-            ville: getVillePoint(point, commune),
-            adresse_point: point.label,
-            latitude: point.coords[1],
-            longitude: point.coords[0]
-          }).then((data) => {
-            setEtatIaModele(point, fournisseurIa, 'done', data.source_resultat === 'base_csv' ? 'Repris base CSV' : 'Reponse recue', data);
-            return data;
-          }).catch((error) => {
-            setEtatIaModele(point, fournisseurIa, 'error', error.message || 'Erreur IA');
-            throw error;
-          });
-        });
-        erreurs.forEach((item) => console.warn('Reponse IA echouee', item.fournisseurIa, item.error));
-        const analyse = premier.data;
-          if (analyse.avertissement) {
-            afficherAvertissementZone(analyse.avertissement);
-          }
-        modifierEtapePoint(point, 'markdown', 'done', analyse.markdown_zone || 'Zone extraite');
-        modifierEtapePoint(point, 'ia', 'done', `Reponse recue`);
-        if (analyse.retry_donnees_insuffisantes) {
-          modifierEtapePoint(point, 'ia_retry', 'done', `Renvoi fichier complet - Reponse finale recue`);
-        }
-
-        point.iaStatus = 'IA OK';
-        point.iaResult = analyse;
-        point.iaOutputPath = analyse.json_final || analyse.sortie_ia || analyse.base_csv || point.iaOutputPath;
-        setAiStatus(`Reponse IA recue (${premier.fournisseurIa}).`);
-        setAiResult(analyse);
-        return analyse;
-      } catch (error) {
-        point.iaStatus = 'Erreur IA';
-        point.iaError = error.message || 'Traitement IA impossible';
-        const runningStep = point.steps?.find((step) => step.state === 'running');
-        modifierEtapePoint(point, runningStep?.key || 'ia', 'error', point.iaError);
-        setAiStatus(`Erreur traitement IA : ${point.iaError}`, true);
-        setAiResult(error.data || point.iaError);
-        return null;
-      } finally {
-        renderPoints();
-      }
-    }
-
     async function telechargerPdfPoint(point) {
       if (!point.pluFeature) {
-        setAiStatus('Aucune zone PLU pour ce point.', true);
         return;
       }
 
@@ -1509,8 +1266,6 @@
       point.iaStatus = 'Telechargement PDF...';
       point.iaError = '';
       modifierEtapePoint(point, 'reglement', 'running', nomfic || 'Recherche PDF via API');
-      setAiStatus(nomfic ? `Telechargement direct du PDF ${nomfic}...` : 'Nom PDF absent, recherche du document actif via API...');
-      setAiResult('');
 
       try {
         const data = await postBackend('/api/nouveau/telecharger-pdf', {
@@ -1534,8 +1289,6 @@
           modifierEtapePoint(point, 'reglement', 'done', 'Deja en base CSV');
           modifierEtapePoint(point, 'markdown', 'done', 'Deja en base CSV');
           modifierEtapePoint(point, 'ia', 'done', 'Repris base CSV');
-          setAiStatus('Resultat deja present dans la base CSV. Telechargement ignore.');
-          setAiResult(data);
           return data;
         }
         point.pdfPath = data.pdf;
@@ -1543,8 +1296,6 @@
         point.archivePath = data.archive || '';
         point.iaStatus = 'PDF OK';
         modifierEtapePoint(point, 'reglement', 'done', data.pdf);
-        setAiStatus(`PDF telecharge : ${data.pdf}`);
-        setAiResult(data);
         return data;
       } catch (error) {
         const categorie = error.data?.categorie_erreur;
@@ -1559,8 +1310,6 @@
         point.iaError = messageErreur;
         point.categorieErreur = categorie || '';
         modifierEtapePoint(point, 'reglement', 'error', messageErreur);
-        setAiStatus(`Erreur : ${messageErreur}`, true);
-        setAiResult(error.data || point.iaError);
         return null;
       } finally {
         renderPoints();
@@ -1570,238 +1319,49 @@
     async function sortirMarkdownPoint(point) {
       const zone = getPluZoneCode(point.pluFeature);
       if (!point.pdfPath) {
-        setAiStatus('Telecharge d’abord le PDF du point.', true);
         return;
       }
       if (!zone) {
-        setAiStatus('Zone PLU absente pour ce point.', true);
         return;
       }
 
-      point.iaStatus = 'Markdown section...';
+      point.iaStatus = 'Markdown complet...';
       point.iaError = '';
       modifierEtapePoint(point, 'markdown', 'running', 'Conversion PDF → Markdown...');
-      setAiStatus(`Conversion PDF → Markdown pour la zone ${zone}...`);
 
       try {
-        const data = await postBackend('/api/nouveau/markdown-section', {
-          pdf: point.pdfPath,
-          zone
+        const data = await postBackend('/api/nouveau/markdown-complet', {
+          pdf: point.pdfPath
         });
         if (data.avertissement) {
           afficherAvertissementZone(data.avertissement);
         }
-        point.markdownCompletPath = data.markdown_complet;
-        point.markdownSectionPath = data.markdown_section;
-        point.matchParfait = data.match_parfait !== false;
+        point.markdownCompletPath = data.markdown_complet || data.markdown || '';
+        point.markdownSectionPath = point.markdownCompletPath;
         point.pdfScanne = data.pdf_scanne || false;
-        point.zonesDetectees = data.zones_detectees || [];
         const mdMsg = data.pdf_scanne
-          ? `PDF scanné — OCR appliqué — ${data.markdown_section || 'section extraite'}`
-          : (data.markdown_section || 'section extraite');
+          ? `PDF scanné — OCR appliqué — ${point.markdownCompletPath || 'Markdown complet cree'}`
+          : (point.markdownCompletPath || 'Markdown complet cree');
         point.iaStatus = 'Markdown OK';
         modifierEtapePoint(point, 'markdown', 'done', mdMsg);
-        setAiStatus(data.avertissement || `Markdown section créé${data.pdf_scanne ? ' (PDF scanné, OCR)' : ''} : ${data.markdown_section}`, Boolean(data.avertissement));
-        setAiResult(data);
-
-        // Pas de match parfait → pause, l'utilisateur choisit le mode
-        if (!point.matchParfait) {
-          point.awaitingZoneChoice = true;
-          point.modeZone = 'auto';
-          point.zoneChoisie = null;
-          renderPoints();
-          return null;
-        }
 
         return data;
       } catch (error) {
         point.iaStatus = 'Erreur Markdown';
         point.iaError = error.message || 'Extraction Markdown impossible';
         modifierEtapePoint(point, 'markdown', 'error', point.iaError);
-        setAiStatus(`Erreur Markdown : ${point.iaError}`, true);
-        setAiResult(error.data || point.iaError);
         return null;
       } finally {
         renderPoints();
       }
     }
 
-    function formatPagesEnvoyees(pages) {
-      if (!Array.isArray(pages) || !pages.length) return 'pages inconnues';
-      const debut = pages[0];
-      const fin = pages.length > 1 ? pages[pages.length - 1] : pages[0];
-      return debut === fin ? `page ${debut}` : `pages ${debut}-${fin}`;
-    }
-
-    async function localiserZoneSommaire(point, fournisseurIa, zone) {
-      modifierEtapePoint(point, 'ia_sommaire', 'running', `Zone ${zone || '?'} - envoi table des matieres a l'IA...`);
-      setEtatIaModele(point, fournisseurIa, 'running', `Zone ${zone || '?'} - sommaire`);
-      setAiStatus(`Mode auto - localisation de la zone ${zone || '?'} dans le sommaire...`);
-
-      const localisation = await postBackend('/api/nouveau/localiser-zone-sommaire', {
-        markdown_complet: point.markdownCompletPath,
-        zone,
-        fournisseur_ia: fournisseurIa,
-        ville: getVillePoint(point),
-        adresse_point: point.label,
-        latitude: point.coords[1],
-        longitude: point.coords[0],
-        pdf: point.pdfPath || '',
-        archive: point.archivePath || '',
-        markdown_section: point.markdownSectionPath || '',
-      });
-
-      point.markdownSectionPath = localisation.markdown_section || point.markdownSectionPath;
-      point.localisationSommairePath = localisation.sortie_localisation_sommaire || point.localisationSommairePath || '';
-      point.localisationSommaireJsonPath = localisation.json_localisation_sommaire || point.localisationSommaireJsonPath || '';
-      point.promptLocalisationPath = localisation.prompt_envoye || point.promptLocalisationPath || '';
-      point.sommaireEnvoyePath = localisation.sommaire_envoye || point.sommaireEnvoyePath || '';
-      point.matchParfait = localisation.match_parfait !== false;
-      const pages = localisation.pages_localisees || [];
-      const fichiersLocalisation = [
-        localisation.prompt_envoye ? `prompt : ${nomFichier(localisation.prompt_envoye)}` : '',
-        localisation.sommaire_envoye ? `sommaire : ${nomFichier(localisation.sommaire_envoye)}` : '',
-        localisation.sortie_localisation_sommaire ? `reponse : ${nomFichier(localisation.sortie_localisation_sommaire)}` : ''
-      ].filter(Boolean).join(' - ');
-      const sortieLocalisation = fichiersLocalisation ? ` - ${fichiersLocalisation}` : '';
-      const zoneEff = localisation.zone_effective && localisation.zone_effective !== zone
-        ? `${localisation.zone_effective} (variante de ${zone})`
-        : (zone || '?');
-      modifierEtapePoint(point, 'ia_sommaire', pages.length ? 'done' : 'error',
-        pages.length
-          ? `Zone ${zoneEff} - pages identifiees : ${formatPagesEnvoyees(pages)}${sortieLocalisation}`
-          : `Zone ${zone || '?'} - aucune page trouvee dans le sommaire${sortieLocalisation}`
-      );
-      modifierEtapePoint(point, 'markdown', 'done', localisation.markdown_section || 'Zone localisee par sommaire');
-      return localisation;
-    }
-
-    async function analyserMarkdownZoneLocalisee(point, fournisseurIa, zone, localisation, retry = false) {
-      const pagesLabel = formatPagesEnvoyees(localisation?.pages_localisees || []);
-      modifierEtapePoint(point, retry ? 'ia_retry' : 'ia', 'running', `Envoi de la zone - ${pagesLabel}`);
-      setEtatIaModele(point, fournisseurIa, 'running', `Envoi zone ${zone || '?'} - ${pagesLabel}`);
-      setAiStatus(`Envoi de la zone ${zone || '?'} a l'IA (${pagesLabel})...`);
-      const data = await postBackend('/api/nouveau/traitement-ia', {
-        markdown_section: localisation?.markdown_section || point.markdownSectionPath || '',
-        zone,
-        fournisseur_ia: fournisseurIa,
-        ville: getVillePoint(point),
-        adresse_point: point.label,
-        latitude: point.coords[1],
-        longitude: point.coords[0],
-        pdf: point.pdfPath || '',
-        archive: point.archivePath || '',
-        markdown_complet: point.markdownCompletPath || '',
-        match_parfait: localisation?.match_parfait === false ? 'false' : 'true',
-        url_pdf: point.pdfUrl || ''
-      });
-      data.pages_localisees = data.pages_localisees?.length ? data.pages_localisees : (localisation?.pages_localisees || []);
-      data.zone_effective = data.zone_effective || localisation?.zone_effective || zone;
-      data.sortie_localisation_sommaire = localisation?.sortie_localisation_sommaire || data.sortie_localisation_sommaire || '';
-      data.json_localisation_sommaire = localisation?.json_localisation_sommaire || data.json_localisation_sommaire || '';
-      data.prompt_localisation_sommaire = localisation?.prompt_envoye || data.prompt_localisation_sommaire || '';
-      data.sommaire_envoye = localisation?.sommaire_envoye || data.sommaire_envoye || '';
-      data.reponse_localisation_sommaire = localisation?.reponse_localisation_sommaire || data.reponse_localisation_sommaire || null;
-      return data;
-    }
-
-    async function lancerZoneAuto(point) {
-      const zone = getPluZoneCode(point.pluFeature);
-      point.awaitingZoneChoice = false;
-      point.autoRunning = true;
-      renderPoints();
-
-      const fournisseursIa = getIaProviders();
-      modifierEtapePoint(point, 'ia_sommaire', 'running', `Zone ${zone || '?'} — envoi table des matières à l'IA...`);
-      modifierEtapePoint(point, 'ia', 'running', `Zone ${zone || '?'} — analyse automatique via sommaire...`);
-      modifierEtapePoint(point, 'ia_retry', 'hidden');
-      setAiStatus(`Mode auto — localisation de la zone ${zone || '?'} dans le sommaire...`);
-      point.iaModelStates = {};
-
-      try {
-        const { premier, erreurs } = await executerFournisseursIaEnSequence(fournisseursIa, (fournisseurIa) => {
-          return localiserZoneSommaire(point, fournisseurIa, zone)
-          .then((localisation) => analyserMarkdownZoneLocalisee(point, fournisseurIa, zone, localisation, false))
-          .then((data) => {
-            setEtatIaModele(point, fournisseurIa, 'done', `Zone ${zone || '?'} - reponse recue`, data);
-            return data;
-          }).catch((error) => {
-            setEtatIaModele(point, fournisseurIa, 'error', error.message || 'Erreur IA');
-            throw error;
-          });
-        });
-        erreurs.forEach((item) => console.warn('Erreur IA auto', item.fournisseurIa, item.error));
-        const data = premier.data;
-        const pages = data.pages_localisees || [];
-        const zoneEff = data.zone_effective && data.zone_effective !== zone ? `${data.zone_effective} (variante de ${zone})` : (zone || '?');
-        modifierEtapePoint(point, 'ia_sommaire', 'done',
-          pages.length
-            ? `Zone ${zoneEff} — pages identifiées : ${formatPagesEnvoyees(pages)}`
-            : `Zone ${zone || '?'} — aucune variante trouvée, fichier complet envoyé`
-        );
-        point.iaOutputPath = data.base_csv || data.sortie_ia || point.iaOutputPath;
-        point.iaResult = data;
-        point.iaStatus = 'IA OK';
-        modifierEtapePoint(point, 'ia', 'done', `Zone ${zone || '?'} — réponse reçue`);
-        setAiStatus(`Analyse auto terminée — Zone ${zone || '?'}.`);
-        setAiResult(data.reponse_brute || data);
-      } catch (error) {
-        point.iaStatus = 'Erreur IA';
-        point.iaError = error.message || 'Erreur';
-        modifierEtapePoint(point, 'ia_sommaire', 'error', point.iaError);
-        modifierEtapePoint(point, 'ia', 'error', point.iaError);
-        setAiStatus(`Erreur analyse auto : ${point.iaError}`, true);
-      } finally {
-        point.autoRunning = false;
-        renderPoints();
-      }
-    }
-
-    async function lancerZoneManuelle(point) {
-      const zone = getPluZoneCode(point.pluFeature);
-      const zoneChoisie = point.zoneChoisie;
-      if (!zoneChoisie) return;
-
-      point.awaitingZoneChoice = false;
-      point.autoRunning = true;
-      renderPoints();
-
-      modifierEtapePoint(point, 'ia_sommaire', 'skipped', `Zone ${zone || '?'} — sélection manuelle : ${zoneChoisie}`);
-
-      // Ré-extraire le markdown pour la zone choisie (match parfait garanti)
-      try {
-        modifierEtapePoint(point, 'markdown', 'running', `Extraction zone choisie : ${zoneChoisie}`);
-        setAiStatus(`Extraction de la zone manuelle ${zoneChoisie}...`);
-        const mdData = await postBackend('/api/nouveau/markdown-section', {
-          pdf: point.pdfPath,
-          zone: zoneChoisie
-        });
-        point.markdownSectionPath = mdData.markdown_section;
-        point.matchParfait = true;
-        modifierEtapePoint(point, 'markdown', 'done', `Zone ${zoneChoisie} — section extraite`);
-        setAiResult(mdData);
-      } catch (error) {
-        modifierEtapePoint(point, 'markdown', 'error', error.message || 'Erreur extraction');
-        setAiStatus(`Erreur extraction zone ${zoneChoisie} : ${error.message}`, true);
-        point.autoRunning = false;
-        renderPoints();
-        return;
-      }
-
-      // Lancer l'IA normalement avec match parfait
-      await lancerIaPoint(point);
-      point.autoRunning = false;
-      renderPoints();
-    }
-
     async function lancerZoneMarkdownComplet(point) {
       const zone = getPluZoneCode(point.pluFeature);
       if (!point.markdownCompletPath) {
-        setAiStatus('Markdown complet introuvable pour ce point.', true);
         return;
       }
 
-      point.awaitingZoneChoice = false;
       point.autoRunning = true;
       point.iaStatus = 'IA en cours...';
       point.iaError = '';
@@ -1810,7 +1370,6 @@
       modifierEtapePoint(point, 'ia_sommaire', 'skipped', `Zone ${zone || '?'} - markdown complet envoye`);
       modifierEtapePoint(point, 'ia', 'running', `Envoi du reglement complet - Zone ${zone || '?'}...`);
       modifierEtapePoint(point, 'ia_retry', 'hidden');
-      setAiStatus(`Envoi du Markdown complet a l'IA (${fournisseursIa.join(' puis ')}) - Zone ${zone || '?'}...`);
       renderPoints();
 
       try {
@@ -1845,15 +1404,11 @@
         point.iaResult = data;
         point.iaStatus = 'IA OK';
         modifierEtapePoint(point, 'ia', 'done', `Zone ${zone || '?'} - reponse recue depuis markdown complet`);
-        setAiStatus(`Analyse du Markdown complet terminee (${premier.fournisseurIa}).`);
-        setAiResult(data.reponse_brute || data);
         return data;
       } catch (error) {
         point.iaStatus = 'Erreur IA';
         point.iaError = error.message || 'Traitement IA complet impossible';
         modifierEtapePoint(point, 'ia', 'error', point.iaError);
-        setAiStatus(`Erreur IA complet : ${point.iaError}`, true);
-        setAiResult(error.data || point.iaError);
         return null;
       } finally {
         point.autoRunning = false;
@@ -1862,114 +1417,7 @@
     }
 
     async function lancerIaPoint(point) {
-      const zone = getPluZoneCode(point.pluFeature);
-      if (!point.markdownSectionPath) {
-        setAiStatus('Sors d’abord le Markdown section du point.', true);
-        return;
-      }
-
-      point.iaStatus = 'IA en cours...';
-      point.iaError = '';
-      const fournisseursIa = getIaProviders();
-      const estMatchParfait = point.matchParfait !== false;
-
-      if (estMatchParfait) {
-        modifierEtapePoint(point, 'ia_sommaire', 'skipped', `Zone ${zone || '?'} — match exact, localisation non nécessaire`);
-      } else {
-        modifierEtapePoint(point, 'ia_sommaire', 'running', `Zone ${zone || '?'} — envoi table des matières à l'IA...`);
-      }
-
-      modifierEtapePoint(point, 'ia', 'running', `Envoi à l'IA — Zone ${zone || '?'}...`);
-      setAiStatus(`Envoi à l'IA (${fournisseursIa.join(' + ')}) — Zone ${zone || '?'}...`);
-      point.iaModelStates = {};
-
-      try {
-        modifierEtapePoint(point, 'ia', 'running', `Traitement en cours — Zone ${zone || '?'}...`);
-        setAiStatus(`Traitement IA en cours (${fournisseursIa.join(' puis ')}) — Zone ${zone || '?'}...`);
-        const { premier, erreurs } = await executerFournisseursIaEnSequence(fournisseursIa, (fournisseurIa) => {
-          setEtatIaModele(point, fournisseurIa, 'running', `Zone ${zone || 'section'}`);
-          return postBackend('/api/nouveau/traitement-ia', {
-            markdown_section: point.markdownSectionPath || '',
-            zone,
-            fournisseur_ia: fournisseurIa,
-            ville: getVillePoint(point),
-            adresse_point: point.label,
-            latitude: point.coords[1],
-            longitude: point.coords[0],
-            pdf: point.pdfPath || '',
-            archive: point.archivePath || '',
-            markdown_complet: point.markdownCompletPath || '',
-            match_parfait: estMatchParfait ? 'true' : 'false',
-            url_pdf: point.pdfUrl || ''
-          }).then(async (data) => {
-            // Données insuffisantes → 2ème appel avec pipeline sommaire
-            if (data.donnees_insuffisantes && point.markdownCompletPath) {
-              setEtatIaModele(point, fournisseurIa, 'running', `Zone ${zone || '?'} — données insuffisantes, relocalisation...`);
-              modifierEtapePoint(point, 'ia', 'running', `Zone ${zone || '?'} — données insuffisantes, relocalisation en cours...`);
-              modifierEtapePoint(point, 'ia_retry', 'running', `Zone ${zone || '?'} — envoi sommaire à l'IA...`);
-              modifierEtapePoint(point, 'ia_sommaire', 'running', `Zone ${zone || '?'} — relocalisation via table des matières...`);
-              setAiStatus(`Zone ${zone || '?'} — données insuffisantes, relocalisation via sommaire...`);
-
-              const localisationRetry = await localiserZoneSommaire(point, fournisseurIa, zone);
-              const dataRetry = await analyserMarkdownZoneLocalisee(point, fournisseurIa, zone, localisationRetry, true);
-              dataRetry.retry_donnees_insuffisantes = true;
-              setEtatIaModele(point, fournisseurIa, 'done', `Zone ${zone || '?'} - Reponse retry recue`, dataRetry);
-              return dataRetry;
-            }
-            setEtatIaModele(point, fournisseurIa, 'done', data.source_resultat === 'base_csv' ? 'Repris base CSV' : `Zone ${zone || '?'} — Réponse reçue`, data);
-            return data;
-          }).catch((error) => {
-            setEtatIaModele(point, fournisseurIa, 'error', error.message || 'Erreur IA');
-            throw error;
-          });
-        });
-        erreurs.forEach((item) => console.warn('Traitement IA secondaire echoue', item.fournisseurIa, item.error));
-        const data = premier.data;
-
-        // Mise à jour étape localisation sommaire (1er appel imparfait)
-        if (!estMatchParfait && !data.retry_donnees_insuffisantes) {
-          const pages = data.pages_localisees || [];
-          if (pages.length) {
-            modifierEtapePoint(point, 'ia_sommaire', 'done', `Zone ${zone || '?'} — pages identifiées : ${formatPagesEnvoyees(pages)}`);
-          } else {
-            modifierEtapePoint(point, 'ia_sommaire', 'error', `Zone ${zone || '?'} — aucune page trouvée dans le sommaire`);
-          }
-        }
-
-        // Mise à jour suite retry données insuffisantes
-        if (data.retry_donnees_insuffisantes) {
-          const pagesRetry = data.pages_localisees || [];
-          modifierEtapePoint(point, 'ia_sommaire', 'done',
-            pagesRetry.length
-              ? `Zone ${zone || '?'} — relocalisation — pages : ${formatPagesEnvoyees(pagesRetry)}`
-              : `Zone ${zone || '?'} — relocalisation — sommaire sans résultat, fichier complet envoyé`
-          );
-          modifierEtapePoint(point, 'ia_retry', 'done', `Zone ${zone || '?'} — réponse finale reçue`);
-        }
-
-        // Nettoyage automatique des chemins/fichiers temporairement desactive :
-        // on garde les PDF/Markdown disponibles apres l'analyse pour controle manuel.
-        // point.pdfPath = data.base_csv ? '' : point.pdfPath;
-        // point.archivePath = data.base_csv ? '' : point.archivePath;
-        // point.markdownCompletPath = data.base_csv ? '' : point.markdownCompletPath;
-        // point.markdownSectionPath = data.base_csv ? '' : point.markdownSectionPath;
-        point.iaOutputPath = data.base_csv || data.sortie_ia || point.iaOutputPath;
-        point.iaResult = data;
-        point.iaStatus = 'IA OK';
-        modifierEtapePoint(point, 'ia', 'done', data.source_resultat === 'base_csv' ? 'Repris base CSV' : `Zone ${zone || '?'} — Réponse reçue`);
-        setAiStatus(`Sortie IA recue (${premier.fournisseurIa}). Fichiers temporaires conserves.`);
-        setAiResult(data.reponse_brute || data);
-        return data;
-      } catch (error) {
-        point.iaStatus = 'Erreur IA';
-        point.iaError = error.message || 'Traitement IA impossible';
-        modifierEtapePoint(point, 'ia', 'error', point.iaError);
-        setAiStatus(`Erreur IA : ${point.iaError}`, true);
-        setAiResult(error.data || point.iaError);
-        return null;
-      } finally {
-        renderPoints();
-      }
+      return lancerZoneMarkdownComplet(point);
     }
 
     async function analyzePoint(point) {
@@ -2034,7 +1482,6 @@
       point.autoRunning = true;
       point.iaStatus = 'Cascade en cours...';
       point.iaError = '';
-      setAiResult('');
 
       try {
         const infoOk = await analyzePoint(point);
@@ -2045,14 +1492,9 @@
         if (pdf.source_resultat === 'base_csv') return;
 
         const markdown = await sortirMarkdownPoint(point);
-        if (isFullIaMode()) {
-          if (!point.markdownCompletPath) return;
-          await lancerZoneMarkdownComplet(point);
-          return;
-        }
         if (!markdown) return;
-
-        await lancerIaPoint(point);
+        if (!point.markdownCompletPath) return;
+        await lancerZoneMarkdownComplet(point);
       } finally {
         point.autoRunning = false;
         renderPoints();
@@ -2096,10 +1538,6 @@
         iaModelStates: {},
         showIaJson: false,
         steps: [],
-        awaitingZoneChoice: false,
-        modeZone: 'auto',
-        zoneChoisie: null,
-        zonesDetectees: []
       };
       initialiserEtapesPoint(point);
       state.points.push(point);
@@ -2188,28 +1626,6 @@
                     </button>
                   </div>
                 </div>
-                ${point.awaitingZoneChoice ? `
-                <div class="zone-picker">
-                  <div class="zone-picker-title">Zone PLU <strong>${escapeHtml(zone || '?')}</strong> non trouvée exactement dans le règlement — choisir le mode d'analyse</div>
-                  <div class="mode-switch">
-                    <button class="mode-btn ${point.modeZone === 'auto' ? 'active' : ''}" data-mode-zone="${point.id}" data-mode="auto">Auto</button>
-                    <button class="mode-btn ${point.modeZone === 'manuel' ? 'active' : ''}" data-mode-zone="${point.id}" data-mode="manuel">Manuel</button>
-                    <button class="mode-btn ${point.modeZone === 'complet' ? 'active' : ''}" data-mode-zone="${point.id}" data-mode="complet">MD complet</button>
-                  </div>
-                  ${point.modeZone === 'manuel' ? `
-                  <div class="zones-list">
-                    ${(point.zonesDetectees || []).map(z => `
-                      <button class="zone-btn ${point.zoneChoisie === z ? 'selected' : ''}" data-choisir-zone="${point.id}" data-zone="${escapeHtml(z)}">${escapeHtml(z)}</button>
-                    `).join('')}
-                  </div>` : point.modeZone === 'complet' ? `<div style="font-size:0.76rem;color:var(--text-dim);margin-bottom:10px;">L'IA recevra le Markdown complet du reglement et devra extraire uniquement la zone <strong style="color:#fdba74">${escapeHtml(zone || '?')}</strong>.</div>` : `<div style="font-size:0.76rem;color:var(--text-dim);margin-bottom:10px;">L'IA localisera la zone <strong style="color:#fdba74">${escapeHtml(zone || '?')}</strong> dans la table des matieres puis extraira les pages correspondantes.</div>`}
-                  <div class="zone-picker-actions">
-                    <button class="btn-lancer-zone" data-lancer-zone="${point.id}"
-                      ${point.modeZone === 'manuel' && !point.zoneChoisie ? 'disabled' : ''}>
-                      Lancer l'analyse
-                    </button>
-                    ${point.modeZone === 'manuel' && point.zoneChoisie ? `<span style="font-size:0.75rem;color:#86efac">Zone choisie : <strong>${escapeHtml(point.zoneChoisie)}</strong></span>` : ''}
-                  </div>
-                </div>` : ''}
                 <div class="point-actions">
                   <table class="actions-table">
                     <thead>
@@ -2633,30 +2049,6 @@
       const removeButton = event.target.closest('[data-remove-point]');
       if (removeButton) {
         supprimerPointAffichage(removeButton.dataset.removePoint);
-        return;
-      }
-
-      const modeBtn = event.target.closest('[data-mode-zone]');
-      if (modeBtn) {
-        const point = state.points.find(item => item.id === modeBtn.dataset.modeZone);
-        if (point) { point.modeZone = modeBtn.dataset.mode; point.zoneChoisie = null; renderPoints(); }
-        return;
-      }
-
-      const zoneBtn = event.target.closest('[data-choisir-zone]');
-      if (zoneBtn) {
-        const point = state.points.find(item => item.id === zoneBtn.dataset.choisirZone);
-        if (point) { point.zoneChoisie = zoneBtn.dataset.zone; renderPoints(); }
-        return;
-      }
-
-      const lancerBtn = event.target.closest('[data-lancer-zone]');
-      if (lancerBtn) {
-        const point = state.points.find(item => item.id === lancerBtn.dataset.lancerZone);
-        if (!point) return;
-        if (point.modeZone === 'auto') lancerZoneAuto(point);
-        else if (point.modeZone === 'manuel' && point.zoneChoisie) lancerZoneManuelle(point);
-        else if (point.modeZone === 'complet') lancerZoneMarkdownComplet(point);
         return;
       }
 
