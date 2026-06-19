@@ -1,0 +1,348 @@
+{
+  "zone": "UR3-O",
+  "zone_effective": "UR3-O",
+  "donnees_insuffisantes": false,
+  "hauteur_maximale": {
+    "valeur": "non precisee",
+    "condition": "La hauteur maximale des constructions est fixée selon les dispositions de l'article DC-2.6 commun à toutes les zones et complétée par les dispositions du règlement de la zone UR3. Le plan des hauteurs fixe graphiquement la valeur de hauteur maximale. En l'absence de valeur sur le plan des hauteurs, la hauteur maximale n'est pas réglementée par le plan des hauteurs (mode d'emploi, page 5).",
+    "page": "5, 40, 148"
+  },
+  "emprise_au_sol": {
+    "valeur": "non precisee",
+    "condition": "L'emprise au sol des constructions ne peut excéder la valeur résultant du pourcentage figurant au plan des emprises rapporté à la superficie du terrain (article DC-2.2, page 39). Aucune valeur spécifique n'est fixée dans le règlement écrit de la zone UR3.",
+    "page": "39, 148"
+  },
+  "implantation_voies": {
+    "regle": "Les constructions et installations doivent être implantées en recul de 5 m minimum des voies existantes, à modifier ou à créer (article UR3-2.1). Cette règle ne s'applique pas aux éléments de modénature de façades ou toitures limités (attiques, loggia, balcons, garde-corps, reculs et débords ponctuels, lucarnes, cheminées, bandeaux, garde-corps, etc.).",
+    "page": "152"
+  },
+  "implantation_limites": {
+    "regle": "Dans les secteurs UR3-O et UR3-OL : dans une bande d'implantation de 25 m à compter de l'alignement, les constructions doivent être implantées conformément à l'article UR3-2.2.1 (soit sur une seule limite séparative latérale, soit en retrait de toutes les limites séparatives avec un retrait au moins égal à la moitié de la hauteur, minimum 3 m) et observer un retrait par rapport aux autres limites séparatives au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Au-delà de cette bande de 25 m, les constructions doivent être implantées en retrait d'au moins 6 m de toutes les limites séparatives et observer un retrait au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Sont admises les implantations en limite séparative des constructions édifiées à l'intérieur du profil d'une construction ou d'un mur voisins édifiés sur la même limite séparative. Ne sont pas soumis à ces règles : éléments de modénature, extensions et annexes inférieures à 25 m² d'emprise au sol et 3,5 m de haut.",
+    "page": "153"
+  },
+  "espaces_verts": {
+    "regle": "Par exception aux dispositions du 2° de l'article DC-3.6.2, les limites résultant des emprises de pleine-terre et du coefficient de biotope par surface ne s'appliquent pas aux constructions et installations des services publics et d'intérêt collectif, aux extensions relevant de la destination artisanat et commerce de détail, aux extensions de moins de 25 m² des autres destinations et sous-destinations, aux seuls bassins des piscines de moins de 40 m², aux rampes d'accessibilité pour les personnes à mobilité réduite, ainsi qu'aux constructions annexes de moins de 25 m² d'emprise au sol et de moins de 3,5 m de haut (article UR3-3.2). Les emprises de pleine-terre sont définies par un pourcentage fixé par les plans d'emprise appliqué à la surface du terrain (article DC-3.6.3).",
+    "page": "44, 45, 155"
+  },
+  "stationnement": {
+    "valeur_pl": "non precisee",
+    "valeur_vl": "non precisee",
+    "regle": "Les opérations qui projettent la création de voiries nouvelles (articles DC-4.3, 5°, 6°, 7°) doivent comporter au moins 1 place visiteur aérienne pour 3 logements (article UR3-3.1). Pour le stationnement des véhicules motorisés, en l'absence de norme spécifique dans la zone UR3, les normes de stationnement communes s'appliquent (article DC-3.7.6, tableau page 55) : pour les logements, 1 place par logement (opération < 5 logements) ou 1 place par 35 m² de surface de plancher avec minimum 1 place et maximum 3 places par logement (opération ≥ 5 logements).",
+    "page": "55, 155"
+  },
+  "destinations": {
+    "autorisees": "Logement (sous-destination Habitation) | Exploitation agricole (sous condition : agriculture urbaine compatible avec le fonctionnement du quartier) | Hébergement et Hôtels (sous condition : limité à 25 chambres maximum) | Artisanat et commerce de détail (sous condition : travaux et extensions de constructions existantes à la date d'approbation du PLUM, ne pas nuire au caractère résidentiel) | Activité de service accueillant une clientèle (sous condition : ne pas nuire au caractère résidentiel) | Enseignement, santé et action sociale (sous condition : ne pas nuire au caractère résidentiel) | Salles d'art et de spectacle (sous condition : ne pas nuire au caractère résidentiel) | Bureau (sous condition : nécessaire à la gestion et à la mise aux normes des sites existants à la date d'approbation du PLUM)",
+    "interdites": "Exploitation forestière | Restauration | Commerce de gros | Cinéma | Autres hébergements touristiques | Lieux de culte | Autres équipements recevant du public | Industrie | Entrepôt | Centre de congrès et d'exposition | Cuisine dédiée à la vente en ligne | Installations classées pour la protection de l'environnement (ICPE) nouvelles | Ouverture et exploitation de carrières | Stationnement des caravanes au-delà de 3 mois | Dépôts divers et aires de stockage d'épaves de véhicules, ferrailles, pneus, etc. | Autres dépôts non couverts (hors compostage domestique)"
+  },
+  "contrainte_particulieres": "Dans les secteurs UR3-L et UR3-OL : les constructions nouvelles sont interdites au-delà d'une bande de constructibilité de 50 m, à l'exception des équipements d'intérêt collectif, des piscines des constructions existantes, des extensions et annexes des constructions existantes (inférieures à 25 m² d'emprise au sol et 3,5 m de haut, ne conduisant pas à la création d'unité d'habitation nouvelle). Dans les secteurs UR3-TL, la bande de constructibilité est réduite à 25 m (article UR3-1.3). | Limitation de constructibilité des fonds de parcelles dans le secteur UR3-O : bande de constructibilité de 50 m (UR3-L/UR3-OL) ou 25 m (UR3-TL) à compter de l'alignement, au-delà de laquelle les constructions nouvelles sont interdites sauf exceptions (équipements d'intérêt collectif, piscines existantes, extensions et annexes existantes < 25 m² et < 3,5 m). | Implantation des constructions les unes par rapport aux autres sur une même propriété dans les secteurs UR3-O et UR3-OL : dans une bande de 25 m à compter de l'alignement, la distance entre deux constructions non contiguës doit être au moins égale à 6 m. Au-delà de cette bande, lorsque l'une des constructions dispose de baies orientées face à l'autre, cette distance est portée à 12 m (article UR3-2.3.2).",
+  "alertes": [],
+  "resultat_ia_detaille": {
+    "fichier": "244500468_reglement_20251001.md",
+    "bloc": 1,
+    "zones_detectees": [
+      {
+        "zone": "UR3-O",
+        "hauteur_maximale": {
+          "valeur": "non precisee",
+          "condition": "La hauteur maximale des constructions est fixée selon les dispositions de l'article DC-2.6 commun à toutes les zones et complétée par les dispositions du règlement de la zone UR3. Le plan des hauteurs fixe graphiquement la valeur de hauteur maximale. En l'absence de valeur sur le plan des hauteurs, la hauteur maximale n'est pas réglementée par le plan des hauteurs (mode d'emploi, page 5).",
+          "page_source": "5, 40, 148"
+        },
+        "emprise_au_sol": {
+          "valeur": "non precisee",
+          "condition": "L'emprise au sol des constructions ne peut excéder la valeur résultant du pourcentage figurant au plan des emprises rapporté à la superficie du terrain (article DC-2.2, page 39). Aucune valeur spécifique n'est fixée dans le règlement écrit de la zone UR3.",
+          "page_source": "39, 148"
+        },
+        "implantation_voies": {
+          "regle": "Les constructions et installations doivent être implantées en recul de 5 m minimum des voies existantes, à modifier ou à créer (article UR3-2.1). Cette règle ne s'applique pas aux éléments de modénature de façades ou toitures limités (attiques, loggia, balcons, garde-corps, reculs et débords ponctuels, lucarnes, cheminées, bandeaux, garde-corps, etc.).",
+          "page_source": "152"
+        },
+        "implantation_limites": {
+          "regle": "Dans les secteurs UR3-O et UR3-OL : dans une bande d'implantation de 25 m à compter de l'alignement, les constructions doivent être implantées conformément à l'article UR3-2.2.1 (soit sur une seule limite séparative latérale, soit en retrait de toutes les limites séparatives avec un retrait au moins égal à la moitié de la hauteur, minimum 3 m) et observer un retrait par rapport aux autres limites séparatives au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Au-delà de cette bande de 25 m, les constructions doivent être implantées en retrait d'au moins 6 m de toutes les limites séparatives et observer un retrait au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Sont admises les implantations en limite séparative des constructions édifiées à l'intérieur du profil d'une construction ou d'un mur voisins édifiés sur la même limite séparative. Ne sont pas soumis à ces règles : éléments de modénature, extensions et annexes inférieures à 25 m² d'emprise au sol et 3,5 m de haut.",
+          "page_source": "153"
+        },
+        "stationnement": {
+          "regle": "Les opérations qui projettent la création de voiries nouvelles (articles DC-4.3, 5°, 6°, 7°) doivent comporter au moins 1 place visiteur aérienne pour 3 logements (article UR3-3.1). Pour le stationnement des véhicules motorisés, en l'absence de norme spécifique dans la zone UR3, les normes de stationnement communes s'appliquent (article DC-3.7.6, tableau page 55) : pour les logements, 1 place par logement (opération < 5 logements) ou 1 place par 35 m² de surface de plancher avec minimum 1 place et maximum 3 places par logement (opération ≥ 5 logements).",
+          "valeur_pl": "non precisee",
+          "valeur_vl": "non precisee",
+          "page_source": "55, 155"
+        },
+        "espaces_verts": {
+          "regle": "Par exception aux dispositions du 2° de l'article DC-3.6.2, les limites résultant des emprises de pleine-terre et du coefficient de biotope par surface ne s'appliquent pas aux constructions et installations des services publics et d'intérêt collectif, aux extensions relevant de la destination artisanat et commerce de détail, aux extensions de moins de 25 m² des autres destinations et sous-destinations, aux seuls bassins des piscines de moins de 40 m², aux rampes d'accessibilité pour les personnes à mobilité réduite, ainsi qu'aux constructions annexes de moins de 25 m² d'emprise au sol et de moins de 3,5 m de haut (article UR3-3.2). Les emprises de pleine-terre sont définies par un pourcentage fixé par les plans d'emprise appliqué à la surface du terrain (article DC-3.6.3).",
+          "page_source": "44, 45, 155"
+        },
+        "destinations": {
+          "autorisees": [
+            "Logement (sous-destination Habitation)",
+            "Exploitation agricole (sous condition : agriculture urbaine compatible avec le fonctionnement du quartier)",
+            "Hébergement et Hôtels (sous condition : limité à 25 chambres maximum)",
+            "Artisanat et commerce de détail (sous condition : travaux et extensions de constructions existantes à la date d'approbation du PLUM, ne pas nuire au caractère résidentiel)",
+            "Activité de service accueillant une clientèle (sous condition : ne pas nuire au caractère résidentiel)",
+            "Enseignement, santé et action sociale (sous condition : ne pas nuire au caractère résidentiel)",
+            "Salles d'art et de spectacle (sous condition : ne pas nuire au caractère résidentiel)",
+            "Bureau (sous condition : nécessaire à la gestion et à la mise aux normes des sites existants à la date d'approbation du PLUM)"
+          ],
+          "interdites": [
+            "Exploitation forestière",
+            "Restauration",
+            "Commerce de gros",
+            "Cinéma",
+            "Autres hébergements touristiques",
+            "Lieux de culte",
+            "Autres équipements recevant du public",
+            "Industrie",
+            "Entrepôt",
+            "Centre de congrès et d'exposition",
+            "Cuisine dédiée à la vente en ligne",
+            "Installations classées pour la protection de l'environnement (ICPE) nouvelles",
+            "Ouverture et exploitation de carrières",
+            "Stationnement des caravanes au-delà de 3 mois",
+            "Dépôts divers et aires de stockage d'épaves de véhicules, ferrailles, pneus, etc.",
+            "Autres dépôts non couverts (hors compostage domestique)"
+          ],
+          "page_source": "149, 151"
+        },
+        "contraintes_particulieres": [
+          {
+            "description": "Dans les secteurs UR3-L et UR3-OL : les constructions nouvelles sont interdites au-delà d'une bande de constructibilité de 50 m, à l'exception des équipements d'intérêt collectif, des piscines des constructions existantes, des extensions et annexes des constructions existantes (inférieures à 25 m² d'emprise au sol et 3,5 m de haut, ne conduisant pas à la création d'unité d'habitation nouvelle). Dans les secteurs UR3-TL, la bande de constructibilité est réduite à 25 m (article UR3-1.3).",
+            "page_source": "150"
+          },
+          {
+            "description": "Limitation de constructibilité des fonds de parcelles dans le secteur UR3-O : bande de constructibilité de 50 m (UR3-L/UR3-OL) ou 25 m (UR3-TL) à compter de l'alignement, au-delà de laquelle les constructions nouvelles sont interdites sauf exceptions (équipements d'intérêt collectif, piscines existantes, extensions et annexes existantes < 25 m² et < 3,5 m).",
+            "page_source": "150"
+          },
+          {
+            "description": "Implantation des constructions les unes par rapport aux autres sur une même propriété dans les secteurs UR3-O et UR3-OL : dans une bande de 25 m à compter de l'alignement, la distance entre deux constructions non contiguës doit être au moins égale à 6 m. Au-delà de cette bande, lorsque l'une des constructions dispose de baies orientées face à l'autre, cette distance est portée à 12 m (article UR3-2.3.2).",
+            "page_source": "154"
+          }
+        ]
+      }
+    ],
+    "alertes": []
+  },
+  "source_resultat": "ia",
+  "modele_ia": "openrouter/owl-alpha",
+  "fournisseur_ia": "openrouter",
+  "ia_envoyee": true,
+  "ville": "Orléans",
+  "adresse_point": "23 Rue Delaugère, 45100 Orléans, France",
+  "latitude": 47.8804460120416,
+  "longitude": 1.9114511198123978,
+  "pdf": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\pdf\\244500468_reglement_20251001.pdf",
+  "archive": "",
+  "markdown_zone": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\markdown\\244500468_reglement_20251001.md",
+  "reponse_brute_texte": "{\n  \"fichier\": \"244500468_reglement_20251001.md\",\n  \"bloc\": 1,\n  \"zones_detectees\": [\n    {\n      \"zone\": \"UR3-O\",\n      \"hauteur_maximale\": {\n        \"valeur\": \"non precisee\",\n        \"condition\": \"La hauteur maximale des constructions est fixée selon les dispositions de l'article DC-2.6 commun à toutes les zones et complétée par les dispositions du règlement de la zone UR3. Le plan des hauteurs fixe graphiquement la valeur de hauteur maximale. En l'absence de valeur sur le plan des hauteurs, la hauteur maximale n'est pas réglementée par le plan des hauteurs (mode d'emploi, page 5).\",\n        \"page_source\": \"5, 40, 148\"\n      },\n      \"emprise_au_sol\": {\n        \"valeur\": \"non precisee\",\n        \"condition\": \"L'emprise au sol des constructions ne peut excéder la valeur résultant du pourcentage figurant au plan des emprises rapporté à la superficie du terrain (article DC-2.2, page 39). Aucune valeur spécifique n'est fixée dans le règlement écrit de la zone UR3.\",\n        \"page_source\": \"39, 148\"\n      },\n      \"implantation_voies\": {\n        \"regle\": \"Les constructions et installations doivent être implantées en recul de 5 m minimum des voies existantes, à modifier ou à créer (article UR3-2.1). Cette règle ne s'applique pas aux éléments de modénature de façades ou toitures limités (attiques, loggia, balcons, garde-corps, reculs et débords ponctuels, lucarnes, cheminées, bandeaux, garde-corps, etc.).\",\n        \"page_source\": \"152\"\n      },\n      \"implantation_limites\": {\n        \"regle\": \"Dans les secteurs UR3-O et UR3-OL : dans une bande d'implantation de 25 m à compter de l'alignement, les constructions doivent être implantées conformément à l'article UR3-2.2.1 (soit sur une seule limite séparative latérale, soit en retrait de toutes les limites séparatives avec un retrait au moins égal à la moitié de la hauteur, minimum 3 m) et observer un retrait par rapport aux autres limites séparatives au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Au-delà de cette bande de 25 m, les constructions doivent être implantées en retrait d'au moins 6 m de toutes les limites séparatives et observer un retrait au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Sont admises les implantations en limite séparative des constructions édifiées à l'intérieur du profil d'une construction ou d'un mur voisins édifiés sur la même limite séparative. Ne sont pas soumis à ces règles : éléments de modénature, extensions et annexes inférieures à 25 m² d'emprise au sol et 3,5 m de haut.\",\n        \"page_source\": \"153\"\n      },\n      \"stationnement\": {\n        \"regle\": \"Les opérations qui projettent la création de voiries nouvelles (articles DC-4.3, 5°, 6°, 7°) doivent comporter au moins 1 place visiteur aérienne pour 3 logements (article UR3-3.1). Pour le stationnement des véhicules motorisés, en l'absence de norme spécifique dans la zone UR3, les normes de stationnement communes s'appliquent (article DC-3.7.6, tableau page 55) : pour les logements, 1 place par logement (opération < 5 logements) ou 1 place par 35 m² de surface de plancher avec minimum 1 place et maximum 3 places par logement (opération ≥ 5 logements).\",\n        \"valeur_pl\": \"non precisee\",\n        \"valeur_vl\": \"non precisee\",\n        \"page_source\": \"55, 155\"\n      },\n      \"espaces_verts\": {\n        \"regle\": \"Par exception aux dispositions du 2° de l'article DC-3.6.2, les limites résultant des emprises de pleine-terre et du coefficient de biotope par surface ne s'appliquent pas aux constructions et installations des services publics et d'intérêt collectif, aux extensions relevant de la destination artisanat et commerce de détail, aux extensions de moins de 25 m² des autres destinations et sous-destinations, aux seuls bassins des piscines de moins de 40 m², aux rampes d'accessibilité pour les personnes à mobilité réduite, ainsi qu'aux constructions annexes de moins de 25 m² d'emprise au sol et de moins de 3,5 m de haut (article UR3-3.2). Les emprises de pleine-terre sont définies par un pourcentage fixé par les plans d'emprise appliqué à la surface du terrain (article DC-3.6.3).\",\n        \"page_source\": \"44, 45, 155\"\n      },\n      \"destinations\": {\n        \"autorisees\": [\n          \"Logement (sous-destination Habitation)\",\n          \"Exploitation agricole (sous condition : agriculture urbaine compatible avec le fonctionnement du quartier)\",\n          \"Hébergement et Hôtels (sous condition : limité à 25 chambres maximum)\",\n          \"Artisanat et commerce de détail (sous condition : travaux et extensions de constructions existantes à la date d'approbation du PLUM, ne pas nuire au caractère résidentiel)\",\n          \"Activité de service accueillant une clientèle (sous condition : ne pas nuire au caractère résidentiel)\",\n          \"Enseignement, santé et action sociale (sous condition : ne pas nuire au caractère résidentiel)\",\n          \"Salles d'art et de spectacle (sous condition : ne pas nuire au caractère résidentiel)\",\n          \"Bureau (sous condition : nécessaire à la gestion et à la mise aux normes des sites existants à la date d'approbation du PLUM)\"\n        ],\n        \"interdites\": [\n          \"Exploitation forestière\",\n          \"Restauration\",\n          \"Commerce de gros\",\n          \"Cinéma\",\n          \"Autres hébergements touristiques\",\n          \"Lieux de culte\",\n          \"Autres équipements recevant du public\",\n          \"Industrie\",\n          \"Entrepôt\",\n          \"Centre de congrès et d'exposition\",\n          \"Cuisine dédiée à la vente en ligne\",\n          \"Installations classées pour la protection de l'environnement (ICPE) nouvelles\",\n          \"Ouverture et exploitation de carrières\",\n          \"Stationnement des caravanes au-delà de 3 mois\",\n          \"Dépôts divers et aires de stockage d'épaves de véhicules, ferrailles, pneus, etc.\",\n          \"Autres dépôts non couverts (hors compostage domestique)\"\n        ],\n        \"page_source\": \"149, 151\"\n      },\n      \"contraintes_particulieres\": [\n        {\n          \"description\": \"Dans les secteurs UR3-L et UR3-OL : les constructions nouvelles sont interdites au-delà d'une bande de constructibilité de 50 m, à l'exception des équipements d'intérêt collectif, des piscines des constructions existantes, des extensions et annexes des constructions existantes (inférieures à 25 m² d'emprise au sol et 3,5 m de haut, ne conduisant pas à la création d'unité d'habitation nouvelle). Dans les secteurs UR3-TL, la bande de constructibilité est réduite à 25 m (article UR3-1.3).\",\n          \"page_source\": \"150\"\n        },\n        {\n          \"description\": \"Limitation de constructibilité des fonds de parcelles dans le secteur UR3-O : bande de constructibilité de 50 m (UR3-L/UR3-OL) ou 25 m (UR3-TL) à compter de l'alignement, au-delà de laquelle les constructions nouvelles sont interdites sauf exceptions (équipements d'intérêt collectif, piscines existantes, extensions et annexes existantes < 25 m² et < 3,5 m).\",\n          \"page_source\": \"150\"\n        },\n        {\n          \"description\": \"Implantation des constructions les unes par rapport aux autres sur une même propriété dans les secteurs UR3-O et UR3-OL : dans une bande de 25 m à compter de l'alignement, la distance entre deux constructions non contiguës doit être au moins égale à 6 m. Au-delà de cette bande, lorsque l'une des constructions dispose de baies orientées face à l'autre, cette distance est portée à 12 m (article UR3-2.3.2).\",\n          \"page_source\": \"154\"\n        }\n      ]\n    }\n  ],\n  \"alertes\": []\n}",
+  "retry_donnees_insuffisantes": false,
+  "prompt_envoye": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\244500468_analyse_ia_20260619_104755_791331_prompt_envoye.md",
+  "sortie_ia": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\244500468_analyse_ia_20260619_104755_791331_reponse_ia.txt",
+  "json_final": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\244500468_analyse_ia_20260619_104755_791331.json",
+  "nouvelle_ligne_base": {
+    "csv": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\data\\base_resultats_plu.csv",
+    "raison": "analyse_ia",
+    "ligne_base_csv": {
+      "adresse_point": "23 Rue Delaugère, 45100 Orléans, France",
+      "lat": "47.8804460120416",
+      "long": "1.9114511198123978",
+      "date_recherche": "2026-06-19T10:47:55",
+      "date_edition_plu": "2025-10-01",
+      "ville": "Orléans",
+      "code_insee": "45100",
+      "zone": "UR3-O",
+      "lettre_zone_envoyer": "UR3-O",
+      "modele_ia": "openrouter/owl-alpha",
+      "url_pdf": "https://www.geoportail-urbanisme.gouv.fr/api/document/download-by-partition/DU_244500468/file/244500468_reglement_20251001.pdf",
+      "hauteur_maximale.valeur": "non precisee",
+      "hauteur_maximale.condition": "La hauteur maximale des constructions est fixée selon les dispositions de l'article DC-2.6 commun à toutes les zones et complétée par les dispositions du règlement de la zone UR3. Le plan des hauteurs fixe graphiquement la valeur de hauteur maximale. En l'absence de valeur sur le plan des hauteurs, la hauteur maximale n'est pas réglementée par le plan des hauteurs (mode d'emploi, page 5).",
+      "hauteur_maximale.page": "5, 40, 148",
+      "emprise_au_sol.valeur": "non precisee",
+      "emprise_au_sol.condition": "L'emprise au sol des constructions ne peut excéder la valeur résultant du pourcentage figurant au plan des emprises rapporté à la superficie du terrain (article DC-2.2, page 39). Aucune valeur spécifique n'est fixée dans le règlement écrit de la zone UR3.",
+      "emprise_au_sol.page": "39, 148",
+      "implantation_voies.regle": "Les constructions et installations doivent être implantées en recul de 5 m minimum des voies existantes, à modifier ou à créer (article UR3-2.1). Cette règle ne s'applique pas aux éléments de modénature de façades ou toitures limités (attiques, loggia, balcons, garde-corps, reculs et débords ponctuels, lucarnes, cheminées, bandeaux, garde-corps, etc.).",
+      "implantation_voies.page": "152",
+      "implantation_limites.regle": "Dans les secteurs UR3-O et UR3-OL : dans une bande d'implantation de 25 m à compter de l'alignement, les constructions doivent être implantées conformément à l'article UR3-2.2.1 (soit sur une seule limite séparative latérale, soit en retrait de toutes les limites séparatives avec un retrait au moins égal à la moitié de la hauteur, minimum 3 m) et observer un retrait par rapport aux autres limites séparatives au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Au-delà de cette bande de 25 m, les constructions doivent être implantées en retrait d'au moins 6 m de toutes les limites séparatives et observer un retrait au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Sont admises les implantations en limite séparative des constructions édifiées à l'intérieur du profil d'une construction ou d'un mur voisins édifiés sur la même limite séparative. Ne sont pas soumis à ces règles : éléments de modénature, extensions et annexes inférieures à 25 m² d'emprise au sol et 3,5 m de haut.",
+      "implantation_limites.page": "153",
+      "espaces_verts.regle": "Par exception aux dispositions du 2° de l'article DC-3.6.2, les limites résultant des emprises de pleine-terre et du coefficient de biotope par surface ne s'appliquent pas aux constructions et installations des services publics et d'intérêt collectif, aux extensions relevant de la destination artisanat et commerce de détail, aux extensions de moins de 25 m² des autres destinations et sous-destinations, aux seuls bassins des piscines de moins de 40 m², aux rampes d'accessibilité pour les personnes à mobilité réduite, ainsi qu'aux constructions annexes de moins de 25 m² d'emprise au sol et de moins de 3,5 m de haut (article UR3-3.2). Les emprises de pleine-terre sont définies par un pourcentage fixé par les plans d'emprise appliqué à la surface du terrain (article DC-3.6.3).",
+      "espaces_verts.page": "44, 45, 155",
+      "stationnement.valeur_pl": "non precisee",
+      "stationnement.valeur_vl": "non precisee",
+      "stationnement.regle": "Les opérations qui projettent la création de voiries nouvelles (articles DC-4.3, 5°, 6°, 7°) doivent comporter au moins 1 place visiteur aérienne pour 3 logements (article UR3-3.1). Pour le stationnement des véhicules motorisés, en l'absence de norme spécifique dans la zone UR3, les normes de stationnement communes s'appliquent (article DC-3.7.6, tableau page 55) : pour les logements, 1 place par logement (opération < 5 logements) ou 1 place par 35 m² de surface de plancher avec minimum 1 place et maximum 3 places par logement (opération ≥ 5 logements).",
+      "stationnement.page": "55, 155",
+      "destinations.autorisees": "Logement (sous-destination Habitation) | Exploitation agricole (sous condition : agriculture urbaine compatible avec le fonctionnement du quartier) | Hébergement et Hôtels (sous condition : limité à 25 chambres maximum) | Artisanat et commerce de détail (sous condition : travaux et extensions de constructions existantes à la date d'approbation du PLUM, ne pas nuire au caractère résidentiel) | Activité de service accueillant une clientèle (sous condition : ne pas nuire au caractère résidentiel) | Enseignement, santé et action sociale (sous condition : ne pas nuire au caractère résidentiel) | Salles d'art et de spectacle (sous condition : ne pas nuire au caractère résidentiel) | Bureau (sous condition : nécessaire à la gestion et à la mise aux normes des sites existants à la date d'approbation du PLUM)",
+      "destinations.interdites": "Exploitation forestière | Restauration | Commerce de gros | Cinéma | Autres hébergements touristiques | Lieux de culte | Autres équipements recevant du public | Industrie | Entrepôt | Centre de congrès et d'exposition | Cuisine dédiée à la vente en ligne | Installations classées pour la protection de l'environnement (ICPE) nouvelles | Ouverture et exploitation de carrières | Stationnement des caravanes au-delà de 3 mois | Dépôts divers et aires de stockage d'épaves de véhicules, ferrailles, pneus, etc. | Autres dépôts non couverts (hors compostage domestique)",
+      "contrainte_particulieres": "Dans les secteurs UR3-L et UR3-OL : les constructions nouvelles sont interdites au-delà d'une bande de constructibilité de 50 m, à l'exception des équipements d'intérêt collectif, des piscines des constructions existantes, des extensions et annexes des constructions existantes (inférieures à 25 m² d'emprise au sol et 3,5 m de haut, ne conduisant pas à la création d'unité d'habitation nouvelle). Dans les secteurs UR3-TL, la bande de constructibilité est réduite à 25 m (article UR3-1.3). | Limitation de constructibilité des fonds de parcelles dans le secteur UR3-O : bande de constructibilité de 50 m (UR3-L/UR3-OL) ou 25 m (UR3-TL) à compter de l'alignement, au-delà de laquelle les constructions nouvelles sont interdites sauf exceptions (équipements d'intérêt collectif, piscines existantes, extensions et annexes existantes < 25 m² et < 3,5 m). | Implantation des constructions les unes par rapport aux autres sur une même propriété dans les secteurs UR3-O et UR3-OL : dans une bande de 25 m à compter de l'alignement, la distance entre deux constructions non contiguës doit être au moins égale à 6 m. Au-delà de cette bande, lorsque l'une des constructions dispose de baies orientées face à l'autre, cette distance est portée à 12 m (article UR3-2.3.2)."
+    }
+  },
+  "reponse_brute": {
+    "zone": "UR3-O",
+    "zone_effective": "UR3-O",
+    "donnees_insuffisantes": false,
+    "hauteur_maximale": {
+      "valeur": "non precisee",
+      "condition": "La hauteur maximale des constructions est fixée selon les dispositions de l'article DC-2.6 commun à toutes les zones et complétée par les dispositions du règlement de la zone UR3. Le plan des hauteurs fixe graphiquement la valeur de hauteur maximale. En l'absence de valeur sur le plan des hauteurs, la hauteur maximale n'est pas réglementée par le plan des hauteurs (mode d'emploi, page 5).",
+      "page": "5, 40, 148"
+    },
+    "emprise_au_sol": {
+      "valeur": "non precisee",
+      "condition": "L'emprise au sol des constructions ne peut excéder la valeur résultant du pourcentage figurant au plan des emprises rapporté à la superficie du terrain (article DC-2.2, page 39). Aucune valeur spécifique n'est fixée dans le règlement écrit de la zone UR3.",
+      "page": "39, 148"
+    },
+    "implantation_voies": {
+      "regle": "Les constructions et installations doivent être implantées en recul de 5 m minimum des voies existantes, à modifier ou à créer (article UR3-2.1). Cette règle ne s'applique pas aux éléments de modénature de façades ou toitures limités (attiques, loggia, balcons, garde-corps, reculs et débords ponctuels, lucarnes, cheminées, bandeaux, garde-corps, etc.).",
+      "page": "152"
+    },
+    "implantation_limites": {
+      "regle": "Dans les secteurs UR3-O et UR3-OL : dans une bande d'implantation de 25 m à compter de l'alignement, les constructions doivent être implantées conformément à l'article UR3-2.2.1 (soit sur une seule limite séparative latérale, soit en retrait de toutes les limites séparatives avec un retrait au moins égal à la moitié de la hauteur, minimum 3 m) et observer un retrait par rapport aux autres limites séparatives au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Au-delà de cette bande de 25 m, les constructions doivent être implantées en retrait d'au moins 6 m de toutes les limites séparatives et observer un retrait au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Sont admises les implantations en limite séparative des constructions édifiées à l'intérieur du profil d'une construction ou d'un mur voisins édifiés sur la même limite séparative. Ne sont pas soumis à ces règles : éléments de modénature, extensions et annexes inférieures à 25 m² d'emprise au sol et 3,5 m de haut.",
+      "page": "153"
+    },
+    "espaces_verts": {
+      "regle": "Par exception aux dispositions du 2° de l'article DC-3.6.2, les limites résultant des emprises de pleine-terre et du coefficient de biotope par surface ne s'appliquent pas aux constructions et installations des services publics et d'intérêt collectif, aux extensions relevant de la destination artisanat et commerce de détail, aux extensions de moins de 25 m² des autres destinations et sous-destinations, aux seuls bassins des piscines de moins de 40 m², aux rampes d'accessibilité pour les personnes à mobilité réduite, ainsi qu'aux constructions annexes de moins de 25 m² d'emprise au sol et de moins de 3,5 m de haut (article UR3-3.2). Les emprises de pleine-terre sont définies par un pourcentage fixé par les plans d'emprise appliqué à la surface du terrain (article DC-3.6.3).",
+      "page": "44, 45, 155"
+    },
+    "stationnement": {
+      "valeur_pl": "non precisee",
+      "valeur_vl": "non precisee",
+      "regle": "Les opérations qui projettent la création de voiries nouvelles (articles DC-4.3, 5°, 6°, 7°) doivent comporter au moins 1 place visiteur aérienne pour 3 logements (article UR3-3.1). Pour le stationnement des véhicules motorisés, en l'absence de norme spécifique dans la zone UR3, les normes de stationnement communes s'appliquent (article DC-3.7.6, tableau page 55) : pour les logements, 1 place par logement (opération < 5 logements) ou 1 place par 35 m² de surface de plancher avec minimum 1 place et maximum 3 places par logement (opération ≥ 5 logements).",
+      "page": "55, 155"
+    },
+    "destinations": {
+      "autorisees": "Logement (sous-destination Habitation) | Exploitation agricole (sous condition : agriculture urbaine compatible avec le fonctionnement du quartier) | Hébergement et Hôtels (sous condition : limité à 25 chambres maximum) | Artisanat et commerce de détail (sous condition : travaux et extensions de constructions existantes à la date d'approbation du PLUM, ne pas nuire au caractère résidentiel) | Activité de service accueillant une clientèle (sous condition : ne pas nuire au caractère résidentiel) | Enseignement, santé et action sociale (sous condition : ne pas nuire au caractère résidentiel) | Salles d'art et de spectacle (sous condition : ne pas nuire au caractère résidentiel) | Bureau (sous condition : nécessaire à la gestion et à la mise aux normes des sites existants à la date d'approbation du PLUM)",
+      "interdites": "Exploitation forestière | Restauration | Commerce de gros | Cinéma | Autres hébergements touristiques | Lieux de culte | Autres équipements recevant du public | Industrie | Entrepôt | Centre de congrès et d'exposition | Cuisine dédiée à la vente en ligne | Installations classées pour la protection de l'environnement (ICPE) nouvelles | Ouverture et exploitation de carrières | Stationnement des caravanes au-delà de 3 mois | Dépôts divers et aires de stockage d'épaves de véhicules, ferrailles, pneus, etc. | Autres dépôts non couverts (hors compostage domestique)"
+    },
+    "contrainte_particulieres": "Dans les secteurs UR3-L et UR3-OL : les constructions nouvelles sont interdites au-delà d'une bande de constructibilité de 50 m, à l'exception des équipements d'intérêt collectif, des piscines des constructions existantes, des extensions et annexes des constructions existantes (inférieures à 25 m² d'emprise au sol et 3,5 m de haut, ne conduisant pas à la création d'unité d'habitation nouvelle). Dans les secteurs UR3-TL, la bande de constructibilité est réduite à 25 m (article UR3-1.3). | Limitation de constructibilité des fonds de parcelles dans le secteur UR3-O : bande de constructibilité de 50 m (UR3-L/UR3-OL) ou 25 m (UR3-TL) à compter de l'alignement, au-delà de laquelle les constructions nouvelles sont interdites sauf exceptions (équipements d'intérêt collectif, piscines existantes, extensions et annexes existantes < 25 m² et < 3,5 m). | Implantation des constructions les unes par rapport aux autres sur une même propriété dans les secteurs UR3-O et UR3-OL : dans une bande de 25 m à compter de l'alignement, la distance entre deux constructions non contiguës doit être au moins égale à 6 m. Au-delà de cette bande, lorsque l'une des constructions dispose de baies orientées face à l'autre, cette distance est portée à 12 m (article UR3-2.3.2).",
+    "alertes": [],
+    "resultat_ia_detaille": {
+      "fichier": "244500468_reglement_20251001.md",
+      "bloc": 1,
+      "zones_detectees": [
+        {
+          "zone": "UR3-O",
+          "hauteur_maximale": {
+            "valeur": "non precisee",
+            "condition": "La hauteur maximale des constructions est fixée selon les dispositions de l'article DC-2.6 commun à toutes les zones et complétée par les dispositions du règlement de la zone UR3. Le plan des hauteurs fixe graphiquement la valeur de hauteur maximale. En l'absence de valeur sur le plan des hauteurs, la hauteur maximale n'est pas réglementée par le plan des hauteurs (mode d'emploi, page 5).",
+            "page_source": "5, 40, 148"
+          },
+          "emprise_au_sol": {
+            "valeur": "non precisee",
+            "condition": "L'emprise au sol des constructions ne peut excéder la valeur résultant du pourcentage figurant au plan des emprises rapporté à la superficie du terrain (article DC-2.2, page 39). Aucune valeur spécifique n'est fixée dans le règlement écrit de la zone UR3.",
+            "page_source": "39, 148"
+          },
+          "implantation_voies": {
+            "regle": "Les constructions et installations doivent être implantées en recul de 5 m minimum des voies existantes, à modifier ou à créer (article UR3-2.1). Cette règle ne s'applique pas aux éléments de modénature de façades ou toitures limités (attiques, loggia, balcons, garde-corps, reculs et débords ponctuels, lucarnes, cheminées, bandeaux, garde-corps, etc.).",
+            "page_source": "152"
+          },
+          "implantation_limites": {
+            "regle": "Dans les secteurs UR3-O et UR3-OL : dans une bande d'implantation de 25 m à compter de l'alignement, les constructions doivent être implantées conformément à l'article UR3-2.2.1 (soit sur une seule limite séparative latérale, soit en retrait de toutes les limites séparatives avec un retrait au moins égal à la moitié de la hauteur, minimum 3 m) et observer un retrait par rapport aux autres limites séparatives au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Au-delà de cette bande de 25 m, les constructions doivent être implantées en retrait d'au moins 6 m de toutes les limites séparatives et observer un retrait au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Sont admises les implantations en limite séparative des constructions édifiées à l'intérieur du profil d'une construction ou d'un mur voisins édifiés sur la même limite séparative. Ne sont pas soumis à ces règles : éléments de modénature, extensions et annexes inférieures à 25 m² d'emprise au sol et 3,5 m de haut.",
+            "page_source": "153"
+          },
+          "stationnement": {
+            "regle": "Les opérations qui projettent la création de voiries nouvelles (articles DC-4.3, 5°, 6°, 7°) doivent comporter au moins 1 place visiteur aérienne pour 3 logements (article UR3-3.1). Pour le stationnement des véhicules motorisés, en l'absence de norme spécifique dans la zone UR3, les normes de stationnement communes s'appliquent (article DC-3.7.6, tableau page 55) : pour les logements, 1 place par logement (opération < 5 logements) ou 1 place par 35 m² de surface de plancher avec minimum 1 place et maximum 3 places par logement (opération ≥ 5 logements).",
+            "valeur_pl": "non precisee",
+            "valeur_vl": "non precisee",
+            "page_source": "55, 155"
+          },
+          "espaces_verts": {
+            "regle": "Par exception aux dispositions du 2° de l'article DC-3.6.2, les limites résultant des emprises de pleine-terre et du coefficient de biotope par surface ne s'appliquent pas aux constructions et installations des services publics et d'intérêt collectif, aux extensions relevant de la destination artisanat et commerce de détail, aux extensions de moins de 25 m² des autres destinations et sous-destinations, aux seuls bassins des piscines de moins de 40 m², aux rampes d'accessibilité pour les personnes à mobilité réduite, ainsi qu'aux constructions annexes de moins de 25 m² d'emprise au sol et de moins de 3,5 m de haut (article UR3-3.2). Les emprises de pleine-terre sont définies par un pourcentage fixé par les plans d'emprise appliqué à la surface du terrain (article DC-3.6.3).",
+            "page_source": "44, 45, 155"
+          },
+          "destinations": {
+            "autorisees": [
+              "Logement (sous-destination Habitation)",
+              "Exploitation agricole (sous condition : agriculture urbaine compatible avec le fonctionnement du quartier)",
+              "Hébergement et Hôtels (sous condition : limité à 25 chambres maximum)",
+              "Artisanat et commerce de détail (sous condition : travaux et extensions de constructions existantes à la date d'approbation du PLUM, ne pas nuire au caractère résidentiel)",
+              "Activité de service accueillant une clientèle (sous condition : ne pas nuire au caractère résidentiel)",
+              "Enseignement, santé et action sociale (sous condition : ne pas nuire au caractère résidentiel)",
+              "Salles d'art et de spectacle (sous condition : ne pas nuire au caractère résidentiel)",
+              "Bureau (sous condition : nécessaire à la gestion et à la mise aux normes des sites existants à la date d'approbation du PLUM)"
+            ],
+            "interdites": [
+              "Exploitation forestière",
+              "Restauration",
+              "Commerce de gros",
+              "Cinéma",
+              "Autres hébergements touristiques",
+              "Lieux de culte",
+              "Autres équipements recevant du public",
+              "Industrie",
+              "Entrepôt",
+              "Centre de congrès et d'exposition",
+              "Cuisine dédiée à la vente en ligne",
+              "Installations classées pour la protection de l'environnement (ICPE) nouvelles",
+              "Ouverture et exploitation de carrières",
+              "Stationnement des caravanes au-delà de 3 mois",
+              "Dépôts divers et aires de stockage d'épaves de véhicules, ferrailles, pneus, etc.",
+              "Autres dépôts non couverts (hors compostage domestique)"
+            ],
+            "page_source": "149, 151"
+          },
+          "contraintes_particulieres": [
+            {
+              "description": "Dans les secteurs UR3-L et UR3-OL : les constructions nouvelles sont interdites au-delà d'une bande de constructibilité de 50 m, à l'exception des équipements d'intérêt collectif, des piscines des constructions existantes, des extensions et annexes des constructions existantes (inférieures à 25 m² d'emprise au sol et 3,5 m de haut, ne conduisant pas à la création d'unité d'habitation nouvelle). Dans les secteurs UR3-TL, la bande de constructibilité est réduite à 25 m (article UR3-1.3).",
+              "page_source": "150"
+            },
+            {
+              "description": "Limitation de constructibilité des fonds de parcelles dans le secteur UR3-O : bande de constructibilité de 50 m (UR3-L/UR3-OL) ou 25 m (UR3-TL) à compter de l'alignement, au-delà de laquelle les constructions nouvelles sont interdites sauf exceptions (équipements d'intérêt collectif, piscines existantes, extensions et annexes existantes < 25 m² et < 3,5 m).",
+              "page_source": "150"
+            },
+            {
+              "description": "Implantation des constructions les unes par rapport aux autres sur une même propriété dans les secteurs UR3-O et UR3-OL : dans une bande de 25 m à compter de l'alignement, la distance entre deux constructions non contiguës doit être au moins égale à 6 m. Au-delà de cette bande, lorsque l'une des constructions dispose de baies orientées face à l'autre, cette distance est portée à 12 m (article UR3-2.3.2).",
+              "page_source": "154"
+            }
+          ]
+        }
+      ],
+      "alertes": []
+    },
+    "source_resultat": "ia",
+    "modele_ia": "openrouter/owl-alpha",
+    "fournisseur_ia": "openrouter",
+    "ia_envoyee": true,
+    "ville": "Orléans",
+    "adresse_point": "23 Rue Delaugère, 45100 Orléans, France",
+    "latitude": 47.8804460120416,
+    "longitude": 1.9114511198123978,
+    "pdf": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\pdf\\244500468_reglement_20251001.pdf",
+    "archive": "",
+    "markdown_zone": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\markdown\\244500468_reglement_20251001.md",
+    "reponse_brute_texte": "{\n  \"fichier\": \"244500468_reglement_20251001.md\",\n  \"bloc\": 1,\n  \"zones_detectees\": [\n    {\n      \"zone\": \"UR3-O\",\n      \"hauteur_maximale\": {\n        \"valeur\": \"non precisee\",\n        \"condition\": \"La hauteur maximale des constructions est fixée selon les dispositions de l'article DC-2.6 commun à toutes les zones et complétée par les dispositions du règlement de la zone UR3. Le plan des hauteurs fixe graphiquement la valeur de hauteur maximale. En l'absence de valeur sur le plan des hauteurs, la hauteur maximale n'est pas réglementée par le plan des hauteurs (mode d'emploi, page 5).\",\n        \"page_source\": \"5, 40, 148\"\n      },\n      \"emprise_au_sol\": {\n        \"valeur\": \"non precisee\",\n        \"condition\": \"L'emprise au sol des constructions ne peut excéder la valeur résultant du pourcentage figurant au plan des emprises rapporté à la superficie du terrain (article DC-2.2, page 39). Aucune valeur spécifique n'est fixée dans le règlement écrit de la zone UR3.\",\n        \"page_source\": \"39, 148\"\n      },\n      \"implantation_voies\": {\n        \"regle\": \"Les constructions et installations doivent être implantées en recul de 5 m minimum des voies existantes, à modifier ou à créer (article UR3-2.1). Cette règle ne s'applique pas aux éléments de modénature de façades ou toitures limités (attiques, loggia, balcons, garde-corps, reculs et débords ponctuels, lucarnes, cheminées, bandeaux, garde-corps, etc.).\",\n        \"page_source\": \"152\"\n      },\n      \"implantation_limites\": {\n        \"regle\": \"Dans les secteurs UR3-O et UR3-OL : dans une bande d'implantation de 25 m à compter de l'alignement, les constructions doivent être implantées conformément à l'article UR3-2.2.1 (soit sur une seule limite séparative latérale, soit en retrait de toutes les limites séparatives avec un retrait au moins égal à la moitié de la hauteur, minimum 3 m) et observer un retrait par rapport aux autres limites séparatives au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Au-delà de cette bande de 25 m, les constructions doivent être implantées en retrait d'au moins 6 m de toutes les limites séparatives et observer un retrait au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Sont admises les implantations en limite séparative des constructions édifiées à l'intérieur du profil d'une construction ou d'un mur voisins édifiés sur la même limite séparative. Ne sont pas soumis à ces règles : éléments de modénature, extensions et annexes inférieures à 25 m² d'emprise au sol et 3,5 m de haut.\",\n        \"page_source\": \"153\"\n      },\n      \"stationnement\": {\n        \"regle\": \"Les opérations qui projettent la création de voiries nouvelles (articles DC-4.3, 5°, 6°, 7°) doivent comporter au moins 1 place visiteur aérienne pour 3 logements (article UR3-3.1). Pour le stationnement des véhicules motorisés, en l'absence de norme spécifique dans la zone UR3, les normes de stationnement communes s'appliquent (article DC-3.7.6, tableau page 55) : pour les logements, 1 place par logement (opération < 5 logements) ou 1 place par 35 m² de surface de plancher avec minimum 1 place et maximum 3 places par logement (opération ≥ 5 logements).\",\n        \"valeur_pl\": \"non precisee\",\n        \"valeur_vl\": \"non precisee\",\n        \"page_source\": \"55, 155\"\n      },\n      \"espaces_verts\": {\n        \"regle\": \"Par exception aux dispositions du 2° de l'article DC-3.6.2, les limites résultant des emprises de pleine-terre et du coefficient de biotope par surface ne s'appliquent pas aux constructions et installations des services publics et d'intérêt collectif, aux extensions relevant de la destination artisanat et commerce de détail, aux extensions de moins de 25 m² des autres destinations et sous-destinations, aux seuls bassins des piscines de moins de 40 m², aux rampes d'accessibilité pour les personnes à mobilité réduite, ainsi qu'aux constructions annexes de moins de 25 m² d'emprise au sol et de moins de 3,5 m de haut (article UR3-3.2). Les emprises de pleine-terre sont définies par un pourcentage fixé par les plans d'emprise appliqué à la surface du terrain (article DC-3.6.3).\",\n        \"page_source\": \"44, 45, 155\"\n      },\n      \"destinations\": {\n        \"autorisees\": [\n          \"Logement (sous-destination Habitation)\",\n          \"Exploitation agricole (sous condition : agriculture urbaine compatible avec le fonctionnement du quartier)\",\n          \"Hébergement et Hôtels (sous condition : limité à 25 chambres maximum)\",\n          \"Artisanat et commerce de détail (sous condition : travaux et extensions de constructions existantes à la date d'approbation du PLUM, ne pas nuire au caractère résidentiel)\",\n          \"Activité de service accueillant une clientèle (sous condition : ne pas nuire au caractère résidentiel)\",\n          \"Enseignement, santé et action sociale (sous condition : ne pas nuire au caractère résidentiel)\",\n          \"Salles d'art et de spectacle (sous condition : ne pas nuire au caractère résidentiel)\",\n          \"Bureau (sous condition : nécessaire à la gestion et à la mise aux normes des sites existants à la date d'approbation du PLUM)\"\n        ],\n        \"interdites\": [\n          \"Exploitation forestière\",\n          \"Restauration\",\n          \"Commerce de gros\",\n          \"Cinéma\",\n          \"Autres hébergements touristiques\",\n          \"Lieux de culte\",\n          \"Autres équipements recevant du public\",\n          \"Industrie\",\n          \"Entrepôt\",\n          \"Centre de congrès et d'exposition\",\n          \"Cuisine dédiée à la vente en ligne\",\n          \"Installations classées pour la protection de l'environnement (ICPE) nouvelles\",\n          \"Ouverture et exploitation de carrières\",\n          \"Stationnement des caravanes au-delà de 3 mois\",\n          \"Dépôts divers et aires de stockage d'épaves de véhicules, ferrailles, pneus, etc.\",\n          \"Autres dépôts non couverts (hors compostage domestique)\"\n        ],\n        \"page_source\": \"149, 151\"\n      },\n      \"contraintes_particulieres\": [\n        {\n          \"description\": \"Dans les secteurs UR3-L et UR3-OL : les constructions nouvelles sont interdites au-delà d'une bande de constructibilité de 50 m, à l'exception des équipements d'intérêt collectif, des piscines des constructions existantes, des extensions et annexes des constructions existantes (inférieures à 25 m² d'emprise au sol et 3,5 m de haut, ne conduisant pas à la création d'unité d'habitation nouvelle). Dans les secteurs UR3-TL, la bande de constructibilité est réduite à 25 m (article UR3-1.3).\",\n          \"page_source\": \"150\"\n        },\n        {\n          \"description\": \"Limitation de constructibilité des fonds de parcelles dans le secteur UR3-O : bande de constructibilité de 50 m (UR3-L/UR3-OL) ou 25 m (UR3-TL) à compter de l'alignement, au-delà de laquelle les constructions nouvelles sont interdites sauf exceptions (équipements d'intérêt collectif, piscines existantes, extensions et annexes existantes < 25 m² et < 3,5 m).\",\n          \"page_source\": \"150\"\n        },\n        {\n          \"description\": \"Implantation des constructions les unes par rapport aux autres sur une même propriété dans les secteurs UR3-O et UR3-OL : dans une bande de 25 m à compter de l'alignement, la distance entre deux constructions non contiguës doit être au moins égale à 6 m. Au-delà de cette bande, lorsque l'une des constructions dispose de baies orientées face à l'autre, cette distance est portée à 12 m (article UR3-2.3.2).\",\n          \"page_source\": \"154\"\n        }\n      ]\n    }\n  ],\n  \"alertes\": []\n}",
+    "retry_donnees_insuffisantes": false,
+    "prompt_envoye": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\244500468_analyse_ia_20260619_104755_791331_prompt_envoye.md",
+    "sortie_ia": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\244500468_analyse_ia_20260619_104755_791331_reponse_ia.txt",
+    "json_final": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\244500468_analyse_ia_20260619_104755_791331.json",
+    "nouvelle_ligne_base": {
+      "csv": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\data\\base_resultats_plu.csv",
+      "raison": "analyse_ia",
+      "ligne_base_csv": {
+        "adresse_point": "23 Rue Delaugère, 45100 Orléans, France",
+        "lat": "47.8804460120416",
+        "long": "1.9114511198123978",
+        "date_recherche": "2026-06-19T10:47:55",
+        "date_edition_plu": "2025-10-01",
+        "ville": "Orléans",
+        "code_insee": "45100",
+        "zone": "UR3-O",
+        "lettre_zone_envoyer": "UR3-O",
+        "modele_ia": "openrouter/owl-alpha",
+        "url_pdf": "https://www.geoportail-urbanisme.gouv.fr/api/document/download-by-partition/DU_244500468/file/244500468_reglement_20251001.pdf",
+        "hauteur_maximale.valeur": "non precisee",
+        "hauteur_maximale.condition": "La hauteur maximale des constructions est fixée selon les dispositions de l'article DC-2.6 commun à toutes les zones et complétée par les dispositions du règlement de la zone UR3. Le plan des hauteurs fixe graphiquement la valeur de hauteur maximale. En l'absence de valeur sur le plan des hauteurs, la hauteur maximale n'est pas réglementée par le plan des hauteurs (mode d'emploi, page 5).",
+        "hauteur_maximale.page": "5, 40, 148",
+        "emprise_au_sol.valeur": "non precisee",
+        "emprise_au_sol.condition": "L'emprise au sol des constructions ne peut excéder la valeur résultant du pourcentage figurant au plan des emprises rapporté à la superficie du terrain (article DC-2.2, page 39). Aucune valeur spécifique n'est fixée dans le règlement écrit de la zone UR3.",
+        "emprise_au_sol.page": "39, 148",
+        "implantation_voies.regle": "Les constructions et installations doivent être implantées en recul de 5 m minimum des voies existantes, à modifier ou à créer (article UR3-2.1). Cette règle ne s'applique pas aux éléments de modénature de façades ou toitures limités (attiques, loggia, balcons, garde-corps, reculs et débords ponctuels, lucarnes, cheminées, bandeaux, garde-corps, etc.).",
+        "implantation_voies.page": "152",
+        "implantation_limites.regle": "Dans les secteurs UR3-O et UR3-OL : dans une bande d'implantation de 25 m à compter de l'alignement, les constructions doivent être implantées conformément à l'article UR3-2.2.1 (soit sur une seule limite séparative latérale, soit en retrait de toutes les limites séparatives avec un retrait au moins égal à la moitié de la hauteur, minimum 3 m) et observer un retrait par rapport aux autres limites séparatives au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Au-delà de cette bande de 25 m, les constructions doivent être implantées en retrait d'au moins 6 m de toutes les limites séparatives et observer un retrait au moins égal à la moitié de la hauteur avec un minimum de 6 m (L=H/2 mini 6 m). Sont admises les implantations en limite séparative des constructions édifiées à l'intérieur du profil d'une construction ou d'un mur voisins édifiés sur la même limite séparative. Ne sont pas soumis à ces règles : éléments de modénature, extensions et annexes inférieures à 25 m² d'emprise au sol et 3,5 m de haut.",
+        "implantation_limites.page": "153",
+        "espaces_verts.regle": "Par exception aux dispositions du 2° de l'article DC-3.6.2, les limites résultant des emprises de pleine-terre et du coefficient de biotope par surface ne s'appliquent pas aux constructions et installations des services publics et d'intérêt collectif, aux extensions relevant de la destination artisanat et commerce de détail, aux extensions de moins de 25 m² des autres destinations et sous-destinations, aux seuls bassins des piscines de moins de 40 m², aux rampes d'accessibilité pour les personnes à mobilité réduite, ainsi qu'aux constructions annexes de moins de 25 m² d'emprise au sol et de moins de 3,5 m de haut (article UR3-3.2). Les emprises de pleine-terre sont définies par un pourcentage fixé par les plans d'emprise appliqué à la surface du terrain (article DC-3.6.3).",
+        "espaces_verts.page": "44, 45, 155",
+        "stationnement.valeur_pl": "non precisee",
+        "stationnement.valeur_vl": "non precisee",
+        "stationnement.regle": "Les opérations qui projettent la création de voiries nouvelles (articles DC-4.3, 5°, 6°, 7°) doivent comporter au moins 1 place visiteur aérienne pour 3 logements (article UR3-3.1). Pour le stationnement des véhicules motorisés, en l'absence de norme spécifique dans la zone UR3, les normes de stationnement communes s'appliquent (article DC-3.7.6, tableau page 55) : pour les logements, 1 place par logement (opération < 5 logements) ou 1 place par 35 m² de surface de plancher avec minimum 1 place et maximum 3 places par logement (opération ≥ 5 logements).",
+        "stationnement.page": "55, 155",
+        "destinations.autorisees": "Logement (sous-destination Habitation) | Exploitation agricole (sous condition : agriculture urbaine compatible avec le fonctionnement du quartier) | Hébergement et Hôtels (sous condition : limité à 25 chambres maximum) | Artisanat et commerce de détail (sous condition : travaux et extensions de constructions existantes à la date d'approbation du PLUM, ne pas nuire au caractère résidentiel) | Activité de service accueillant une clientèle (sous condition : ne pas nuire au caractère résidentiel) | Enseignement, santé et action sociale (sous condition : ne pas nuire au caractère résidentiel) | Salles d'art et de spectacle (sous condition : ne pas nuire au caractère résidentiel) | Bureau (sous condition : nécessaire à la gestion et à la mise aux normes des sites existants à la date d'approbation du PLUM)",
+        "destinations.interdites": "Exploitation forestière | Restauration | Commerce de gros | Cinéma | Autres hébergements touristiques | Lieux de culte | Autres équipements recevant du public | Industrie | Entrepôt | Centre de congrès et d'exposition | Cuisine dédiée à la vente en ligne | Installations classées pour la protection de l'environnement (ICPE) nouvelles | Ouverture et exploitation de carrières | Stationnement des caravanes au-delà de 3 mois | Dépôts divers et aires de stockage d'épaves de véhicules, ferrailles, pneus, etc. | Autres dépôts non couverts (hors compostage domestique)",
+        "contrainte_particulieres": "Dans les secteurs UR3-L et UR3-OL : les constructions nouvelles sont interdites au-delà d'une bande de constructibilité de 50 m, à l'exception des équipements d'intérêt collectif, des piscines des constructions existantes, des extensions et annexes des constructions existantes (inférieures à 25 m² d'emprise au sol et 3,5 m de haut, ne conduisant pas à la création d'unité d'habitation nouvelle). Dans les secteurs UR3-TL, la bande de constructibilité est réduite à 25 m (article UR3-1.3). | Limitation de constructibilité des fonds de parcelles dans le secteur UR3-O : bande de constructibilité de 50 m (UR3-L/UR3-OL) ou 25 m (UR3-TL) à compter de l'alignement, au-delà de laquelle les constructions nouvelles sont interdites sauf exceptions (équipements d'intérêt collectif, piscines existantes, extensions et annexes existantes < 25 m² et < 3,5 m). | Implantation des constructions les unes par rapport aux autres sur une même propriété dans les secteurs UR3-O et UR3-OL : dans une bande de 25 m à compter de l'alignement, la distance entre deux constructions non contiguës doit être au moins égale à 6 m. Au-delà de cette bande, lorsque l'une des constructions dispose de baies orientées face à l'autre, cette distance est portée à 12 m (article UR3-2.3.2)."
+      }
+    }
+  }
+}

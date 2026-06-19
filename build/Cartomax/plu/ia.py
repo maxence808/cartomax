@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import os
 import re
 from pathlib import Path
 
@@ -14,8 +13,8 @@ except ImportError:
 
 
 DOSSIER_OUTPUT = RACINE / "tmp" / "output_ai"
-MODELE_OPENROUTER = os.getenv("OPENROUTER_MODEL", "openrouter/owl-alpha")
-MODELE_AISTUDIO = os.getenv("AISTUDIO_MODEL", "gemini-2.5-flash")
+MODELE_OPENROUTER = "openrouter/owl-alpha"
+MODELE_AISTUDIO = "gemini-2.5-flash"
 OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 AISTUDIO_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{modele}:generateContent"
 
@@ -78,10 +77,12 @@ class ErreurReponseIa(RuntimeError):
         self.reponse = reponse
 
 
-def charger_env_local() -> None:
+def charger_env_local() -> dict[str, str]:
     env_path = RACINE / ".env"
     if not env_path.exists():
-        return
+        return {}
+
+    valeurs = {}
     for ligne in env_path.read_text(encoding="utf-8", errors="replace").splitlines():
         ligne = ligne.strip()
         if not ligne or ligne.startswith("#") or "=" not in ligne:
@@ -89,20 +90,23 @@ def charger_env_local() -> None:
         cle, valeur = ligne.split("=", 1)
         cle = cle.strip()
         valeur = valeur.strip().strip('"').strip("'")
-        os.environ.setdefault(cle, valeur)
+        if cle:
+            valeurs[cle] = valeur
+    return valeurs
 
 
 def _env_premier(*cles: str) -> str:
-    charger_env_local()
+    valeurs_env = charger_env_local()
     for cle in cles:
-        valeur = os.environ.get(cle, "").strip()
+        valeur = valeurs_env.get(cle, "").strip()
         if valeur:
             return valeur
     return ""
 
 
 def creer_client_ia(fournisseur: str | None = None) -> dict:
-    fournisseur = (fournisseur or os.environ.get("PLU_IA_PROVIDER") or "openrouter").strip().lower()
+    valeurs_env = charger_env_local()
+    fournisseur = (fournisseur or valeurs_env.get("PLU_IA_PROVIDER") or "openrouter").strip().lower()
     alias = {
         "openrouter": "openrouter",
         "or": "openrouter",
@@ -124,7 +128,7 @@ def creer_client_ia(fournisseur: str | None = None) -> dict:
         return {
             "fournisseur": "openrouter",
             "api_key": api_key,
-            "modele": os.environ.get("OPENROUTER_MODEL", MODELE_OPENROUTER),
+            "modele": valeurs_env.get("OPENROUTER_MODEL", MODELE_OPENROUTER),
         }
 
     if fournisseur == "aistudio":
@@ -134,7 +138,10 @@ def creer_client_ia(fournisseur: str | None = None) -> dict:
         return {
             "fournisseur": "aistudio",
             "api_key": api_key,
-            "modele": os.environ.get("AISTUDIO_MODEL", os.environ.get("GEMINI_MODEL", MODELE_AISTUDIO)),
+            "modele": valeurs_env.get(
+                "AISTUDIO_MODEL",
+                valeurs_env.get("GEMINI_MODEL", MODELE_AISTUDIO),
+            ),
         }
 
     raise ErreurConfigurationIa(f"Fournisseur IA inconnu: {fournisseur}")

@@ -1,0 +1,348 @@
+{
+  "zone": "UD",
+  "zone_effective": "UD",
+  "donnees_insuffisantes": false,
+  "hauteur_maximale": {
+    "valeur": "8 mètres",
+    "condition": "Ouvrages techniques, cheminées et autres superstructures mineures et discontinues exclus. Non applicable à l'aménagement et à l'extension de bâtiments existants à la date d'approbation du PLU dépassant cette hauteur (la hauteur initiale ne doit pas être augmentée).",
+    "page": "42"
+  },
+  "emprise_au_sol": {
+    "valeur": "40 %",
+    "condition": "Emprise au sol des constructions (piscine et annexes comprises) limitée à 40 % de la superficie du terrain.",
+    "page": "42"
+  },
+  "implantation_voies": {
+    "regle": "Recul minimum de 5 mètres par rapport à l'alignement actuel ou futur des voies publiques traversantes et de 3 mètres pour les voies en impasse. Sauf pour les constructions de faible importance (intérêt général) et l'extension de bâtiments existants (sous conditions).",
+    "page": "41"
+  },
+  "implantation_limites": {
+    "regle": "Implantation sur au moins une limite séparative OU en recul d'une distance au moins égale à la demi-hauteur de la construction avec un minimum de 3 mètres. Sauf pour l'extension de bâtiments existants et les bassins de piscines (1 mètre).",
+    "page": "42"
+  },
+  "espaces_verts": {
+    "regle": "Les parcelles doivent comporter au moins 40% d'espaces végétalisés. Les surfaces non construites doivent être plantées à raison d'au moins un arbre par 300 m² de terrain. Les parcs de stationnement de plus de 4 places doivent être plantés d'au moins un arbre de haute tige pour 10 places.",
+    "page": "46"
+  },
+  "stationnement": {
+    "valeur_pl": "non precisee",
+    "valeur_vl": "non precisee",
+    "regle": "2 places de stationnement minimum par logement. 1 place par logement pour les logements locatifs aidés. 1 place par tranche de 50 m² pour commerces/artisanat/bureaux. 1 place par chambre (hôtels). A ces places s'ajoutent les aires pour la manœuvre et le stationnement des autocars et des véhicules de livraison.",
+    "page": "44-45"
+  },
+  "destinations": {
+    "autorisees": "Habitat individuel (vocation dominante) | Artisanat (sous condition de non-nuisance : odeurs, bruit, poussières) | Installations classées soumises à déclaration (si liées à commerce, services ou artisanat et compatibles avec le voisinage) | Constructions nécessaires à l'exploitation et à la gestion des réseaux et des services publics",
+    "interdites": "Exploitation agricole ou forestière | Industrie | Entrepôts commerciaux non liés à une activité commerciale attenante | Carrières et exploitation du sous-sol | Camping, caravaning, mobil homes | Dépôts sauvages de ferrailles, matériaux, déchets, véhicules, combustibles | Parcs d'attraction ouverts au public | Sports ou loisirs motorisés"
+  },
+  "contrainte_particulieres": "Secteur UDb : toute construction comportant un sous-sol est interdite. | Secteur UDa : la surface et la nature du sol doivent permettre la mise en place d'un dispositif d'assainissement non collectif conforme (filière autonome). | Risques technologiques : impacté par le secteur RT2 (dépôt pétrolier, aléa faible) et les zones PL1/PL2 (canalisation SPMR). Application des articles R 111-2 du code de l'urbanisme. | Risques d'inondation : impacté par des secteurs à risques de ruissellement et de remontée de nappe phréatique (La Couronne – Bos codoyer). Interdiction des sous-sols et surélévation des planchers de 0,30 m dans les secteurs RI1 et RI2. | Gestion des eaux pluviales : obligation de dispositifs d'infiltration et/ou de stockage. Les eaux pluviales polluées par les activités humaines doivent être traitées avant rejet. | Stockage des déchets : obligation de prévoir des systèmes de stockage adaptés à la nature et à l'importance de la construction avec aires de manœuvre suffisantes.",
+  "alertes": [],
+  "resultat_ia_detaille": {
+    "fichier": "26252_reglement_20191118.md",
+    "bloc": 1,
+    "zones_detectees": [
+      {
+        "zone": "UD",
+        "hauteur_maximale": {
+          "valeur": "8 mètres",
+          "condition": "Ouvrages techniques, cheminées et autres superstructures mineures et discontinues exclus. Non applicable à l'aménagement et à l'extension de bâtiments existants à la date d'approbation du PLU dépassant cette hauteur (la hauteur initiale ne doit pas être augmentée).",
+          "page_source": "42"
+        },
+        "emprise_au_sol": {
+          "valeur": "40 %",
+          "condition": "Emprise au sol des constructions (piscine et annexes comprises) limitée à 40 % de la superficie du terrain.",
+          "page_source": "42"
+        },
+        "implantation_voies": {
+          "regle": "Recul minimum de 5 mètres par rapport à l'alignement actuel ou futur des voies publiques traversantes et de 3 mètres pour les voies en impasse. Sauf pour les constructions de faible importance (intérêt général) et l'extension de bâtiments existants (sous conditions).",
+          "page_source": "41"
+        },
+        "implantation_limites": {
+          "regle": "Implantation sur au moins une limite séparative OU en recul d'une distance au moins égale à la demi-hauteur de la construction avec un minimum de 3 mètres. Sauf pour l'extension de bâtiments existants et les bassins de piscines (1 mètre).",
+          "page_source": "42"
+        },
+        "stationnement": {
+          "regle": "2 places de stationnement minimum par logement. 1 place par logement pour les logements locatifs aidés. 1 place par tranche de 50 m² pour commerces/artisanat/bureaux. 1 place par chambre (hôtels). A ces places s'ajoutent les aires pour la manœuvre et le stationnement des autocars et des véhicules de livraison.",
+          "valeur_pl": "non precisee",
+          "valeur_vl": "non precisee",
+          "page_source": "44-45"
+        },
+        "espaces_verts": {
+          "regle": "Les parcelles doivent comporter au moins 40% d'espaces végétalisés. Les surfaces non construites doivent être plantées à raison d'au moins un arbre par 300 m² de terrain. Les parcs de stationnement de plus de 4 places doivent être plantés d'au moins un arbre de haute tige pour 10 places.",
+          "page_source": "46"
+        },
+        "destinations": {
+          "autorisees": [
+            "Habitat individuel (vocation dominante)",
+            "Artisanat (sous condition de non-nuisance : odeurs, bruit, poussières)",
+            "Installations classées soumises à déclaration (si liées à commerce, services ou artisanat et compatibles avec le voisinage)",
+            "Constructions nécessaires à l'exploitation et à la gestion des réseaux et des services publics"
+          ],
+          "interdites": [
+            "Exploitation agricole ou forestière",
+            "Industrie",
+            "Entrepôts commerciaux non liés à une activité commerciale attenante",
+            "Carrières et exploitation du sous-sol",
+            "Camping, caravaning, mobil homes",
+            "Dépôts sauvages de ferrailles, matériaux, déchets, véhicules, combustibles",
+            "Parcs d'attraction ouverts au public",
+            "Sports ou loisirs motorisés"
+          ],
+          "page_source": "37-38"
+        },
+        "contraintes_particulieres": [
+          {
+            "description": "Secteur UDb : toute construction comportant un sous-sol est interdite.",
+            "page_source": "37"
+          },
+          {
+            "description": "Secteur UDa : la surface et la nature du sol doivent permettre la mise en place d'un dispositif d'assainissement non collectif conforme (filière autonome).",
+            "page_source": "40"
+          },
+          {
+            "description": "Risques technologiques : impacté par le secteur RT2 (dépôt pétrolier, aléa faible) et les zones PL1/PL2 (canalisation SPMR). Application des articles R 111-2 du code de l'urbanisme.",
+            "page_source": "36"
+          },
+          {
+            "description": "Risques d'inondation : impacté par des secteurs à risques de ruissellement et de remontée de nappe phréatique (La Couronne – Bos codoyer). Interdiction des sous-sols et surélévation des planchers de 0,30 m dans les secteurs RI1 et RI2.",
+            "page_source": "36, 10"
+          },
+          {
+            "description": "Gestion des eaux pluviales : obligation de dispositifs d'infiltration et/ou de stockage. Les eaux pluviales polluées par les activités humaines doivent être traitées avant rejet.",
+            "page_source": "40"
+          },
+          {
+            "description": "Stockage des déchets : obligation de prévoir des systèmes de stockage adaptés à la nature et à l'importance de la construction avec aires de manœuvre suffisantes.",
+            "page_source": "41"
+          }
+        ]
+      }
+    ],
+    "alertes": []
+  },
+  "source_resultat": "ia",
+  "modele_ia": "openrouter/owl-alpha",
+  "fournisseur_ia": "openrouter",
+  "ia_envoyee": true,
+  "ville": "Portes-lès-Valence",
+  "adresse_point": "44 Rue Marx Dormoy, 26800 Portes-lès-Valence, France",
+  "latitude": 44.878668417725834,
+  "longitude": 4.8866136179265425,
+  "pdf": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\pdf\\26252_reglement_20191118.pdf",
+  "archive": "",
+  "markdown_zone": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\markdown\\26252_reglement_20191118.md",
+  "reponse_brute_texte": "{\n  \"fichier\": \"26252_reglement_20191118.md\",\n  \"bloc\": 1,\n  \"zones_detectees\": [\n    {\n      \"zone\": \"UD\",\n      \"hauteur_maximale\": {\n        \"valeur\": \"8 mètres\",\n        \"condition\": \"Ouvrages techniques, cheminées et autres superstructures mineures et discontinues exclus. Non applicable à l'aménagement et à l'extension de bâtiments existants à la date d'approbation du PLU dépassant cette hauteur (la hauteur initiale ne doit pas être augmentée).\",\n        \"page_source\": \"42\"\n      },\n      \"emprise_au_sol\": {\n        \"valeur\": \"40 %\",\n        \"condition\": \"Emprise au sol des constructions (piscine et annexes comprises) limitée à 40 % de la superficie du terrain.\",\n        \"page_source\": \"42\"\n      },\n      \"implantation_voies\": {\n        \"regle\": \"Recul minimum de 5 mètres par rapport à l'alignement actuel ou futur des voies publiques traversantes et de 3 mètres pour les voies en impasse. Sauf pour les constructions de faible importance (intérêt général) et l'extension de bâtiments existants (sous conditions).\",\n        \"page_source\": \"41\"\n      },\n      \"implantation_limites\": {\n        \"regle\": \"Implantation sur au moins une limite séparative OU en recul d'une distance au moins égale à la demi-hauteur de la construction avec un minimum de 3 mètres. Sauf pour l'extension de bâtiments existants et les bassins de piscines (1 mètre).\",\n        \"page_source\": \"42\"\n      },\n      \"stationnement\": {\n        \"regle\": \"2 places de stationnement minimum par logement. 1 place par logement pour les logements locatifs aidés. 1 place par tranche de 50 m² pour commerces/artisanat/bureaux. 1 place par chambre (hôtels). A ces places s'ajoutent les aires pour la manœuvre et le stationnement des autocars et des véhicules de livraison.\",\n        \"valeur_pl\": \"non precisee\",\n        \"valeur_vl\": \"non precisee\",\n        \"page_source\": \"44-45\"\n      },\n      \"espaces_verts\": {\n        \"regle\": \"Les parcelles doivent comporter au moins 40% d'espaces végétalisés. Les surfaces non construites doivent être plantées à raison d'au moins un arbre par 300 m² de terrain. Les parcs de stationnement de plus de 4 places doivent être plantés d'au moins un arbre de haute tige pour 10 places.\",\n        \"page_source\": \"46\"\n      },\n      \"destinations\": {\n        \"autorisees\": [\n          \"Habitat individuel (vocation dominante)\",\n          \"Artisanat (sous condition de non-nuisance : odeurs, bruit, poussières)\",\n          \"Installations classées soumises à déclaration (si liées à commerce, services ou artisanat et compatibles avec le voisinage)\",\n          \"Constructions nécessaires à l'exploitation et à la gestion des réseaux et des services publics\"\n        ],\n        \"interdites\": [\n          \"Exploitation agricole ou forestière\",\n          \"Industrie\",\n          \"Entrepôts commerciaux non liés à une activité commerciale attenante\",\n          \"Carrières et exploitation du sous-sol\",\n          \"Camping, caravaning, mobil homes\",\n          \"Dépôts sauvages de ferrailles, matériaux, déchets, véhicules, combustibles\",\n          \"Parcs d'attraction ouverts au public\",\n          \"Sports ou loisirs motorisés\"\n        ],\n        \"page_source\": \"37-38\"\n      },\n      \"contraintes_particulieres\": [\n        {\n          \"description\": \"Secteur UDb : toute construction comportant un sous-sol est interdite.\",\n          \"page_source\": \"37\"\n        },\n        {\n          \"description\": \"Secteur UDa : la surface et la nature du sol doivent permettre la mise en place d'un dispositif d'assainissement non collectif conforme (filière autonome).\",\n          \"page_source\": \"40\"\n        },\n        {\n          \"description\": \"Risques technologiques : impacté par le secteur RT2 (dépôt pétrolier, aléa faible) et les zones PL1/PL2 (canalisation SPMR). Application des articles R 111-2 du code de l'urbanisme.\",\n          \"page_source\": \"36\"\n        },\n        {\n          \"description\": \"Risques d'inondation : impacté par des secteurs à risques de ruissellement et de remontée de nappe phréatique (La Couronne – Bos codoyer). Interdiction des sous-sols et surélévation des planchers de 0,30 m dans les secteurs RI1 et RI2.\",\n          \"page_source\": \"36, 10\"\n        },\n        {\n          \"description\": \"Gestion des eaux pluviales : obligation de dispositifs d'infiltration et/ou de stockage. Les eaux pluviales polluées par les activités humaines doivent être traitées avant rejet.\",\n          \"page_source\": \"40\"\n        },\n        {\n          \"description\": \"Stockage des déchets : obligation de prévoir des systèmes de stockage adaptés à la nature et à l'importance de la construction avec aires de manœuvre suffisantes.\",\n          \"page_source\": \"41\"\n        }\n      ]\n    }\n  ],\n  \"alertes\": []\n}",
+  "retry_donnees_insuffisantes": false,
+  "prompt_envoye": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\26252_analyse_ia_20260618_181039_448856_prompt_envoye.md",
+  "sortie_ia": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\26252_analyse_ia_20260618_181039_448856_reponse_ia.txt",
+  "json_final": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\26252_analyse_ia_20260618_181039_448856.json",
+  "nouvelle_ligne_base": {
+    "csv": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\data\\base_resultats_plu.csv",
+    "raison": "analyse_ia",
+    "ligne_base_csv": {
+      "adresse_point": "44 Rue Marx Dormoy, 26800 Portes-lès-Valence, France",
+      "lat": "44.878668417725834",
+      "long": "4.8866136179265425",
+      "date_recherche": "2026-06-18T18:10:39",
+      "date_edition_plu": "2019-11-18",
+      "ville": "Portes-lès-Valence",
+      "code_insee": "26800",
+      "zone": "UD",
+      "lettre_zone_envoyer": "UD",
+      "modele_ia": "openrouter/owl-alpha",
+      "url_pdf": "https://www.geoportail-urbanisme.gouv.fr/api/document/eb95d0495eaebac13955c254559bcdb2/files/26252_reglement_20191118.pdf",
+      "hauteur_maximale.valeur": "8 mètres",
+      "hauteur_maximale.condition": "Ouvrages techniques, cheminées et autres superstructures mineures et discontinues exclus. Non applicable à l'aménagement et à l'extension de bâtiments existants à la date d'approbation du PLU dépassant cette hauteur (la hauteur initiale ne doit pas être augmentée).",
+      "hauteur_maximale.page": "42",
+      "emprise_au_sol.valeur": "40 %",
+      "emprise_au_sol.condition": "Emprise au sol des constructions (piscine et annexes comprises) limitée à 40 % de la superficie du terrain.",
+      "emprise_au_sol.page": "42",
+      "implantation_voies.regle": "Recul minimum de 5 mètres par rapport à l'alignement actuel ou futur des voies publiques traversantes et de 3 mètres pour les voies en impasse. Sauf pour les constructions de faible importance (intérêt général) et l'extension de bâtiments existants (sous conditions).",
+      "implantation_voies.page": "41",
+      "implantation_limites.regle": "Implantation sur au moins une limite séparative OU en recul d'une distance au moins égale à la demi-hauteur de la construction avec un minimum de 3 mètres. Sauf pour l'extension de bâtiments existants et les bassins de piscines (1 mètre).",
+      "implantation_limites.page": "42",
+      "espaces_verts.regle": "Les parcelles doivent comporter au moins 40% d'espaces végétalisés. Les surfaces non construites doivent être plantées à raison d'au moins un arbre par 300 m² de terrain. Les parcs de stationnement de plus de 4 places doivent être plantés d'au moins un arbre de haute tige pour 10 places.",
+      "espaces_verts.page": "46",
+      "stationnement.valeur_pl": "non precisee",
+      "stationnement.valeur_vl": "non precisee",
+      "stationnement.regle": "2 places de stationnement minimum par logement. 1 place par logement pour les logements locatifs aidés. 1 place par tranche de 50 m² pour commerces/artisanat/bureaux. 1 place par chambre (hôtels). A ces places s'ajoutent les aires pour la manœuvre et le stationnement des autocars et des véhicules de livraison.",
+      "stationnement.page": "44-45",
+      "destinations.autorisees": "Habitat individuel (vocation dominante) | Artisanat (sous condition de non-nuisance : odeurs, bruit, poussières) | Installations classées soumises à déclaration (si liées à commerce, services ou artisanat et compatibles avec le voisinage) | Constructions nécessaires à l'exploitation et à la gestion des réseaux et des services publics",
+      "destinations.interdites": "Exploitation agricole ou forestière | Industrie | Entrepôts commerciaux non liés à une activité commerciale attenante | Carrières et exploitation du sous-sol | Camping, caravaning, mobil homes | Dépôts sauvages de ferrailles, matériaux, déchets, véhicules, combustibles | Parcs d'attraction ouverts au public | Sports ou loisirs motorisés",
+      "contrainte_particulieres": "Secteur UDb : toute construction comportant un sous-sol est interdite. | Secteur UDa : la surface et la nature du sol doivent permettre la mise en place d'un dispositif d'assainissement non collectif conforme (filière autonome). | Risques technologiques : impacté par le secteur RT2 (dépôt pétrolier, aléa faible) et les zones PL1/PL2 (canalisation SPMR). Application des articles R 111-2 du code de l'urbanisme. | Risques d'inondation : impacté par des secteurs à risques de ruissellement et de remontée de nappe phréatique (La Couronne – Bos codoyer). Interdiction des sous-sols et surélévation des planchers de 0,30 m dans les secteurs RI1 et RI2. | Gestion des eaux pluviales : obligation de dispositifs d'infiltration et/ou de stockage. Les eaux pluviales polluées par les activités humaines doivent être traitées avant rejet. | Stockage des déchets : obligation de prévoir des systèmes de stockage adaptés à la nature et à l'importance de la construction avec aires de manœuvre suffisantes."
+    }
+  },
+  "reponse_brute": {
+    "zone": "UD",
+    "zone_effective": "UD",
+    "donnees_insuffisantes": false,
+    "hauteur_maximale": {
+      "valeur": "8 mètres",
+      "condition": "Ouvrages techniques, cheminées et autres superstructures mineures et discontinues exclus. Non applicable à l'aménagement et à l'extension de bâtiments existants à la date d'approbation du PLU dépassant cette hauteur (la hauteur initiale ne doit pas être augmentée).",
+      "page": "42"
+    },
+    "emprise_au_sol": {
+      "valeur": "40 %",
+      "condition": "Emprise au sol des constructions (piscine et annexes comprises) limitée à 40 % de la superficie du terrain.",
+      "page": "42"
+    },
+    "implantation_voies": {
+      "regle": "Recul minimum de 5 mètres par rapport à l'alignement actuel ou futur des voies publiques traversantes et de 3 mètres pour les voies en impasse. Sauf pour les constructions de faible importance (intérêt général) et l'extension de bâtiments existants (sous conditions).",
+      "page": "41"
+    },
+    "implantation_limites": {
+      "regle": "Implantation sur au moins une limite séparative OU en recul d'une distance au moins égale à la demi-hauteur de la construction avec un minimum de 3 mètres. Sauf pour l'extension de bâtiments existants et les bassins de piscines (1 mètre).",
+      "page": "42"
+    },
+    "espaces_verts": {
+      "regle": "Les parcelles doivent comporter au moins 40% d'espaces végétalisés. Les surfaces non construites doivent être plantées à raison d'au moins un arbre par 300 m² de terrain. Les parcs de stationnement de plus de 4 places doivent être plantés d'au moins un arbre de haute tige pour 10 places.",
+      "page": "46"
+    },
+    "stationnement": {
+      "valeur_pl": "non precisee",
+      "valeur_vl": "non precisee",
+      "regle": "2 places de stationnement minimum par logement. 1 place par logement pour les logements locatifs aidés. 1 place par tranche de 50 m² pour commerces/artisanat/bureaux. 1 place par chambre (hôtels). A ces places s'ajoutent les aires pour la manœuvre et le stationnement des autocars et des véhicules de livraison.",
+      "page": "44-45"
+    },
+    "destinations": {
+      "autorisees": "Habitat individuel (vocation dominante) | Artisanat (sous condition de non-nuisance : odeurs, bruit, poussières) | Installations classées soumises à déclaration (si liées à commerce, services ou artisanat et compatibles avec le voisinage) | Constructions nécessaires à l'exploitation et à la gestion des réseaux et des services publics",
+      "interdites": "Exploitation agricole ou forestière | Industrie | Entrepôts commerciaux non liés à une activité commerciale attenante | Carrières et exploitation du sous-sol | Camping, caravaning, mobil homes | Dépôts sauvages de ferrailles, matériaux, déchets, véhicules, combustibles | Parcs d'attraction ouverts au public | Sports ou loisirs motorisés"
+    },
+    "contrainte_particulieres": "Secteur UDb : toute construction comportant un sous-sol est interdite. | Secteur UDa : la surface et la nature du sol doivent permettre la mise en place d'un dispositif d'assainissement non collectif conforme (filière autonome). | Risques technologiques : impacté par le secteur RT2 (dépôt pétrolier, aléa faible) et les zones PL1/PL2 (canalisation SPMR). Application des articles R 111-2 du code de l'urbanisme. | Risques d'inondation : impacté par des secteurs à risques de ruissellement et de remontée de nappe phréatique (La Couronne – Bos codoyer). Interdiction des sous-sols et surélévation des planchers de 0,30 m dans les secteurs RI1 et RI2. | Gestion des eaux pluviales : obligation de dispositifs d'infiltration et/ou de stockage. Les eaux pluviales polluées par les activités humaines doivent être traitées avant rejet. | Stockage des déchets : obligation de prévoir des systèmes de stockage adaptés à la nature et à l'importance de la construction avec aires de manœuvre suffisantes.",
+    "alertes": [],
+    "resultat_ia_detaille": {
+      "fichier": "26252_reglement_20191118.md",
+      "bloc": 1,
+      "zones_detectees": [
+        {
+          "zone": "UD",
+          "hauteur_maximale": {
+            "valeur": "8 mètres",
+            "condition": "Ouvrages techniques, cheminées et autres superstructures mineures et discontinues exclus. Non applicable à l'aménagement et à l'extension de bâtiments existants à la date d'approbation du PLU dépassant cette hauteur (la hauteur initiale ne doit pas être augmentée).",
+            "page_source": "42"
+          },
+          "emprise_au_sol": {
+            "valeur": "40 %",
+            "condition": "Emprise au sol des constructions (piscine et annexes comprises) limitée à 40 % de la superficie du terrain.",
+            "page_source": "42"
+          },
+          "implantation_voies": {
+            "regle": "Recul minimum de 5 mètres par rapport à l'alignement actuel ou futur des voies publiques traversantes et de 3 mètres pour les voies en impasse. Sauf pour les constructions de faible importance (intérêt général) et l'extension de bâtiments existants (sous conditions).",
+            "page_source": "41"
+          },
+          "implantation_limites": {
+            "regle": "Implantation sur au moins une limite séparative OU en recul d'une distance au moins égale à la demi-hauteur de la construction avec un minimum de 3 mètres. Sauf pour l'extension de bâtiments existants et les bassins de piscines (1 mètre).",
+            "page_source": "42"
+          },
+          "stationnement": {
+            "regle": "2 places de stationnement minimum par logement. 1 place par logement pour les logements locatifs aidés. 1 place par tranche de 50 m² pour commerces/artisanat/bureaux. 1 place par chambre (hôtels). A ces places s'ajoutent les aires pour la manœuvre et le stationnement des autocars et des véhicules de livraison.",
+            "valeur_pl": "non precisee",
+            "valeur_vl": "non precisee",
+            "page_source": "44-45"
+          },
+          "espaces_verts": {
+            "regle": "Les parcelles doivent comporter au moins 40% d'espaces végétalisés. Les surfaces non construites doivent être plantées à raison d'au moins un arbre par 300 m² de terrain. Les parcs de stationnement de plus de 4 places doivent être plantés d'au moins un arbre de haute tige pour 10 places.",
+            "page_source": "46"
+          },
+          "destinations": {
+            "autorisees": [
+              "Habitat individuel (vocation dominante)",
+              "Artisanat (sous condition de non-nuisance : odeurs, bruit, poussières)",
+              "Installations classées soumises à déclaration (si liées à commerce, services ou artisanat et compatibles avec le voisinage)",
+              "Constructions nécessaires à l'exploitation et à la gestion des réseaux et des services publics"
+            ],
+            "interdites": [
+              "Exploitation agricole ou forestière",
+              "Industrie",
+              "Entrepôts commerciaux non liés à une activité commerciale attenante",
+              "Carrières et exploitation du sous-sol",
+              "Camping, caravaning, mobil homes",
+              "Dépôts sauvages de ferrailles, matériaux, déchets, véhicules, combustibles",
+              "Parcs d'attraction ouverts au public",
+              "Sports ou loisirs motorisés"
+            ],
+            "page_source": "37-38"
+          },
+          "contraintes_particulieres": [
+            {
+              "description": "Secteur UDb : toute construction comportant un sous-sol est interdite.",
+              "page_source": "37"
+            },
+            {
+              "description": "Secteur UDa : la surface et la nature du sol doivent permettre la mise en place d'un dispositif d'assainissement non collectif conforme (filière autonome).",
+              "page_source": "40"
+            },
+            {
+              "description": "Risques technologiques : impacté par le secteur RT2 (dépôt pétrolier, aléa faible) et les zones PL1/PL2 (canalisation SPMR). Application des articles R 111-2 du code de l'urbanisme.",
+              "page_source": "36"
+            },
+            {
+              "description": "Risques d'inondation : impacté par des secteurs à risques de ruissellement et de remontée de nappe phréatique (La Couronne – Bos codoyer). Interdiction des sous-sols et surélévation des planchers de 0,30 m dans les secteurs RI1 et RI2.",
+              "page_source": "36, 10"
+            },
+            {
+              "description": "Gestion des eaux pluviales : obligation de dispositifs d'infiltration et/ou de stockage. Les eaux pluviales polluées par les activités humaines doivent être traitées avant rejet.",
+              "page_source": "40"
+            },
+            {
+              "description": "Stockage des déchets : obligation de prévoir des systèmes de stockage adaptés à la nature et à l'importance de la construction avec aires de manœuvre suffisantes.",
+              "page_source": "41"
+            }
+          ]
+        }
+      ],
+      "alertes": []
+    },
+    "source_resultat": "ia",
+    "modele_ia": "openrouter/owl-alpha",
+    "fournisseur_ia": "openrouter",
+    "ia_envoyee": true,
+    "ville": "Portes-lès-Valence",
+    "adresse_point": "44 Rue Marx Dormoy, 26800 Portes-lès-Valence, France",
+    "latitude": 44.878668417725834,
+    "longitude": 4.8866136179265425,
+    "pdf": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\pdf\\26252_reglement_20191118.pdf",
+    "archive": "",
+    "markdown_zone": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\markdown\\26252_reglement_20191118.md",
+    "reponse_brute_texte": "{\n  \"fichier\": \"26252_reglement_20191118.md\",\n  \"bloc\": 1,\n  \"zones_detectees\": [\n    {\n      \"zone\": \"UD\",\n      \"hauteur_maximale\": {\n        \"valeur\": \"8 mètres\",\n        \"condition\": \"Ouvrages techniques, cheminées et autres superstructures mineures et discontinues exclus. Non applicable à l'aménagement et à l'extension de bâtiments existants à la date d'approbation du PLU dépassant cette hauteur (la hauteur initiale ne doit pas être augmentée).\",\n        \"page_source\": \"42\"\n      },\n      \"emprise_au_sol\": {\n        \"valeur\": \"40 %\",\n        \"condition\": \"Emprise au sol des constructions (piscine et annexes comprises) limitée à 40 % de la superficie du terrain.\",\n        \"page_source\": \"42\"\n      },\n      \"implantation_voies\": {\n        \"regle\": \"Recul minimum de 5 mètres par rapport à l'alignement actuel ou futur des voies publiques traversantes et de 3 mètres pour les voies en impasse. Sauf pour les constructions de faible importance (intérêt général) et l'extension de bâtiments existants (sous conditions).\",\n        \"page_source\": \"41\"\n      },\n      \"implantation_limites\": {\n        \"regle\": \"Implantation sur au moins une limite séparative OU en recul d'une distance au moins égale à la demi-hauteur de la construction avec un minimum de 3 mètres. Sauf pour l'extension de bâtiments existants et les bassins de piscines (1 mètre).\",\n        \"page_source\": \"42\"\n      },\n      \"stationnement\": {\n        \"regle\": \"2 places de stationnement minimum par logement. 1 place par logement pour les logements locatifs aidés. 1 place par tranche de 50 m² pour commerces/artisanat/bureaux. 1 place par chambre (hôtels). A ces places s'ajoutent les aires pour la manœuvre et le stationnement des autocars et des véhicules de livraison.\",\n        \"valeur_pl\": \"non precisee\",\n        \"valeur_vl\": \"non precisee\",\n        \"page_source\": \"44-45\"\n      },\n      \"espaces_verts\": {\n        \"regle\": \"Les parcelles doivent comporter au moins 40% d'espaces végétalisés. Les surfaces non construites doivent être plantées à raison d'au moins un arbre par 300 m² de terrain. Les parcs de stationnement de plus de 4 places doivent être plantés d'au moins un arbre de haute tige pour 10 places.\",\n        \"page_source\": \"46\"\n      },\n      \"destinations\": {\n        \"autorisees\": [\n          \"Habitat individuel (vocation dominante)\",\n          \"Artisanat (sous condition de non-nuisance : odeurs, bruit, poussières)\",\n          \"Installations classées soumises à déclaration (si liées à commerce, services ou artisanat et compatibles avec le voisinage)\",\n          \"Constructions nécessaires à l'exploitation et à la gestion des réseaux et des services publics\"\n        ],\n        \"interdites\": [\n          \"Exploitation agricole ou forestière\",\n          \"Industrie\",\n          \"Entrepôts commerciaux non liés à une activité commerciale attenante\",\n          \"Carrières et exploitation du sous-sol\",\n          \"Camping, caravaning, mobil homes\",\n          \"Dépôts sauvages de ferrailles, matériaux, déchets, véhicules, combustibles\",\n          \"Parcs d'attraction ouverts au public\",\n          \"Sports ou loisirs motorisés\"\n        ],\n        \"page_source\": \"37-38\"\n      },\n      \"contraintes_particulieres\": [\n        {\n          \"description\": \"Secteur UDb : toute construction comportant un sous-sol est interdite.\",\n          \"page_source\": \"37\"\n        },\n        {\n          \"description\": \"Secteur UDa : la surface et la nature du sol doivent permettre la mise en place d'un dispositif d'assainissement non collectif conforme (filière autonome).\",\n          \"page_source\": \"40\"\n        },\n        {\n          \"description\": \"Risques technologiques : impacté par le secteur RT2 (dépôt pétrolier, aléa faible) et les zones PL1/PL2 (canalisation SPMR). Application des articles R 111-2 du code de l'urbanisme.\",\n          \"page_source\": \"36\"\n        },\n        {\n          \"description\": \"Risques d'inondation : impacté par des secteurs à risques de ruissellement et de remontée de nappe phréatique (La Couronne – Bos codoyer). Interdiction des sous-sols et surélévation des planchers de 0,30 m dans les secteurs RI1 et RI2.\",\n          \"page_source\": \"36, 10\"\n        },\n        {\n          \"description\": \"Gestion des eaux pluviales : obligation de dispositifs d'infiltration et/ou de stockage. Les eaux pluviales polluées par les activités humaines doivent être traitées avant rejet.\",\n          \"page_source\": \"40\"\n        },\n        {\n          \"description\": \"Stockage des déchets : obligation de prévoir des systèmes de stockage adaptés à la nature et à l'importance de la construction avec aires de manœuvre suffisantes.\",\n          \"page_source\": \"41\"\n        }\n      ]\n    }\n  ],\n  \"alertes\": []\n}",
+    "retry_donnees_insuffisantes": false,
+    "prompt_envoye": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\26252_analyse_ia_20260618_181039_448856_prompt_envoye.md",
+    "sortie_ia": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\26252_analyse_ia_20260618_181039_448856_reponse_ia.txt",
+    "json_final": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\26252_analyse_ia_20260618_181039_448856.json",
+    "nouvelle_ligne_base": {
+      "csv": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\data\\base_resultats_plu.csv",
+      "raison": "analyse_ia",
+      "ligne_base_csv": {
+        "adresse_point": "44 Rue Marx Dormoy, 26800 Portes-lès-Valence, France",
+        "lat": "44.878668417725834",
+        "long": "4.8866136179265425",
+        "date_recherche": "2026-06-18T18:10:39",
+        "date_edition_plu": "2019-11-18",
+        "ville": "Portes-lès-Valence",
+        "code_insee": "26800",
+        "zone": "UD",
+        "lettre_zone_envoyer": "UD",
+        "modele_ia": "openrouter/owl-alpha",
+        "url_pdf": "https://www.geoportail-urbanisme.gouv.fr/api/document/eb95d0495eaebac13955c254559bcdb2/files/26252_reglement_20191118.pdf",
+        "hauteur_maximale.valeur": "8 mètres",
+        "hauteur_maximale.condition": "Ouvrages techniques, cheminées et autres superstructures mineures et discontinues exclus. Non applicable à l'aménagement et à l'extension de bâtiments existants à la date d'approbation du PLU dépassant cette hauteur (la hauteur initiale ne doit pas être augmentée).",
+        "hauteur_maximale.page": "42",
+        "emprise_au_sol.valeur": "40 %",
+        "emprise_au_sol.condition": "Emprise au sol des constructions (piscine et annexes comprises) limitée à 40 % de la superficie du terrain.",
+        "emprise_au_sol.page": "42",
+        "implantation_voies.regle": "Recul minimum de 5 mètres par rapport à l'alignement actuel ou futur des voies publiques traversantes et de 3 mètres pour les voies en impasse. Sauf pour les constructions de faible importance (intérêt général) et l'extension de bâtiments existants (sous conditions).",
+        "implantation_voies.page": "41",
+        "implantation_limites.regle": "Implantation sur au moins une limite séparative OU en recul d'une distance au moins égale à la demi-hauteur de la construction avec un minimum de 3 mètres. Sauf pour l'extension de bâtiments existants et les bassins de piscines (1 mètre).",
+        "implantation_limites.page": "42",
+        "espaces_verts.regle": "Les parcelles doivent comporter au moins 40% d'espaces végétalisés. Les surfaces non construites doivent être plantées à raison d'au moins un arbre par 300 m² de terrain. Les parcs de stationnement de plus de 4 places doivent être plantés d'au moins un arbre de haute tige pour 10 places.",
+        "espaces_verts.page": "46",
+        "stationnement.valeur_pl": "non precisee",
+        "stationnement.valeur_vl": "non precisee",
+        "stationnement.regle": "2 places de stationnement minimum par logement. 1 place par logement pour les logements locatifs aidés. 1 place par tranche de 50 m² pour commerces/artisanat/bureaux. 1 place par chambre (hôtels). A ces places s'ajoutent les aires pour la manœuvre et le stationnement des autocars et des véhicules de livraison.",
+        "stationnement.page": "44-45",
+        "destinations.autorisees": "Habitat individuel (vocation dominante) | Artisanat (sous condition de non-nuisance : odeurs, bruit, poussières) | Installations classées soumises à déclaration (si liées à commerce, services ou artisanat et compatibles avec le voisinage) | Constructions nécessaires à l'exploitation et à la gestion des réseaux et des services publics",
+        "destinations.interdites": "Exploitation agricole ou forestière | Industrie | Entrepôts commerciaux non liés à une activité commerciale attenante | Carrières et exploitation du sous-sol | Camping, caravaning, mobil homes | Dépôts sauvages de ferrailles, matériaux, déchets, véhicules, combustibles | Parcs d'attraction ouverts au public | Sports ou loisirs motorisés",
+        "contrainte_particulieres": "Secteur UDb : toute construction comportant un sous-sol est interdite. | Secteur UDa : la surface et la nature du sol doivent permettre la mise en place d'un dispositif d'assainissement non collectif conforme (filière autonome). | Risques technologiques : impacté par le secteur RT2 (dépôt pétrolier, aléa faible) et les zones PL1/PL2 (canalisation SPMR). Application des articles R 111-2 du code de l'urbanisme. | Risques d'inondation : impacté par des secteurs à risques de ruissellement et de remontée de nappe phréatique (La Couronne – Bos codoyer). Interdiction des sous-sols et surélévation des planchers de 0,30 m dans les secteurs RI1 et RI2. | Gestion des eaux pluviales : obligation de dispositifs d'infiltration et/ou de stockage. Les eaux pluviales polluées par les activités humaines doivent être traitées avant rejet. | Stockage des déchets : obligation de prévoir des systèmes de stockage adaptés à la nature et à l'importance de la construction avec aires de manœuvre suffisantes."
+      }
+    }
+  }
+}
