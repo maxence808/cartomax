@@ -1,0 +1,3141 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4257459, 48.9308009]
+      },
+      "properties": {
+        "nom": "Le Bourget",
+        "reseau": "RER;Tramway d'Île de France",
+        "ligne": "B,T11",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3740447, 48.8441177]
+      },
+      "properties": {
+        "nom": "Gare de Lyon",
+        "reseau": "TGV;Transilien",
+        "ligne": "A,D,R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2834758, 48.905901]
+      },
+      "properties": {
+        "nom": "Asnières-sur-Seine",
+        "reseau": "Transilien",
+        "ligne": "J,L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2973511, 48.8975882]
+      },
+      "properties": {
+        "nom": "Clichy-Levallois",
+        "reseau": "Transilien",
+        "ligne": "L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.8734872, 48.9573337]
+      },
+      "properties": {
+        "nom": "Meaux",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3191085, 48.8400624]
+      },
+      "properties": {
+        "nom": "Gare Montparnasse",
+        "reseau": "Transilien",
+        "ligne": "N",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3075935, 48.9336452]
+      },
+      "properties": {
+        "nom": "Gennevilliers",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2595198, 48.9962878]
+      },
+      "properties": {
+        "nom": "Gros Noyer - Saint-Prix",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.257864, 48.9469407]
+      },
+      "properties": {
+        "nom": "Argenteuil",
+        "reseau": "Transilien",
+        "ligne": "J",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1880637, 48.8123397]
+      },
+      "properties": {
+        "nom": "Chaville Rive Droite",
+        "reseau": "Transilien",
+        "ligne": "L,U",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3280777, 48.7986105]
+      },
+      "properties": {
+        "nom": "Arcueil - Cachan",
+        "reseau": "RATP Transilien SNCF Ile de France Mobilités",
+        "ligne": "B",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1.9436491, 48.7553401]
+      },
+      "properties": {
+        "nom": "La Verrière",
+        "reseau": "Transilien",
+        "ligne": "N,U",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1910268, 49.0577058]
+      },
+      "properties": {
+        "nom": "Méry-sur-Oise",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3138373, 48.8628261]
+      },
+      "properties": {
+        "nom": "Invalides",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7512004, 48.4871784]
+      },
+      "properties": {
+        "nom": "Fontaine-le-Port",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7607709, 48.4427392]
+      },
+      "properties": {
+        "nom": "Héricy",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7266285, 48.4163144]
+      },
+      "properties": {
+        "nom": "Fontainebleau - Avon",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1223837, 49.0547101]
+      },
+      "properties": {
+        "nom": "Épluches",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1422346, 49.0694368]
+      },
+      "properties": {
+        "nom": "Chaponval",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1753597, 49.0704674]
+      },
+      "properties": {
+        "nom": "Auvers-sur-Oise",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.897142, 48.3787856]
+      },
+      "properties": {
+        "nom": "La Grande-Paroisse",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4768414, 49.0324994]
+      },
+      "properties": {
+        "nom": "Les Noues",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.0406809, 48.8072915]
+      },
+      "properties": {
+        "nom": "Fontenay-le-Fleury",
+        "reseau": "Transilien",
+        "ligne": "N",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1.9927044, 48.8237835]
+      },
+      "properties": {
+        "nom": "Villepreux - Les Clayes",
+        "reseau": "Transilien",
+        "ligne": "N",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1.9434777, 48.8319663]
+      },
+      "properties": {
+        "nom": "Plaisir - Grignon",
+        "reseau": "Transilien",
+        "ligne": "N",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.6184604, 48.8060951]
+      },
+      "properties": {
+        "nom": "Émerainville Pontault-Combault",
+        "reseau": "RER",
+        "ligne": "E",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.5797902, 48.8231656]
+      },
+      "properties": {
+        "nom": "Les Yvris Noisy-le-Grand",
+        "reseau": "RER",
+        "ligne": "E",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.5118815, 48.8248403]
+      },
+      "properties": {
+        "nom": "Les Boullereaux - Champigny",
+        "reseau": "RER",
+        "ligne": "E",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4811886, 48.8825591]
+      },
+      "properties": {
+        "nom": "Rosny Bois Perrier",
+        "reseau": "RER",
+        "ligne": "E",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4736052, 48.6140021]
+      },
+      "properties": {
+        "nom": "Corbeil-Essonnes",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3934472, 48.3936741]
+      },
+      "properties": {
+        "nom": "Maisse",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3870667, 48.3707399]
+      },
+      "properties": {
+        "nom": "Buno - Gironville",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3711049, 48.5321637]
+      },
+      "properties": {
+        "nom": "Ballancourt",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4734909, 48.5863595]
+      },
+      "properties": {
+        "nom": "Moulin Galant",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4626322, 48.6056231]
+      },
+      "properties": {
+        "nom": "Essonnes Robinson",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.5448933, 48.535017]
+      },
+      "properties": {
+        "nom": "Ponthierry Pringy",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.6551924, 48.5274833]
+      },
+      "properties": {
+        "nom": "Melun",
+        "reseau": "RER;Transilien",
+        "ligne": "D,R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.0073018, 48.998106]
+      },
+      "properties": {
+        "nom": "Isles - Armentières - Congis",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.6855644, 48.2678408]
+      },
+      "properties": {
+        "nom": "Nemours - Saint-Pierre",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7432191, 48.0069479]
+      },
+      "properties": {
+        "nom": "Montargis",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7828344, 48.8704008]
+      },
+      "properties": {
+        "nom": "Marne-la-Vallée Chessy",
+        "reseau": "TGV InOui",
+        "ligne": "A",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.390265, 48.976527]
+      },
+      "properties": {
+        "nom": "Garges - Sarcelles",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.0066596, 48.7748343]
+      },
+      "properties": {
+        "nom": "Trappes",
+        "reseau": "Transilien",
+        "ligne": "N,U",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4504028, 48.6232786]
+      },
+      "properties": {
+        "nom": "Le Bras de Fer",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.428907, 48.625989]
+      },
+      "properties": {
+        "nom": "Évry - Courcouronnes",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3517701, 48.4847616]
+      },
+      "properties": {
+        "nom": "La Ferté-Alais",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.6163935, 48.8434831]
+      },
+      "properties": {
+        "nom": "Noisiel",
+        "reseau": "SNCF Réseau",
+        "ligne": "A",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.6919165, 48.4755914]
+      },
+      "properties": {
+        "nom": "Bois-le-Roi",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1889107, 48.8048138]
+      },
+      "properties": {
+        "nom": "Chaville Rive Gauche",
+        "reseau": "Transilien",
+        "ligne": "N",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.6991012, 49.0321161]
+      },
+      "properties": {
+        "nom": "Dammartin - Juilly - Saint-Mard",
+        "reseau": "TER Hauts-de-France;Transilien",
+        "ligne": "K",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7446739, 49.0959723]
+      },
+      "properties": {
+        "nom": "Le Plessis-Belleville",
+        "reseau": "Transilien",
+        "ligne": "K",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4942678, 48.8386135]
+      },
+      "properties": {
+        "nom": "Nogent - Le Perreux",
+        "reseau": "RER",
+        "ligne": "E",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3963774, 48.6542441]
+      },
+      "properties": {
+        "nom": "Grigny-Centre",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7723071, 48.0965112]
+      },
+      "properties": {
+        "nom": "Ferrières - Fontenay",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.384957, 48.9240954]
+      },
+      "properties": {
+        "nom": "La Courneuve - Aubervilliers",
+        "reseau": "RER",
+        "ligne": "B",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3587094, 48.8808038]
+      },
+      "properties": {
+        "nom": "Magenta",
+        "reseau": "RER",
+        "ligne": "E",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4004902, 48.8979517]
+      },
+      "properties": {
+        "nom": "Pantin",
+        "reseau": "RER",
+        "ligne": "E",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4544348, 48.932705]
+      },
+      "properties": {
+        "nom": "Drancy",
+        "reseau": "RER",
+        "ligne": "B",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.5255352, 49.0995779]
+      },
+      "properties": {
+        "nom": "Survilliers - Fosses",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4595267, 49.1872381]
+      },
+      "properties": {
+        "nom": "Chantilly – Gouvieux",
+        "reseau": "RER;TER Hauts-de-France",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4899686, 49.1385074]
+      },
+      "properties": {
+        "nom": "Orry-la-Ville - Coye-la-Forêt",
+        "reseau": "RER;TER Hauts-de-France",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.5060723, 49.1268059]
+      },
+      "properties": {
+        "nom": "La Borne Blanche",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.727358, 48.7462814]
+      },
+      "properties": {
+        "nom": "Gretz-Armainvilliers",
+        "reseau": "RER",
+        "ligne": "E",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4768975, 48.9322896]
+      },
+      "properties": {
+        "nom": "Le Blanc-Mesnil",
+        "reseau": "RER",
+        "ligne": "B",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3761952, 48.4348794]
+      },
+      "properties": {
+        "nom": "Boutigny",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.6805673, 49.0085125]
+      },
+      "properties": {
+        "nom": "Thieux - Nantouillet",
+        "reseau": "Transilien",
+        "ligne": "K",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2350311, 48.9934276]
+      },
+      "properties": {
+        "nom": "Franconville – Le Plessis-Bouchard",
+        "reseau": "RER;Transilien",
+        "ligne": "C,H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.0906339, 49.0180904]
+      },
+      "properties": {
+        "nom": "Éragny - Neuville",
+        "reseau": "Transilien",
+        "ligne": "J",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4330895, 48.5710587]
+      },
+      "properties": {
+        "nom": "Mennecy",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1524193, 48.8367417]
+      },
+      "properties": {
+        "nom": "Vaucresson",
+        "reseau": "Transilien",
+        "ligne": "L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1871303, 48.8382992]
+      },
+      "properties": {
+        "nom": "Garches - Marnes-la-Coquette",
+        "reseau": "Transilien",
+        "ligne": "L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3260147, 49.1552109]
+      },
+      "properties": {
+        "nom": "Bruyères-sur-Oise",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3624978, 49.167065]
+      },
+      "properties": {
+        "nom": "Boran-sur-Oise",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2805055, 49.132581]
+      },
+      "properties": {
+        "nom": "Nointel - Mours",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2634012, 48.9899263]
+      },
+      "properties": {
+        "nom": "Ermont Halte",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2423972, 49.0155565]
+      },
+      "properties": {
+        "nom": "Saint-Leu-la-Forêt",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2054547, 49.0777145]
+      },
+      "properties": {
+        "nom": "Mériel",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1306588, 49.0603806]
+      },
+      "properties": {
+        "nom": "Pont Petit",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1037387, 49.0396846]
+      },
+      "properties": {
+        "nom": "Saint-Ouen-l'Aumône Quartier de l'Église",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.8157792, 48.3822686]
+      },
+      "properties": {
+        "nom": "Saint-Mammès",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1.877503, 48.815329]
+      },
+      "properties": {
+        "nom": "Villiers - Neauphle - Pontchartrain",
+        "reseau": "Transilien",
+        "ligne": "N",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.0126543, 48.5614718]
+      },
+      "properties": {
+        "nom": "Nangis",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.0490816, 48.9748202]
+      },
+      "properties": {
+        "nom": "Andrésy",
+        "reseau": "Transilien",
+        "ligne": "J",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7047921, 48.8821143]
+      },
+      "properties": {
+        "nom": "Lagny - Thorigny",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.5329514, 48.6809364]
+      },
+      "properties": {
+        "nom": "Boussy Saint-Antoine",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.5478186, 48.6675776]
+      },
+      "properties": {
+        "nom": "Combs-la-Ville - Quincy",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4143034, 48.7083523]
+      },
+      "properties": {
+        "nom": "Vigneux-sur-Seine",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4615848, 48.592772]
+      },
+      "properties": {
+        "nom": "Villabé",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.9426727, 48.3794243]
+      },
+      "properties": {
+        "nom": "Montereau",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1.9490103, 49.1241696]
+      },
+      "properties": {
+        "nom": "Santeuil - Le Perchay",
+        "reseau": "Transilien",
+        "ligne": "J",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2687814, 48.9055566]
+      },
+      "properties": {
+        "nom": "Bécon-les-Bruyères",
+        "reseau": "Transilien",
+        "ligne": "L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1.8457308, 48.9922338]
+      },
+      "properties": {
+        "nom": "Juziers",
+        "reseau": "Transilien",
+        "ligne": "J",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.5066339, 48.6992635]
+      },
+      "properties": {
+        "nom": "Brunoy",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1.8090361, 48.9829928]
+      },
+      "properties": {
+        "nom": "Gargenville",
+        "reseau": "Transilien",
+        "ligne": "J",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3283996, 48.9581476]
+      },
+      "properties": {
+        "nom": "Épinay - Villetaneuse",
+        "reseau": "Transilien;Tramway d'Île de France",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2100326, 49.1147858]
+      },
+      "properties": {
+        "nom": "L'Isle-Adam - Parmain",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4177697, 49.2140793]
+      },
+      "properties": {
+        "nom": "Saint-Leu-d'Esserent",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.738544, 48.336466]
+      },
+      "properties": {
+        "nom": "Montigny-sur-Loing",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4011985, 48.2934162]
+      },
+      "properties": {
+        "nom": "Malesherbes",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2133626, 48.9010513]
+      },
+      "properties": {
+        "nom": "Nanterre - Université",
+        "reseau": "RER;Transilien",
+        "ligne": "A,L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7943715, 49.1428104]
+      },
+      "properties": {
+        "nom": "Nanteuil-le-Haudouin",
+        "reseau": "Transilien",
+        "ligne": "K",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1.6301463, 48.9974027]
+      },
+      "properties": {
+        "nom": "Rosny-sur-Seine",
+        "reseau": "Transilien",
+        "ligne": "J",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.0423421, 48.8139949]
+      },
+      "properties": {
+        "nom": "Mouroux",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.312232, 48.7802471]
+      },
+      "properties": {
+        "nom": "Bourg-la-Reine",
+        "reseau": "Réseau Express Régional",
+        "ligne": "B",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7349626, 48.1817602]
+      },
+      "properties": {
+        "nom": "Souppes - Château-Landon",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.120881, 49.179674]
+      },
+      "properties": {
+        "nom": "La Ferté-Milon",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.197024, 49.0461831]
+      },
+      "properties": {
+        "nom": "Frépillon",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2714017, 48.980694]
+      },
+      "properties": {
+        "nom": "Ermont - Eaubonne",
+        "reseau": "RER;Transilien",
+        "ligne": "C,H,J",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.2870716, 48.5454403]
+      },
+      "properties": {
+        "nom": "Champbenoist - Poigny",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.2557102, 48.5293947]
+      },
+      "properties": {
+        "nom": "Sainte-Colombe Septveilles",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4112139, 48.7643737]
+      },
+      "properties": {
+        "nom": "Choisy-le-Roi",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.0819816, 48.8077066]
+      },
+      "properties": {
+        "nom": "Coulommiers",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1059281, 49.0452786]
+      },
+      "properties": {
+        "nom": "Saint-Ouen-l'Aumône",
+        "reseau": "RER;Transilien",
+        "ligne": "C,H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1.7846207, 49.2851686]
+      },
+      "properties": {
+        "nom": "Gisors",
+        "reseau": "TER Normandie;Transilien",
+        "ligne": "J",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4094509, 48.7829984]
+      },
+      "properties": {
+        "nom": "Les Ardoines",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.382849, 48.8391964]
+      },
+      "properties": {
+        "nom": "Paris-Bercy - Bourgogne-Pays d'Auvergne",
+        "reseau": "SNCF Gares & Connexions",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2098277, 49.0357484]
+      },
+      "properties": {
+        "nom": "Bessancourt",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3390071, 48.8205877]
+      },
+      "properties": {
+        "nom": "Cité Universitaire",
+        "reseau": "RATP Transilien SNCF Ile de France Mobilités",
+        "ligne": "B",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.5827737, 48.8742022]
+      },
+      "properties": {
+        "nom": "Chelles Gournay",
+        "reseau": "RER;Transilien",
+        "ligne": "E,P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.8374339, 49.2001907]
+      },
+      "properties": {
+        "nom": "Ormoy-Villers",
+        "reseau": "Transilien",
+        "ligne": "K",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.5695685, 48.6283373]
+      },
+      "properties": {
+        "nom": "Lieusaint - Moissy",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.077719, 48.9701965]
+      },
+      "properties": {
+        "nom": "Achères - Ville",
+        "reseau": "RER;Transilien",
+        "ligne": "A,L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.0120435, 49.0485662]
+      },
+      "properties": {
+        "nom": "Cergy-le-Haut",
+        "reseau": "RER;Transilien",
+        "ligne": "A,L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.0794144, 49.0365516]
+      },
+      "properties": {
+        "nom": "Cergy Préfecture",
+        "reseau": "RER;Transilien",
+        "ligne": "A,L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.0346919, 49.0496017]
+      },
+      "properties": {
+        "nom": "Cergy - Saint-Christophe",
+        "reseau": "RER;Transilien",
+        "ligne": "A,L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.0782873, 49.0142697]
+      },
+      "properties": {
+        "nom": "Neuville Université",
+        "reseau": "RER;Transilien",
+        "ligne": "A,L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.0951961, 49.0467275]
+      },
+      "properties": {
+        "nom": "Pontoise",
+        "reseau": "RER;Transilien",
+        "ligne": "C,H,J",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2639812, 48.9701924]
+      },
+      "properties": {
+        "nom": "Sannois",
+        "reseau": "Transilien",
+        "ligne": "J",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1594995, 48.4369538]
+      },
+      "properties": {
+        "nom": "Étampes",
+        "reseau": "RER;TER Centre − Val de Loire",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2633387, 48.829667]
+      },
+      "properties": {
+        "nom": "Issy Val de Seine",
+        "reseau": "RER;Tramway d'Île de France",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3259096, 48.8605888]
+      },
+      "properties": {
+        "nom": "Musée d'Orsay",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3158319, 48.8383847]
+      },
+      "properties": {
+        "nom": "Paris Montparnasse 3 - Vaugirard",
+        "reseau": "TER Normandie",
+        "ligne": "N",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1321144, 48.8541882]
+      },
+      "properties": {
+        "nom": "Bougival",
+        "reseau": "Transilien",
+        "ligne": "L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1381607, 48.842692]
+      },
+      "properties": {
+        "nom": "La Celle-Saint-Cloud",
+        "reseau": "Transilien",
+        "ligne": "L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2165707, 48.8563887]
+      },
+      "properties": {
+        "nom": "Le Val d'Or",
+        "reseau": "Transilien",
+        "ligne": "L,U",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1230807, 48.861215]
+      },
+      "properties": {
+        "nom": "Louveciennes",
+        "reseau": "Transilien",
+        "ligne": "L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.0966837, 48.8714738]
+      },
+      "properties": {
+        "nom": "Marly-le-Roi",
+        "reseau": "Transilien",
+        "ligne": "L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2337199, 48.8834194]
+      },
+      "properties": {
+        "nom": "Puteaux",
+        "reseau": "Tramway d'Île de France;Transilien",
+        "ligne": "L,U",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.0509445, 48.867811]
+      },
+      "properties": {
+        "nom": "Saint-Nom-la-Bretèche - Forêt de Marly",
+        "reseau": "Transilien;Tramway d'Île de France",
+        "ligne": "L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2210307, 48.8717256]
+      },
+      "properties": {
+        "nom": "Suresnes Mont-Valérien",
+        "reseau": "Transilien",
+        "ligne": "L,U",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3594905, 48.8770979]
+      },
+      "properties": {
+        "nom": "Paris Gare de l'Est",
+        "reseau": "TGV;Transilien;Métro de Paris;DB InterCityExpress",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3453785, 48.9350549]
+      },
+      "properties": {
+        "nom": "Saint-Denis - L'Île-Saint-Denis",
+        "reseau": "RER;Transilien",
+        "ligne": "D,H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2878349, 49.1135126]
+      },
+      "properties": {
+        "nom": "Presles - Courcelles",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3229123, 49.0451839]
+      },
+      "properties": {
+        "nom": "Bouffémont - Moisselles",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3377457, 49.0327734]
+      },
+      "properties": {
+        "nom": "Domont",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3225994, 49.0660153]
+      },
+      "properties": {
+        "nom": "Montsoult - Maffliers",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3382926, 48.97593]
+      },
+      "properties": {
+        "nom": "Deuil - Montmagny",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3534922, 48.9843631]
+      },
+      "properties": {
+        "nom": "Groslay",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3687261, 48.9961525]
+      },
+      "properties": {
+        "nom": "Sarcelles - Saint-Brice",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3626417, 49.0229548]
+      },
+      "properties": {
+        "nom": "Écouen - Ézanville",
+        "reseau": "Transilien",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.3223268, 48.9687351]
+      },
+      "properties": {
+        "nom": "Nogent-l'Artaud - Charly",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1.703099, 48.9893972]
+      },
+      "properties": {
+        "nom": "Mantes-la-Jolie",
+        "reseau": "TER Normandie;Transilien",
+        "ligne": "J,N",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2070988, 49.1946859]
+      },
+      "properties": {
+        "nom": "Bornel - Belle-Église",
+        "reseau": "TER Hauts-de-France",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1708179, 49.2125135]
+      },
+      "properties": {
+        "nom": "Esches",
+        "reseau": "SNCF Gares & Connexions",
+        "ligne": "H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.2870716, 48.5454403]
+      },
+      "properties": {
+        "nom": "Champbenoist - Poigny",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.2557102, 48.5293947]
+      },
+      "properties": {
+        "nom": "Sainte-Colombe Septveilles",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3770491, 48.8297207]
+      },
+      "properties": {
+        "nom": "Bibliothèque François Mitterrand",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.5729279, 48.5293818]
+      },
+      "properties": {
+        "nom": "Boissise-le-Roi",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2897559, 48.8567083]
+      },
+      "properties": {
+        "nom": "Champ de Mars - Tour Eiffel",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2999919, 48.8625482]
+      },
+      "properties": {
+        "nom": "Pont de l'Alma",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3664552, 48.841244]
+      },
+      "properties": {
+        "nom": "Paris Austerlitz",
+        "reseau": "Intercités;RER;TER Bourgogne-Franche-Comté;TGV",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2156384, 48.5143361]
+      },
+      "properties": {
+        "nom": "Chamarande",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2154872, 48.7511924]
+      },
+      "properties": {
+        "nom": "Bièvres",
+        "reseau": "Transilien",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3127322, 48.7479468]
+      },
+      "properties": {
+        "nom": "Chemin d'Antony",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2412058, 48.8079004]
+      },
+      "properties": {
+        "nom": "Meudon Val Fleury",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2309877, 48.740041]
+      },
+      "properties": {
+        "nom": "Igny",
+        "reseau": "Transilien",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2592369, 48.8198807]
+      },
+      "properties": {
+        "nom": "Issy",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2734857, 48.7347833]
+      },
+      "properties": {
+        "nom": "Massy-Verrières",
+        "reseau": "RER",
+        "ligne": "B,C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.6386689, 48.8752295]
+      },
+      "properties": {
+        "nom": "Vaires - Torcy",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2752552, 48.8705615]
+      },
+      "properties": {
+        "nom": "Avenue Foch",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2721528, 48.8645533]
+      },
+      "properties": {
+        "nom": "Avenue Henri Martin",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2981866, 48.8855014]
+      },
+      "properties": {
+        "nom": "Pereire - Levallois",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.0628712, 49.0916882]
+      },
+      "properties": {
+        "nom": "Crouy-sur-Ourcq",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4352991, 48.771492]
+      },
+      "properties": {
+        "nom": "Créteil Pompadour",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3023104, 48.9542296]
+      },
+      "properties": {
+        "nom": "Épinay-sur-Seine",
+        "reseau": "RER;Tramway d'Île de France",
+        "ligne": "C,T11,T8",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.1254389, 48.9509096]
+      },
+      "properties": {
+        "nom": "La Ferté-sous-Jouarre",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1840722, 48.7995676]
+      },
+      "properties": {
+        "nom": "Chaville-Vélizy",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1635389, 48.7647766]
+      },
+      "properties": {
+        "nom": "Jouy-en-Josas",
+        "reseau": "Transilien",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1355157, 48.7954702]
+      },
+      "properties": {
+        "nom": "Versailles-Chantiers",
+        "reseau": "RER;TER Normandie;TGV;Transilien",
+        "ligne": "C,N,U",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4632384, 49.023848]
+      },
+      "properties": {
+        "nom": "Goussainville",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1283107, 49.0339718]
+      },
+      "properties": {
+        "nom": "Saint-Ouen-l'Aumône Liesse",
+        "reseau": "RER;Transilien",
+        "ligne": "C,H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1922024, 48.7591621]
+      },
+      "properties": {
+        "nom": "Vauboyen",
+        "reseau": "Transilien",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.502078, 49.0495594]
+      },
+      "properties": {
+        "nom": "Louvres",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1975369, 49.0074443]
+      },
+      "properties": {
+        "nom": "Montigny - Beauchamp",
+        "reseau": "RER;Transilien",
+        "ligne": "C,H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1470409, 48.7718405]
+      },
+      "properties": {
+        "nom": "Petit Jouy - Les Loges",
+        "reseau": "Transilien",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1535658, 49.0194293]
+      },
+      "properties": {
+        "nom": "Pierrelaye",
+        "reseau": "RER;Transilien",
+        "ligne": "C,H",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1531096, 48.7966743]
+      },
+      "properties": {
+        "nom": "Porchefontaine",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1357131, 48.8095808]
+      },
+      "properties": {
+        "nom": "Versailles Rive Droite",
+        "reseau": "Transilien",
+        "ligne": "L",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.2200608, 48.973952]
+      },
+      "properties": {
+        "nom": "Nanteuil - Saâcy",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.2502917, 48.5136233]
+      },
+      "properties": {
+        "nom": "Longueville",
+        "reseau": "TGV;Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.8247838, 48.6445543]
+      },
+      "properties": {
+        "nom": "Verneuil-l'Étang",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.907487, 48.789231]
+      },
+      "properties": {
+        "nom": "Mortcerf",
+        "reseau": "Transilien",
+        "ligne": "P",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.5706742, 49.0039654]
+      },
+      "properties": {
+        "nom": "Aéroport Charles de Gaulle 2 TGV (RER)",
+        "reseau": "RER",
+        "ligne": "B",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.0445253, 48.7874524]
+      },
+      "properties": {
+        "nom": "Saint-Quentin-en-Yvelines",
+        "reseau": "RER;Transilien",
+        "ligne": "C,N,U",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2149014, 48.8212245]
+      },
+      "properties": {
+        "nom": "Sèvres-Rive-Gauche",
+        "reseau": "Transilien",
+        "ligne": "N",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.391244, 48.814468]
+      },
+      "properties": {
+        "nom": "Ivry-sur-Seine",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4024811, 48.8006139]
+      },
+      "properties": {
+        "nom": "Vitry-sur-Seine",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4264491, 48.8023251]
+      },
+      "properties": {
+        "nom": "Maisons-Alfort - Alfortville",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4175668, 48.7454793]
+      },
+      "properties": {
+        "nom": "Les Saules",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.402955, 48.7418089]
+      },
+      "properties": {
+        "nom": "Orly Ville",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4263833, 48.7398541]
+      },
+      "properties": {
+        "nom": "Villeneuve-le-Roi",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3728756, 48.7481834]
+      },
+      "properties": {
+        "nom": "Pont de Rungis Aéroport d'Orly",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3529205, 48.7404828]
+      },
+      "properties": {
+        "nom": "Rungis - La Fraternelle",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4194543, 48.7254534]
+      },
+      "properties": {
+        "nom": "Ablon",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4036055, 48.712617]
+      },
+      "properties": {
+        "nom": "Athis-Mons",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3838186, 48.6902026]
+      },
+      "properties": {
+        "nom": "Juvisy-sur-Orge",
+        "reseau": "RER",
+        "ligne": "C,D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.352065, 48.67609]
+      },
+      "properties": {
+        "nom": "Savigny-sur-Orge",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.4834728, 48.7065517]
+      },
+      "properties": {
+        "nom": "Yerres",
+        "reseau": "RER",
+        "ligne": "D",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.33347495, 48.67012695]
+      },
+      "properties": {
+        "nom": "Épinay-sur-Orge",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2903813, 48.5331579]
+      },
+      "properties": {
+        "nom": "Bouray",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3019977, 48.6068145]
+      },
+      "properties": {
+        "nom": "Brétigny-sur-Orge",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2672615, 48.5916376]
+      },
+      "properties": {
+        "nom": "La Norville - Saint-Germain-lès-Arpajon",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2555159, 48.520741]
+      },
+      "properties": {
+        "nom": "Lardy",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2909649, 48.565125]
+      },
+      "properties": {
+        "nom": "Marolles-en-Hurepoix",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1452675, 48.4274675]
+      },
+      "properties": {
+        "nom": "Saint-Martin d'Étampes",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3067915, 48.6357473]
+      },
+      "properties": {
+        "nom": "Saint-Michel-sur-Orge",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.3132967, 48.653119]
+      },
+      "properties": {
+        "nom": "Sainte-Geneviève-des-Bois",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1945814, 48.4936601]
+      },
+      "properties": {
+        "nom": "Étréchy",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2411493, 48.5860031]
+      },
+      "properties": {
+        "nom": "Arpajon",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1918832, 48.577426]
+      },
+      "properties": {
+        "nom": "Breuillet - Bruyères-le-Châtel",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.1713115, 48.5647454]
+      },
+      "properties": {
+        "nom": "Breuillet - Village",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.125734, 48.5511055]
+      },
+      "properties": {
+        "nom": "Saint-Chéron",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2226777, 48.5825365]
+      },
+      "properties": {
+        "nom": "Égly",
+        "reseau": "RER",
+        "ligne": "C",
+        "iata": "",
+        "type": "ter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.7992908, 48.3784011]
+      },
+      "properties": {
+        "nom": "Moret-sur-Loing - Veneux-les-Sablons",
+        "reseau": "Transilien",
+        "ligne": "R",
+        "iata": "",
+        "type": "ter"
+      }
+    }
+  ]
+}

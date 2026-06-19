@@ -1,0 +1,318 @@
+{
+  "zone": "Ab",
+  "zone_effective": "Ab",
+  "donnees_insuffisantes": false,
+  "hauteur_maximale": {
+    "valeur": "non precisee",
+    "condition": "non precisee",
+    "page": "non precise"
+  },
+  "emprise_au_sol": {
+    "valeur": "non precisee",
+    "condition": "non precisee",
+    "page": "non precise"
+  },
+  "implantation_voies": {
+    "regle": "Les constructions et installations nécessaires à l'exploitation agricole peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 10 mètres. Les autres constructions peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 5 mètres.",
+    "page": "94"
+  },
+  "implantation_limites": {
+    "regle": "Les constructions devront s'implanter en observant par rapport à toutes les limites séparatives de propriété une marge de recul au moins égale à 5 mètres.",
+    "page": "94"
+  },
+  "espaces_verts": {
+    "regle": "Une étude de sol préalable est requise dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines abandonnées aux lieux dits : l’Eglantier, le Noyer à la Brebis, la Contrée d’Hennepont, les Grattons, les 40 Arpents, Belle Croix, Petit Fleigny, Septveilles et le Courtils.",
+    "page": "93"
+  },
+  "stationnement": {
+    "valeur_pl": "non precisee",
+    "valeur_vl": "non precisee",
+    "regle": "Le stationnement doit être assuré en dehors de la voie publique.",
+    "page": "95"
+  },
+  "destinations": {
+    "autorisees": "Constructions et installations nécessaires à l'exploitation agricole | Locaux techniques et industriels des administrations publiques et assimilés | Gîtes ruraux | Aménagement des constructions existantes",
+    "interdites": "Toute construction ou installation nouvelle (sauf exceptions listées à l'article A.1.3) | Exploitation des richesses du sous-sol et carrières | Ouverture de terrains de camping et caravanage | Stationnement des caravanes isolées | Stockages d'ordures ménagères, résidus urbains ou déchets"
+  },
+  "contrainte_particulieres": "Interdiction d'exploitation des richesses du sous-sol et de carrières dans le secteur Ab. | Obligation de réaliser une étude de sol préalable dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines. | Dans un secteur de 75 m de part et d'autre de la RD 619, seules les constructions liées aux infrastructures routières, aux services publics, aux bâtiments d'exploitation agricole, aux réseaux d'intérêt public et aux infrastructures de production d'énergie solaire sont autorisées.",
+  "alertes": [],
+  "resultat_ia_detaille": {
+    "fichier": "77379_reglement_20251008.md",
+    "bloc": 1,
+    "zones_detectees": [
+      {
+        "zone": "Ab",
+        "hauteur_maximale": {
+          "valeur": "non precisee",
+          "condition": "non precisee",
+          "page_source": "non precise"
+        },
+        "emprise_au_sol": {
+          "valeur": "non precisee",
+          "condition": "non precisee",
+          "page_source": "non precise"
+        },
+        "implantation_voies": {
+          "regle": "Les constructions et installations nécessaires à l'exploitation agricole peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 10 mètres. Les autres constructions peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 5 mètres.",
+          "page_source": "94"
+        },
+        "implantation_limites": {
+          "regle": "Les constructions devront s'implanter en observant par rapport à toutes les limites séparatives de propriété une marge de recul au moins égale à 5 mètres.",
+          "page_source": "94"
+        },
+        "stationnement": {
+          "regle": "Le stationnement doit être assuré en dehors de la voie publique.",
+          "valeur_pl": "non precisee",
+          "valeur_vl": "non precisee",
+          "page_source": "95"
+        },
+        "espaces_verts": {
+          "regle": "Une étude de sol préalable est requise dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines abandonnées aux lieux dits : l’Eglantier, le Noyer à la Brebis, la Contrée d’Hennepont, les Grattons, les 40 Arpents, Belle Croix, Petit Fleigny, Septveilles et le Courtils.",
+          "page_source": "93"
+        },
+        "destinations": {
+          "autorisees": [
+            "Constructions et installations nécessaires à l'exploitation agricole",
+            "Locaux techniques et industriels des administrations publiques et assimilés",
+            "Gîtes ruraux",
+            "Aménagement des constructions existantes"
+          ],
+          "interdites": [
+            "Toute construction ou installation nouvelle (sauf exceptions listées à l'article A.1.3)",
+            "Exploitation des richesses du sous-sol et carrières",
+            "Ouverture de terrains de camping et caravanage",
+            "Stationnement des caravanes isolées",
+            "Stockages d'ordures ménagères, résidus urbains ou déchets"
+          ],
+          "page_source": "93"
+        },
+        "contraintes_particulieres": [
+          {
+            "description": "Interdiction d'exploitation des richesses du sous-sol et de carrières dans le secteur Ab.",
+            "page_source": "93"
+          },
+          {
+            "description": "Obligation de réaliser une étude de sol préalable dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines.",
+            "page_source": "93"
+          },
+          {
+            "description": "Dans un secteur de 75 m de part et d'autre de la RD 619, seules les constructions liées aux infrastructures routières, aux services publics, aux bâtiments d'exploitation agricole, aux réseaux d'intérêt public et aux infrastructures de production d'énergie solaire sont autorisées.",
+            "page_source": "93"
+          }
+        ]
+      }
+    ],
+    "alertes": []
+  },
+  "source_resultat": "ia",
+  "modele_ia": "openrouter/owl-alpha",
+  "fournisseur_ia": "openrouter",
+  "ia_envoyee": true,
+  "ville": "Provins",
+  "adresse_point": "D 619, 77160 Provins, France",
+  "latitude": 48.55199360481535,
+  "longitude": 3.314586532041943,
+  "pdf": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\pdf\\77379_reglement_20251008.pdf",
+  "archive": "",
+  "markdown_zone": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\markdown\\77379_reglement_20251008.md",
+  "reponse_brute_texte": "{\n  \"fichier\": \"77379_reglement_20251008.md\",\n  \"bloc\": 1,\n  \"zones_detectees\": [\n    {\n      \"zone\": \"Ab\",\n      \"hauteur_maximale\": {\n        \"valeur\": \"non precisee\",\n        \"condition\": \"non precisee\",\n        \"page_source\": \"non precise\"\n      },\n      \"emprise_au_sol\": {\n        \"valeur\": \"non precisee\",\n        \"condition\": \"non precisee\",\n        \"page_source\": \"non precise\"\n      },\n      \"implantation_voies\": {\n        \"regle\": \"Les constructions et installations nécessaires à l'exploitation agricole peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 10 mètres. Les autres constructions peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 5 mètres.\",\n        \"page_source\": \"94\"\n      },\n      \"implantation_limites\": {\n        \"regle\": \"Les constructions devront s'implanter en observant par rapport à toutes les limites séparatives de propriété une marge de recul au moins égale à 5 mètres.\",\n        \"page_source\": \"94\"\n      },\n      \"stationnement\": {\n        \"regle\": \"Le stationnement doit être assuré en dehors de la voie publique.\",\n        \"valeur_pl\": \"non precisee\",\n        \"valeur_vl\": \"non precisee\",\n        \"page_source\": \"95\"\n      },\n      \"espaces_verts\": {\n        \"regle\": \"Une étude de sol préalable est requise dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines abandonnées aux lieux dits : l’Eglantier, le Noyer à la Brebis, la Contrée d’Hennepont, les Grattons, les 40 Arpents, Belle Croix, Petit Fleigny, Septveilles et le Courtils.\",\n        \"page_source\": \"93\"\n      },\n      \"destinations\": {\n        \"autorisees\": [\n          \"Constructions et installations nécessaires à l'exploitation agricole\",\n          \"Locaux techniques et industriels des administrations publiques et assimilés\",\n          \"Gîtes ruraux\",\n          \"Aménagement des constructions existantes\"\n        ],\n        \"interdites\": [\n          \"Toute construction ou installation nouvelle (sauf exceptions listées à l'article A.1.3)\",\n          \"Exploitation des richesses du sous-sol et carrières\",\n          \"Ouverture de terrains de camping et caravanage\",\n          \"Stationnement des caravanes isolées\",\n          \"Stockages d'ordures ménagères, résidus urbains ou déchets\"\n        ],\n        \"page_source\": \"93\"\n      },\n      \"contraintes_particulieres\": [\n        {\n          \"description\": \"Interdiction d'exploitation des richesses du sous-sol et de carrières dans le secteur Ab.\",\n          \"page_source\": \"93\"\n        },\n        {\n          \"description\": \"Obligation de réaliser une étude de sol préalable dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines.\",\n          \"page_source\": \"93\"\n        },\n        {\n          \"description\": \"Dans un secteur de 75 m de part et d'autre de la RD 619, seules les constructions liées aux infrastructures routières, aux services publics, aux bâtiments d'exploitation agricole, aux réseaux d'intérêt public et aux infrastructures de production d'énergie solaire sont autorisées.\",\n          \"page_source\": \"93\"\n        }\n      ]\n    }\n  ],\n  \"alertes\": []\n}",
+  "retry_donnees_insuffisantes": false,
+  "prompt_envoye": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\77379_analyse_ia_20260619_105851_426132_prompt_envoye.md",
+  "sortie_ia": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\77379_analyse_ia_20260619_105851_426132_reponse_ia.txt",
+  "json_final": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\77379_analyse_ia_20260619_105851_426132.json",
+  "nouvelle_ligne_base": {
+    "csv": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\data\\base_resultats_plu.csv",
+    "raison": "analyse_ia",
+    "ligne_base_csv": {
+      "adresse_point": "D 619, 77160 Provins, France",
+      "lat": "48.55199360481535",
+      "long": "3.314586532041943",
+      "date_recherche": "2026-06-19T10:58:51",
+      "date_edition_plu": "2025-10-08",
+      "ville": "Provins",
+      "code_insee": "77160",
+      "zone": "Ab",
+      "lettre_zone_envoyer": "Ab",
+      "modele_ia": "openrouter/owl-alpha",
+      "url_pdf": "https://www.geoportail-urbanisme.gouv.fr/api/document/d080b855835b80b413ca338d8c93663e/files/77379_reglement_20251008.pdf",
+      "hauteur_maximale.valeur": "non precisee",
+      "hauteur_maximale.condition": "non precisee",
+      "hauteur_maximale.page": "non precise",
+      "emprise_au_sol.valeur": "non precisee",
+      "emprise_au_sol.condition": "non precisee",
+      "emprise_au_sol.page": "non precise",
+      "implantation_voies.regle": "Les constructions et installations nécessaires à l'exploitation agricole peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 10 mètres. Les autres constructions peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 5 mètres.",
+      "implantation_voies.page": "94",
+      "implantation_limites.regle": "Les constructions devront s'implanter en observant par rapport à toutes les limites séparatives de propriété une marge de recul au moins égale à 5 mètres.",
+      "implantation_limites.page": "94",
+      "espaces_verts.regle": "Une étude de sol préalable est requise dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines abandonnées aux lieux dits : l’Eglantier, le Noyer à la Brebis, la Contrée d’Hennepont, les Grattons, les 40 Arpents, Belle Croix, Petit Fleigny, Septveilles et le Courtils.",
+      "espaces_verts.page": "93",
+      "stationnement.valeur_pl": "non precisee",
+      "stationnement.valeur_vl": "non precisee",
+      "stationnement.regle": "Le stationnement doit être assuré en dehors de la voie publique.",
+      "stationnement.page": "95",
+      "destinations.autorisees": "Constructions et installations nécessaires à l'exploitation agricole | Locaux techniques et industriels des administrations publiques et assimilés | Gîtes ruraux | Aménagement des constructions existantes",
+      "destinations.interdites": "Toute construction ou installation nouvelle (sauf exceptions listées à l'article A.1.3) | Exploitation des richesses du sous-sol et carrières | Ouverture de terrains de camping et caravanage | Stationnement des caravanes isolées | Stockages d'ordures ménagères, résidus urbains ou déchets",
+      "contrainte_particulieres": "Interdiction d'exploitation des richesses du sous-sol et de carrières dans le secteur Ab. | Obligation de réaliser une étude de sol préalable dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines. | Dans un secteur de 75 m de part et d'autre de la RD 619, seules les constructions liées aux infrastructures routières, aux services publics, aux bâtiments d'exploitation agricole, aux réseaux d'intérêt public et aux infrastructures de production d'énergie solaire sont autorisées."
+    }
+  },
+  "reponse_brute": {
+    "zone": "Ab",
+    "zone_effective": "Ab",
+    "donnees_insuffisantes": false,
+    "hauteur_maximale": {
+      "valeur": "non precisee",
+      "condition": "non precisee",
+      "page": "non precise"
+    },
+    "emprise_au_sol": {
+      "valeur": "non precisee",
+      "condition": "non precisee",
+      "page": "non precise"
+    },
+    "implantation_voies": {
+      "regle": "Les constructions et installations nécessaires à l'exploitation agricole peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 10 mètres. Les autres constructions peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 5 mètres.",
+      "page": "94"
+    },
+    "implantation_limites": {
+      "regle": "Les constructions devront s'implanter en observant par rapport à toutes les limites séparatives de propriété une marge de recul au moins égale à 5 mètres.",
+      "page": "94"
+    },
+    "espaces_verts": {
+      "regle": "Une étude de sol préalable est requise dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines abandonnées aux lieux dits : l’Eglantier, le Noyer à la Brebis, la Contrée d’Hennepont, les Grattons, les 40 Arpents, Belle Croix, Petit Fleigny, Septveilles et le Courtils.",
+      "page": "93"
+    },
+    "stationnement": {
+      "valeur_pl": "non precisee",
+      "valeur_vl": "non precisee",
+      "regle": "Le stationnement doit être assuré en dehors de la voie publique.",
+      "page": "95"
+    },
+    "destinations": {
+      "autorisees": "Constructions et installations nécessaires à l'exploitation agricole | Locaux techniques et industriels des administrations publiques et assimilés | Gîtes ruraux | Aménagement des constructions existantes",
+      "interdites": "Toute construction ou installation nouvelle (sauf exceptions listées à l'article A.1.3) | Exploitation des richesses du sous-sol et carrières | Ouverture de terrains de camping et caravanage | Stationnement des caravanes isolées | Stockages d'ordures ménagères, résidus urbains ou déchets"
+    },
+    "contrainte_particulieres": "Interdiction d'exploitation des richesses du sous-sol et de carrières dans le secteur Ab. | Obligation de réaliser une étude de sol préalable dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines. | Dans un secteur de 75 m de part et d'autre de la RD 619, seules les constructions liées aux infrastructures routières, aux services publics, aux bâtiments d'exploitation agricole, aux réseaux d'intérêt public et aux infrastructures de production d'énergie solaire sont autorisées.",
+    "alertes": [],
+    "resultat_ia_detaille": {
+      "fichier": "77379_reglement_20251008.md",
+      "bloc": 1,
+      "zones_detectees": [
+        {
+          "zone": "Ab",
+          "hauteur_maximale": {
+            "valeur": "non precisee",
+            "condition": "non precisee",
+            "page_source": "non precise"
+          },
+          "emprise_au_sol": {
+            "valeur": "non precisee",
+            "condition": "non precisee",
+            "page_source": "non precise"
+          },
+          "implantation_voies": {
+            "regle": "Les constructions et installations nécessaires à l'exploitation agricole peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 10 mètres. Les autres constructions peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 5 mètres.",
+            "page_source": "94"
+          },
+          "implantation_limites": {
+            "regle": "Les constructions devront s'implanter en observant par rapport à toutes les limites séparatives de propriété une marge de recul au moins égale à 5 mètres.",
+            "page_source": "94"
+          },
+          "stationnement": {
+            "regle": "Le stationnement doit être assuré en dehors de la voie publique.",
+            "valeur_pl": "non precisee",
+            "valeur_vl": "non precisee",
+            "page_source": "95"
+          },
+          "espaces_verts": {
+            "regle": "Une étude de sol préalable est requise dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines abandonnées aux lieux dits : l’Eglantier, le Noyer à la Brebis, la Contrée d’Hennepont, les Grattons, les 40 Arpents, Belle Croix, Petit Fleigny, Septveilles et le Courtils.",
+            "page_source": "93"
+          },
+          "destinations": {
+            "autorisees": [
+              "Constructions et installations nécessaires à l'exploitation agricole",
+              "Locaux techniques et industriels des administrations publiques et assimilés",
+              "Gîtes ruraux",
+              "Aménagement des constructions existantes"
+            ],
+            "interdites": [
+              "Toute construction ou installation nouvelle (sauf exceptions listées à l'article A.1.3)",
+              "Exploitation des richesses du sous-sol et carrières",
+              "Ouverture de terrains de camping et caravanage",
+              "Stationnement des caravanes isolées",
+              "Stockages d'ordures ménagères, résidus urbains ou déchets"
+            ],
+            "page_source": "93"
+          },
+          "contraintes_particulieres": [
+            {
+              "description": "Interdiction d'exploitation des richesses du sous-sol et de carrières dans le secteur Ab.",
+              "page_source": "93"
+            },
+            {
+              "description": "Obligation de réaliser une étude de sol préalable dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines.",
+              "page_source": "93"
+            },
+            {
+              "description": "Dans un secteur de 75 m de part et d'autre de la RD 619, seules les constructions liées aux infrastructures routières, aux services publics, aux bâtiments d'exploitation agricole, aux réseaux d'intérêt public et aux infrastructures de production d'énergie solaire sont autorisées.",
+              "page_source": "93"
+            }
+          ]
+        }
+      ],
+      "alertes": []
+    },
+    "source_resultat": "ia",
+    "modele_ia": "openrouter/owl-alpha",
+    "fournisseur_ia": "openrouter",
+    "ia_envoyee": true,
+    "ville": "Provins",
+    "adresse_point": "D 619, 77160 Provins, France",
+    "latitude": 48.55199360481535,
+    "longitude": 3.314586532041943,
+    "pdf": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\pdf\\77379_reglement_20251008.pdf",
+    "archive": "",
+    "markdown_zone": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\markdown\\77379_reglement_20251008.md",
+    "reponse_brute_texte": "{\n  \"fichier\": \"77379_reglement_20251008.md\",\n  \"bloc\": 1,\n  \"zones_detectees\": [\n    {\n      \"zone\": \"Ab\",\n      \"hauteur_maximale\": {\n        \"valeur\": \"non precisee\",\n        \"condition\": \"non precisee\",\n        \"page_source\": \"non precise\"\n      },\n      \"emprise_au_sol\": {\n        \"valeur\": \"non precisee\",\n        \"condition\": \"non precisee\",\n        \"page_source\": \"non precise\"\n      },\n      \"implantation_voies\": {\n        \"regle\": \"Les constructions et installations nécessaires à l'exploitation agricole peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 10 mètres. Les autres constructions peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 5 mètres.\",\n        \"page_source\": \"94\"\n      },\n      \"implantation_limites\": {\n        \"regle\": \"Les constructions devront s'implanter en observant par rapport à toutes les limites séparatives de propriété une marge de recul au moins égale à 5 mètres.\",\n        \"page_source\": \"94\"\n      },\n      \"stationnement\": {\n        \"regle\": \"Le stationnement doit être assuré en dehors de la voie publique.\",\n        \"valeur_pl\": \"non precisee\",\n        \"valeur_vl\": \"non precisee\",\n        \"page_source\": \"95\"\n      },\n      \"espaces_verts\": {\n        \"regle\": \"Une étude de sol préalable est requise dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines abandonnées aux lieux dits : l’Eglantier, le Noyer à la Brebis, la Contrée d’Hennepont, les Grattons, les 40 Arpents, Belle Croix, Petit Fleigny, Septveilles et le Courtils.\",\n        \"page_source\": \"93\"\n      },\n      \"destinations\": {\n        \"autorisees\": [\n          \"Constructions et installations nécessaires à l'exploitation agricole\",\n          \"Locaux techniques et industriels des administrations publiques et assimilés\",\n          \"Gîtes ruraux\",\n          \"Aménagement des constructions existantes\"\n        ],\n        \"interdites\": [\n          \"Toute construction ou installation nouvelle (sauf exceptions listées à l'article A.1.3)\",\n          \"Exploitation des richesses du sous-sol et carrières\",\n          \"Ouverture de terrains de camping et caravanage\",\n          \"Stationnement des caravanes isolées\",\n          \"Stockages d'ordures ménagères, résidus urbains ou déchets\"\n        ],\n        \"page_source\": \"93\"\n      },\n      \"contraintes_particulieres\": [\n        {\n          \"description\": \"Interdiction d'exploitation des richesses du sous-sol et de carrières dans le secteur Ab.\",\n          \"page_source\": \"93\"\n        },\n        {\n          \"description\": \"Obligation de réaliser une étude de sol préalable dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines.\",\n          \"page_source\": \"93\"\n        },\n        {\n          \"description\": \"Dans un secteur de 75 m de part et d'autre de la RD 619, seules les constructions liées aux infrastructures routières, aux services publics, aux bâtiments d'exploitation agricole, aux réseaux d'intérêt public et aux infrastructures de production d'énergie solaire sont autorisées.\",\n          \"page_source\": \"93\"\n        }\n      ]\n    }\n  ],\n  \"alertes\": []\n}",
+    "retry_donnees_insuffisantes": false,
+    "prompt_envoye": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\77379_analyse_ia_20260619_105851_426132_prompt_envoye.md",
+    "sortie_ia": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\77379_analyse_ia_20260619_105851_426132_reponse_ia.txt",
+    "json_final": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\77379_analyse_ia_20260619_105851_426132.json",
+    "nouvelle_ligne_base": {
+      "csv": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\data\\base_resultats_plu.csv",
+      "raison": "analyse_ia",
+      "ligne_base_csv": {
+        "adresse_point": "D 619, 77160 Provins, France",
+        "lat": "48.55199360481535",
+        "long": "3.314586532041943",
+        "date_recherche": "2026-06-19T10:58:51",
+        "date_edition_plu": "2025-10-08",
+        "ville": "Provins",
+        "code_insee": "77160",
+        "zone": "Ab",
+        "lettre_zone_envoyer": "Ab",
+        "modele_ia": "openrouter/owl-alpha",
+        "url_pdf": "https://www.geoportail-urbanisme.gouv.fr/api/document/d080b855835b80b413ca338d8c93663e/files/77379_reglement_20251008.pdf",
+        "hauteur_maximale.valeur": "non precisee",
+        "hauteur_maximale.condition": "non precisee",
+        "hauteur_maximale.page": "non precise",
+        "emprise_au_sol.valeur": "non precisee",
+        "emprise_au_sol.condition": "non precisee",
+        "emprise_au_sol.page": "non precise",
+        "implantation_voies.regle": "Les constructions et installations nécessaires à l'exploitation agricole peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 10 mètres. Les autres constructions peuvent s'implanter soit à l'alignement, soit en retrait d'une distance au moins égale à 5 mètres.",
+        "implantation_voies.page": "94",
+        "implantation_limites.regle": "Les constructions devront s'implanter en observant par rapport à toutes les limites séparatives de propriété une marge de recul au moins égale à 5 mètres.",
+        "implantation_limites.page": "94",
+        "espaces_verts.regle": "Une étude de sol préalable est requise dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines abandonnées aux lieux dits : l’Eglantier, le Noyer à la Brebis, la Contrée d’Hennepont, les Grattons, les 40 Arpents, Belle Croix, Petit Fleigny, Septveilles et le Courtils.",
+        "espaces_verts.page": "93",
+        "stationnement.valeur_pl": "non precisee",
+        "stationnement.valeur_vl": "non precisee",
+        "stationnement.regle": "Le stationnement doit être assuré en dehors de la voie publique.",
+        "stationnement.page": "95",
+        "destinations.autorisees": "Constructions et installations nécessaires à l'exploitation agricole | Locaux techniques et industriels des administrations publiques et assimilés | Gîtes ruraux | Aménagement des constructions existantes",
+        "destinations.interdites": "Toute construction ou installation nouvelle (sauf exceptions listées à l'article A.1.3) | Exploitation des richesses du sous-sol et carrières | Ouverture de terrains de camping et caravanage | Stationnement des caravanes isolées | Stockages d'ordures ménagères, résidus urbains ou déchets",
+        "contrainte_particulieres": "Interdiction d'exploitation des richesses du sous-sol et de carrières dans le secteur Ab. | Obligation de réaliser une étude de sol préalable dans les secteurs repérés au pré-inventaire des anciennes carrières souterraines. | Dans un secteur de 75 m de part et d'autre de la RD 619, seules les constructions liées aux infrastructures routières, aux services publics, aux bâtiments d'exploitation agricole, aux réseaux d'intérêt public et aux infrastructures de production d'énergie solaire sont autorisées."
+      }
+    }
+  }
+}

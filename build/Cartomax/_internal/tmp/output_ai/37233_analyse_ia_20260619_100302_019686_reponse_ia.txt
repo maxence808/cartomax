@@ -1,0 +1,92 @@
+{
+  "fichier": "37233_reglement_20221212.md",
+  "bloc": 1,
+  "zones_detectees": [
+    {
+      "zone": "UAc",
+      "hauteur_maximale": {
+        "valeur": "Pas de hauteur maximale fixée, sous réserve du respect des servitudes aéronautiques de dégagement",
+        "condition": "Les articles 9 et 10 se cumulent avec l'indice de surface de plancher du PPRi. L'article 10 se cumule également avec les règles du PPRi relatives à la cote de plus hautes eaux connues (PHEC)",
+        "page_source": "16"
+      },
+      "emprise_au_sol": {
+        "valeur": "Définie par le Plan de Prévention des Risques d'inondation (PPRi)",
+        "condition": "Les articles 9 et 10 se cumulent avec l'indice de surface de plancher du PPRi",
+        "page_source": "16"
+      },
+      "implantation_voies": {
+        "regle": "L'implantation des constructions devra tenir compte de l'alignement des bâtiments voisins. L'implantation de bâtiments en bordure de voie devra garantir que les conditions de bonne visibilité pour la circulation soient assurées. Le long de l'avenue Jacques Duclos un recul de 7 mètres minimum par rapport à l'alignement existant ou à créer devra être respecté",
+        "page_source": "14"
+      },
+      "implantation_limites": {
+        "regle": "L'implantation des constructions en limites séparatives est autorisée à condition que des mesures soient prises afin d'éviter la propagation des incendies (mur coupe-feu). Lorsque la construction n'est pas implantée en limite séparative, le recul par rapport à celle-ci doit être au minimum égal à la demi hauteur du bâtiment sans pouvoir être inférieur à 4m",
+        "page_source": "15"
+      },
+      "stationnement": {
+        "regle": "Les voies doivent être adaptées à la nature et à l'importance des usages qu'elles supportent sans toutefois être inférieures à 10m d'emprise dont 6m de chaussée. La création de voie en impasse est interdite. Pour les activités économiques : locaux à usage de bureaux, petits commerces et hôtels-restaurants : 50% de la surface de plancher. Commerces de plus de 500m² : 100% de la surface de plancher (non compris emplacements livraison 100m² min). Ateliers : 30% de la surface de plancher. Entrepôts : 10% de la surface de plancher. Stationnement vélo activités économiques : 1,5% de la surface de plancher (minimum 10m²)",
+        "valeur_pl": "10% de la surface de plancher pour les entrepôts",
+        "valeur_vl": "Non précisé (règles générales de stationnement automobile s'appliquent, minimum 25m² par place en bataille)",
+        "page_source": "12, 21, 22"
+      },
+      "espaces_verts": {
+        "regle": "Les espaces libres de toute construction doivent rester perméables en respectant l'écoulement des eaux pluviales, être traités en espace vert ou en espace minéral, plantés d'arbres de haute ou moyenne tige, d'arbustes ou de plantes vivaces, convenablement aménagés et entretenus. L'implantation des constructions doit être étudiée de manière à préserver au maximum les plantations existantes",
+        "page_source": "23"
+      },
+      "destinations": {
+        "autorisees": [
+          "Bâtiments à usage d'habitation et leurs annexes destinés au logement des personnes sous réserve que leur présence permanente soit nécessaire pour assurer la direction ou la surveillance des établissements ou des services généraux et à condition que le logement soit intégré dans le volume du bâtiment existant",
+          "Extensions des constructions de bâtiments d'activité ou de logements existants conformément à l'article 9",
+          "Equipements d'agglomération (services, commerces, hébergement spécifique)"
+        ],
+        "interdites": [
+          "Installations et constructions nouvelles à usage industriel ou d'entrepôt (sauf exception UAc pour constructions nouvelles industrielles/entrepôts)",
+          "Activités à usage d'entrepôt le long des voies de desserte principales existantes ou à créer (avenue Jacques Duclos, rue des Grands Mortiers, secteur des Atlantes, site du Magasin Général)",
+          "Terrains aménagés pour camping et caravaning",
+          "Stationnement sur terrain nu de caravanes",
+          "Dépôts de vieilles ferrailles, matériaux de démolition, véhicules désaffectés, déchets",
+          "Abris précaires ou mobiles (type Algéco)",
+          "Installations classées non compatibles avec le caractère de la zone",
+          "Etablissements incompatibles avec la salubrité et la sécurité de la zone",
+          "Sous-sols creusés sous le niveau du terrain naturel (sauf parkings collectifs)",
+          "Nouveaux pylônes d'antennes relais de téléphonie mobile"
+        ],
+        "page_source": "10, 11"
+      },
+      "contraintes_particulieres": [
+        {
+          "description": "Interdiction des activités à usage d'entrepôt le long des voies de desserte principales existantes ou à créer (avenue Jacques Duclos, rue des Grands Mortiers, secteur des Atlantes, site du Magasin Général)",
+          "page_source": "10"
+        },
+        {
+          "description": "Les voies doivent avoir une emprise minimale de 10m dont 6m de chaussée. La création de voie en impasse est interdite",
+          "page_source": "12"
+        },
+        {
+          "description": "Les accès doivent être adaptés à la nature et à l'importance des usages qu'ils supportent. Largeur minimale de l'accès : 3,5m",
+          "page_source": "11"
+        },
+        {
+          "description": "Les installations industrielles et artisanales ne doivent rejeter au réseau public d'assainissement que des effluents pré-épurés",
+          "page_source": "13"
+        },
+        {
+          "description": "Les façades aveugles sont interdites le long des voies principales existantes ou à créer",
+          "page_source": "17"
+        },
+        {
+          "description": "Si une clôture est réalisée elle doit être constituée soit d'un grillage ajouré sur une hauteur maximale de 1,80m, soit d'un muret d'une hauteur maximale de 0,50m surmonté d'un grillage ou tout autre élément largement ajouré le tout ne dépassant pas 1,80m de haut",
+          "page_source": "18"
+        },
+        {
+          "description": "Respect obligatoire des dispositions du PPRi (gestion du niveau habitable au-dessus des PHEC, surélévation des rez-de-chaussée, caractéristiques des matériaux, forme urbaine)",
+          "page_source": "10"
+        },
+        {
+          "description": "Les articles 9 (emprise au sol) et 10 (hauteur) se cumulent avec l'indice de surface de plancher du PPRi",
+          "page_source": "16"
+        }
+      ]
+    }
+  ],
+  "alertes": []
+}

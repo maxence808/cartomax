@@ -1,0 +1,7 @@
+{
+  "source_resultat": "erreur_ia",
+  "erreur_ia": "Appel IA externe echoue: Expecting ',' delimiter: line 1 column 5460 (char 5459)",
+  "markdown_zone": "c:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\markdown\\77456_reglement_20190201.md",
+  "prompt_envoye": "C:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\77456_erreur_ia_20260619_105546_052488_prompt_envoye.md",
+  "sortie_ia": "C:\\Users\\maxen\\OneDrive\\Documents\\cbre\\cartomax-lancement\\tmp\\output_ai\\77456_erreur_ia_20260619_105546_052488_reponse_ia.txt"
+}

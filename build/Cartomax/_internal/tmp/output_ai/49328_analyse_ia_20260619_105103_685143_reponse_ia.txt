@@ -1,0 +1,94 @@
+{
+  "fichier": "49328_reglement_20160204.md",
+  "bloc": 1,
+  "zones_detectees": [
+    {
+      "zone": "USa",
+      "hauteur_maximale": {
+        "valeur": "Définie par le Plan d'Epannelage (document n°4), cote NGF d'égout de toiture par section de façade, avec tolérance de ±1 m. En cœur d'îlot, cote maximale repérée au plan (hachures obliques), soit en cote NGF d'égout, soit 3,5 m d'égout / 5 m de faîtage à rez-de-chaussée. Gabarit de toiture : pente 45°-60° depuis l'égout, faîtage max 6 m au-dessus de l'égout.",
+        "condition": "En USa, la hauteur des nouveaux immeubles au niveau des limites séparatives ne peut excéder celle des immeubles voisins protégés (sauf exception). Raccordement obligatoire avec la hauteur du bâtiment voisin existant sur une distance significative. L'Architecte des Bâtiments de France peut imposer des raccords et ajuster les hauteurs. En cœur d'îlot, l'ABF peut moduler la cote maximale de ±1 m.",
+        "page_source": "44-47"
+      },
+      "emprise_au_sol": {
+        "valeur": "Pas de coefficient d'emprise au sol fixé par le règlement.",
+        "condition": "En cas d'emprise de construction imposée portée au Plan de Sauvegarde et de Mise en Valeur, la construction doit reprendre strictement cette emprise. En cas de limite variable d'emprise imposée, l'emprise peut se développer en deçà et au-delà de cette limite. Les constructions doivent se tenir hors des espaces inconstructibles (espaces boisés classés, espaces soumis à prescriptions particulières, plantations à réaliser). Des pavillons < 9 m² peuvent être édifiés dans ces espaces.",
+        "page_source": "42-43"
+      },
+      "implantation_voies": {
+        "regle": "En USa, implantation à l'alignement des voies existantes (principe de continuité des volumes bâtis). Alignement nouveau figuré au plan par trait rouge continu. Marge de reculement éventuelle repérée au plan par trait discontinu. Exceptionnellement, recul partiel ou total accepté par l'ABF sous réserve d'une aile en retour recouvrant le mitoyen en attente et d'un mur de clôture à l'alignement. Saillies de façade limitées à 0,20 m (devantures commerciales, moulurations). Saillies plus importantes possibles pour débord de toiture ou balcons si contexte architectural le permet. En cas de prolongement d'une construction existante en encorbellement, saillies équivalentes possibles à titre exceptionnel.",
+        "page_source": "38-40"
+      },
+      "implantation_limites": {
+        "regle": "En USa, sur une profondeur de 15 m à partir de l'alignement : les constructions doivent s'édifier d'une limite latérale à l'autre pour recouvrir les mitoyens en attente (continuité urbaine). Recul possible si justifié par le parti architectural ou imposé pour espace non constructible. Bande de 15 m ajustable de ±5 m par l'ABF. Au-delà de 15 m : recul minimal de 3 m des limites séparatives, sauf pour constructions < 3,5 m de hauteur (tolérance jusqu'à 5 m en pignon). Si immeuble protégé voisin ouvre fenêtres : distance de vue minimale de 6 m. Possibilité d'adossement aux murs mitoyens en attente. En cas de courette < 3 m de profondeur sur immeuble protégé : distance minimale de 1,90 m (Code Civil). Si courette > 3 m : distance minimale de 3 m. Reconstruction sur petite parcelle : possibilité de reprendre les dimensions de l'ancienne.",
+        "page_source": "39-42"
+      },
+      "stationnement": {
+        "regle": "En USa, les stationnements sont soit enterrés, soit dans le volume construit pour les grandes parcelles. Exceptionnellement dans les espaces libres avec accord de l'ABF si solutions discrètes. Pour les petites parcelles, priorité aux parcs de stationnement publics ou collectifs. Percement d'une porte de garage interdit dans les façades protégées et dans les rues/ruelles/impasses/places piétonnes ou à géométrie insuffisante. Normes : logements = 1,5 place/logement (1 place si prêt aidé) ; hôtels = 2 places jusqu'à 11 chambres, 1 place/2 chambres de 12 à 20, 8 places pour 10 chambres au-delà de 20 ; commerces/restaurants = aucune place imposée ; activités tertiaires = 1 place/30 m² SHON ; dépôts et ateliers = 1 place/50 m² SHON ; établissements culturels/scolaires/sociaux/sportifs = aucune place imposée.",
+        "valeur_pl": "non precisee",
+        "valeur_vl": "non precisee",
+        "page_source": "75-77"
+      },
+      "espaces_verts": {
+        "regle": "Les espaces boisés classés (L.130-1 Code Urbanisme) sont inconstructibles. Les espaces soumis à prescriptions particulières (DM1, DM2, DV1, DV2) sont inconstructibles en surface (sauf petits volumes < 9 m²). Les espaces de plantations à réaliser sont inconstructibles en surface (sauf petits volumes d'animation de jardin). Les ordonnances végétales (alignements d'arbres) doivent être conservées ou remplacées. Les arbres isolés à préserver doivent être conservés ou remplacés par essence équivalente. Les espaces libres en cœur d'îlot doivent être traités en jardins ou cours à dominante minérale. Les revêtements bitumineux sont proscrits.",
+        "page_source": "77-79"
+      },
+      "destinations": {
+        "autorisees": [
+          "Constructions à usage d'habitation",
+          "Usage hôtelier",
+          "Équipements collectifs",
+          "Commerce et artisanat",
+          "Bureaux et services",
+          "Usage industriel (sans nuisances phoniques ou olfactives)",
+          "Entrepôts commerciaux (sans nuisances phoniques ou olfactives)",
+          "Parcs de stationnement",
+          "Aires de sports, de jeux et de stationnement",
+          "Lotissements d'habitation et d'activités",
+          "Installations classées pour la protection de l'environnement (sous réserve d'aucune incommodité pour le voisinage et aucun risque d'insalubrité ou sinistre grave)"
+        ],
+        "interdites": [
+          "Dépôts de véhicules",
+          "Dépôts de matériaux, ferrailles, combustibles et déchets",
+          "Lotissements industriels",
+          "Édification ou agrandissement d'entrepôts (sauf réserves de commerce de détail)",
+          "Installations classées non prévues à l'article US 1-3",
+          "Stationnement isolé de caravanes et garages collectifs de caravanes",
+          "Terrains de campings",
+          "Transformation de local en restaurant sans conduit de fumée intérieur",
+          "Suppression du débouché sur rue des niveaux supérieurs des immeubles à conserver",
+          "Transformation en garage de locaux dans les rues étroites/piétonnes à géométrie insuffisante",
+          "Construction de caves enterrées en zone inondable",
+          "Exhaussements ou affouillements du sol non liés à une construction autorisée"
+        ],
+        "page_source": "30-34"
+      },
+      "contraintes_particulieres": [
+        {
+          "description": "Compatibilité de voisinage avec les usages résidentiels : réalisation d'un diagnostic sonore préalable à une installation ou modification d'activité pour déterminer le niveau prévisible de gêne et les mesures correctives.",
+          "page_source": "8-9"
+        },
+        {
+          "description": "Installations classées (ICPE) : admises seulement si aucune incommodité pour le voisinage et aucun risque d'insalubrité ou sinistre grave en cas d'accident. L'aménagement ou la transformation d'ICPE existantes peut être autorisé si les travaux améliorent l'insertion urbaine et diminuent la gêne ou le danger.",
+          "page_source": "31"
+        },
+        {
+          "description": "Zone inondable (Loire et Thouire) : pour constructions nouvelles, niveau de plancher des pièces d'habitation principales au-dessus de la cote inondable de référence. Locaux commerciaux/services recevant du public peuvent être au niveau de l'espace public (réserves au-dessus de la cote). Installations électriques au-dessous de la cote inondable interdites. Matériaux modernes à risque de dégradation irréversible par l'eau interdits en dessous de la cote inondable.",
+          "page_source": "32-33"
+        },
+        {
+          "description": "Normes de stationnement pour activités : dépôts et ateliers = 1 place/50 m² SHON ; activités tertiaires = 1 place/30 m² SHON.",
+          "page_source": "75-76"
+        },
+        {
+          "description": "Publicité interdite dans le périmètre du Secteur Sauvegardé (arrêté préfectoral du 2 février 1989).",
+          "page_source": "33"
+        },
+        {
+          "description": "Caves troglodytes : réseau protégé, doit être conservé et accessible. Entretien régulier obligatoire (cheminées de ventilation libres). Condamnation possible uniquement pour risque d'effondrement avec autorisation spéciale et relevé précis du tracé.",
+          "page_source": "74-75"
+        }
+      ]
+    }
+  ],
+  "alertes": []
+}
