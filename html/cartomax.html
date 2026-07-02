@@ -2422,7 +2422,7 @@ body.auto-capture #sidebar-toggle {
                     <div id="cadastre-status" style="font-size:0.7rem; color:var(--text-muted); margin-top:8px;"></div>
                     <div class="table-wrapper" style="margin-top:10px; max-height:220px; overflow:auto;">
                         <table style="font-size:0.68rem;">
-                            <thead><tr><th>Contenance</th><th>Section</th><th>Numero</th><th>Commune</th><th></th></tr></thead>
+                            <thead><tr><th>Contenance m²</th><th>Section</th><th>Numero</th><th>Commune</th><th></th></tr></thead>
                             <tbody id="cadastre-table-body"></tbody>
                         </table>
                     </div>
@@ -10960,7 +10960,7 @@ function getCadastreContenance(props = {}) {
     const value = props.contenance || props.surface || props.contenance_m2 || props.surf || props.superficie;
     if (value === undefined || value === null || value === '') return 'non renseigne';
     const numericValue = Number(value);
-    return Number.isFinite(numericValue) ? `${numericValue.toLocaleString('fr-FR')} m2` : value;
+    return Number.isFinite(numericValue) ? numericValue.toLocaleString('fr-FR') : value;
 }
 
 function getCadastreSurfaceValue(props = {}) {
@@ -10970,7 +10970,11 @@ function getCadastreSurfaceValue(props = {}) {
 }
 
 function formatCadastreSurface(value) {
-    return `${Number(value || 0).toLocaleString('fr-FR')} m2`;
+    return Number(value || 0).toLocaleString('fr-FR');
+}
+
+function formatCadastreSurfaceForCopy(value) {
+    return String(value ?? '').replace(/[\s\u00a0\u202f]/g, '');
 }
 
 // cloneFeature : duplique feature.
@@ -11406,12 +11410,14 @@ function toggleSelectedCadastre(feature) {
 
 function showCadastreInfoPopup(feature, lngLat) {
     const props = feature?.properties || {};
+    const contenance = getCadastreContenance(props);
+    const surfaceLabel = contenance === 'non renseigne' ? contenance : `${contenance} m²`;
     const html = `
         <strong>Parcelle cadastrale</strong><br>
         Commune : ${escapeHTML(getCadastreCommune(props))}<br>
         Section : ${escapeHTML(props.section || 'non renseigne')}<br>
         Numero : ${escapeHTML(props.numero || props.id_parcelle || 'non renseigne')}<br>
-        Surface : ${escapeHTML(getCadastreContenance(props))}
+        Surface : ${escapeHTML(surfaceLabel)}
     `;
     new mapboxgl.Popup({ closeButton: true, closeOnClick: true, maxWidth: '280px' })
         .setLngLat(lngLat)
@@ -11511,7 +11517,7 @@ function renderSelectedCadastreTable() {
     }).join('') + `
         <tr style="font-weight:800; background:#f8fafc;">
             <td>${escapeHTML(formatCadastreSurface(totalSurface))}</td>
-            <td colspan="4">Total surfaces</td>
+            <td colspan="4">Surface totale</td>
         </tr>
     `;
 }
@@ -11519,11 +11525,13 @@ function renderSelectedCadastreTable() {
 // copyCadastreTable : copie cadastre tableau.
 function copyCadastreTable() {
     if (!selectedCadastre.length) return alert('Aucune parcelle a copier.');
-    let text = 'Contenance\tSection\tNumero\tCommune\n';
+    const totalSurface = selectedCadastre.reduce((sum, feature) => sum + getCadastreSurfaceValue(feature.properties || {}), 0);
+    let text = 'Contenance m²\tSection\tNumero\tCommune\n';
     selectedCadastre.forEach(feature => {
         const props = feature.properties || {};
-        text += `${getCadastreContenance(props)}\t${props.section || ''}\t${props.numero || ''}\t${getCadastreCommune(props)}\n`;
+        text += `${formatCadastreSurfaceForCopy(getCadastreContenance(props))}\t${props.section || ''}\t${props.numero || ''}\t${getCadastreCommune(props)}\n`;
     });
+    text += `${formatCadastreSurfaceForCopy(formatCadastreSurface(totalSurface))}\tSurface totale\t\t\n`;
     copyTextToClipboard(text, 'Tableau cadastre copie !');
 }
 
