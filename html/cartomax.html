@@ -307,6 +307,21 @@
 
     /* ===== TABLE ===== */
     .table-wrapper { overflow-x: auto; }
+    .table-action-row { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin: 0 0 6px; }
+    .table-heading-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+    .table-copy-btn {
+        min-height: 26px;
+        padding: 5px 9px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        background: #fff;
+        color: var(--text-muted);
+        font-size: 0.66rem;
+        font-weight: 800;
+        line-height: 1;
+        cursor: pointer;
+    }
+    .table-copy-btn:hover { border-color: var(--primary); color: var(--primary); background: #eff6ff; }
     table { width: 100%; border-collapse: collapse; font-size: 0.73rem; }
     th { background: var(--section-bg); padding: 7px 6px; text-align: left; border-bottom: 2px solid #eee; font-weight: 700; white-space: nowrap; }
     td { padding: 4px 5px; border-bottom: 1px solid var(--border-color); vertical-align: middle; }
@@ -1069,9 +1084,9 @@ body.auto-capture #sidebar-toggle {
 
         <!-- Tableau des points -->
         <div class="section">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+            <div class="table-heading-row">
                 <p class="section-title" style="margin:0">Liste des points</p>
-                <button class="icon-btn" onclick="copyTable()" title="Copier pour Excel"> Copier</button>
+                <button class="table-copy-btn" onclick="copyTable()" title="Copier pour Excel">Copie</button>
             </div>
             <div class="table-wrapper">
                 <table>
@@ -1300,11 +1315,6 @@ body.auto-capture #sidebar-toggle {
                 <button class="btn" style="background: #1976D2; color: white;" onclick="addSingleRoute()">Ajouter</button>
             </div>
 
-            <!-- Chargement des autoroutes -->
-            <button class="btn" style="background: #10b981; color: white; width: 100%; margin-bottom: 8px;" onclick="addLogisticsRoutes()">
-                Charger toutes les autoroutes
-            </button>
-
             <p id="edit-hint" style="font-size: 0.7rem; color: #6b7280; margin: 5px 0;">*Le mode 'Fixe' permet d'utiliser le bouton edit pour placer le badge.</p>
             
             <div class="table-wrapper" style="max-height: 200px; overflow-y: auto;">
@@ -1519,10 +1529,6 @@ body.auto-capture #sidebar-toggle {
                 <button class="btn" style="background: #003F2D; color: white;" onclick="addSingleNationalRoute()">Ajouter</button>
             </div>
 
-            <button class="btn" style="background: #10b981; color: white; width: 100%; margin-bottom: 8px;" onclick="addAllNationalRoutes()">
-                Charger toutes les nationales
-            </button>
-
             <div class="table-wrapper" style="max-height: 200px; overflow-y: auto;">
                 <table style="width: 100%; border-collapse: collapse; font-size: 0.7rem;">
                     <thead><tr><th>Réf.</th><th>Coul.</th><th>Tracé</th><th>Badge</th><th></th></tr></thead>
@@ -1619,14 +1625,14 @@ body.auto-capture #sidebar-toggle {
                 <button class="btn btn-primary" style="width:100%; margin-top:8px;" onclick="searchNearbyBusStops()">
                     Rechercher les bus dans la vue
                 </button>
-                <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="copyNearbyBusTable()">
-                    Copier le tableau
-                </button>
                 <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="clearNearbyBusStops()">
                     Effacer les résultats
                 </button>
                 <div id="bus-status" style="font-size:0.7rem; color:var(--text-muted); margin-top:8px;"></div>
                 <div class="table-wrapper" id="bus-results" style="margin-top:10px; display:none; max-height:220px; overflow:auto;">
+                    <div class="table-action-row">
+                        <button class="table-copy-btn" onclick="copyNearbyBusTable()">Copie</button>
+                    </div>
                     <table style="font-size:0.68rem;">
                         <thead>
                             <tr>
@@ -1670,14 +1676,14 @@ body.auto-capture #sidebar-toggle {
                 <button class="btn btn-primary" style="width:100%; margin-top:8px;" onclick="searchNearbyServices()">
                     Rechercher dans la vue
                 </button>
-                <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="copyNearbyServicesTable()">
-                    Copier le tableau
-                </button>
                 <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="clearNearbyServices()">
                     Effacer les résultats
                 </button>
                 <div id="services-status" style="font-size:0.7rem; color:var(--text-muted); margin-top:8px;"></div>
                 <div class="table-wrapper" id="services-results" style="margin-top:10px; display:none; max-height:220px; overflow:auto;">
+                    <div class="table-action-row">
+                        <button class="table-copy-btn" onclick="copyNearbyServicesTable()">Copie</button>
+                    </div>
                     <table style="font-size:0.68rem;">
                         <thead>
                             <tr>
@@ -1995,13 +2001,12 @@ body.auto-capture #sidebar-toggle {
         Calculer les POI les plus proches
     </button>
 
-    <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="copyPoiDrivingDistances()">
-        Copier le tableau
-    </button>
-
     <div id="poi-distance-status" style="font-size:0.7rem; color:var(--text-muted); margin-top:8px;"></div>
 
     <div class="table-wrapper" id="poi-distance-results" style="display:none; margin-top:10px; max-height:260px; overflow:auto;">
+        <div class="table-action-row">
+            <button class="table-copy-btn" onclick="copyPoiDrivingDistances()">Copie</button>
+        </div>
         <table style="font-size:0.68rem;">
             <thead>
                 <tr>
@@ -2034,11 +2039,11 @@ body.auto-capture #sidebar-toggle {
     <button class="btn btn-primary" style="width:100%;" onclick="calculateNearestAutorouteExits()">
         Calculer les autoroutes proches
     </button>
-    <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="copyAutorouteNearbyTable()">
-        Copier le tableau
-    </button>
     <div id="autoroute-nearby-status" style="font-size:0.7rem; color:var(--text-muted); margin-top:8px;"></div>
     <div class="table-wrapper" id="autoroute-nearby-results" style="display:none; margin-top:10px; max-height:220px; overflow:auto;">
+        <div class="table-action-row">
+            <button class="table-copy-btn" onclick="copyAutorouteNearbyTable()">Copie</button>
+        </div>
         <table style="font-size:0.68rem;">
             <thead>
                 <tr>
@@ -2063,11 +2068,11 @@ body.auto-capture #sidebar-toggle {
     <button class="btn btn-primary" style="width:100%;" onclick="calculateNearestMetropolesForCurrentPoint()">
         Calculer les metropoles proches
     </button>
-    <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="copyMetropoleNearbyTable()">
-        Copier le tableau
-    </button>
     <div id="metropole-nearby-status" style="font-size:0.7rem; color:var(--text-muted); margin-top:8px;"></div>
     <div class="table-wrapper" id="metropole-nearby-results" style="display:none; margin-top:10px; max-height:220px; overflow:auto;">
+        <div class="table-action-row">
+            <button class="table-copy-btn" onclick="copyMetropoleNearbyTable()">Copie</button>
+        </div>
         <table style="font-size:0.68rem;">
             <thead>
                 <tr>
@@ -2108,10 +2113,10 @@ body.auto-capture #sidebar-toggle {
                 <button class="btn btn-primary" style="width:100%;" onclick="calculateDistances()">
                     Calculer les itinéraires
                 </button>
-            <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="copyDistances()">
-                Copier les résultats
-            </button>
                 <div id="distance-results" style="margin-top:12px; display:none;">
+                    <div class="table-action-row">
+                        <button class="table-copy-btn" onclick="copyDistances()">Copie</button>
+                    </div>
                     <table style="font-size:0.7rem;">
                         <thead>
                             <tr>
@@ -2194,9 +2199,6 @@ body.auto-capture #sidebar-toggle {
                     </button>
                     <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="clearInseeIsochrone()">
                         Effacer l'isochrone INSEE
-                    </button>
-                    <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="copyInseeIsoStatsTable()">
-                        Copier le tableau
                     </button>
                     <div id="insee-iso-stats" style="margin-top:10px;"></div>
                     <div id="insee-status" style="font-size:0.7rem; color:var(--text-muted); margin-top:8px;"></div>
@@ -2410,9 +2412,6 @@ body.auto-capture #sidebar-toggle {
                     <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="validateSelectedCadastre()">
                         Valider la selection
                     </button>
-                    <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="copyCadastreTable()">
-                        Copier le tableau
-                    </button>
                     <button class="btn btn-outline" style="width:100%; margin-top:5px;" onclick="clearSelectedCadastre()">
                         Vider la selection
                     </button>
@@ -2421,6 +2420,9 @@ body.auto-capture #sidebar-toggle {
                     </p>
                     <div id="cadastre-status" style="font-size:0.7rem; color:var(--text-muted); margin-top:8px;"></div>
                     <div class="table-wrapper" style="margin-top:10px; max-height:220px; overflow:auto;">
+                        <div class="table-action-row">
+                            <button class="table-copy-btn" onclick="copyCadastreTable()">Copie</button>
+                        </div>
                         <table style="font-size:0.68rem;">
                             <thead><tr><th>Contenance m²</th><th>Section</th><th>Numero</th><th>Commune</th><th></th></tr></thead>
                             <tbody id="cadastre-table-body"></tbody>
@@ -7639,21 +7641,6 @@ function buildExportMapboxCityLabelFilter(originalFilter, visibleNames) {
     return originalFilter ? ['all', originalFilter, nameFilter] : nameFilter;
 }
 
-function buildExportMapboxRoadShieldFilter(originalFilter, shieldSnapshot) {
-    const filters = EXPORT_MAPBOX_ROAD_SHIELD_KEYS
-        .map(key => {
-            const values = Array.from(shieldSnapshot?.values?.[key] || []);
-            if (!values.length) return null;
-            return ['match', ['get', key], values, true, false];
-        })
-        .filter(Boolean);
-
-    if (!filters.length) return ['==', ['get', 'ref'], '__export_no_road_shield__'];
-
-    const shieldFilter = ['any', ...filters];
-    return originalFilter ? ['all', originalFilter, shieldFilter] : shieldFilter;
-}
-
 function applyExportMapboxCityLabelDensity(snapshot = {}) {
     Object.entries(snapshot).forEach(([layerId, layerSnapshot]) => {
         if (!map.getLayer(layerId)) return;
@@ -10048,10 +10035,6 @@ function inseeLabelFor(key) {
     return labels[key] || key;
 }
 
-function inseeProfileLabel(profile) {
-    return { walking: 'marche', cycling: 'velo', driving: 'voiture' }[profile] || profile;
-}
-
 function inseeQuantile(values, q) {
     const sorted = values.slice().sort((a, b) => a - b);
     const position = (sorted.length - 1) * q;
@@ -10405,6 +10388,9 @@ function renderInseeIsoStats(settings) {
     const tauxChomage = actifs > 0 ? chomeurs / actifs * 100 : null;
     inseeIsochroneStatsHtml = `
         <div class="table-wrapper" style="max-height:220px; overflow:auto;">
+            <div class="table-action-row">
+                <button class="table-copy-btn" onclick="copyInseeIsoStatsTable()">Copie</button>
+            </div>
             <table style="font-size:0.68rem;">
                 <thead><tr><th>${escapeHTML(getIsoMeasureLabel(settings))}</th><th>Valeur</th></tr></thead>
                 <tbody>
@@ -12649,7 +12635,7 @@ async function loadAutorouteData() {
             if (f.properties && f.properties.ref) refsSet.add(f.properties.ref);
         });
         const selectEl = document.getElementById('spatial-route-select');
-        selectEl.innerHTML = '<option value="">-- Choisir --</option>';
+        selectEl.innerHTML = '<option value="__all__">Tout afficher</option><option value="">-- Choisir --</option>';
         getSortedRouteRefs(refsSet).forEach(ref => {
             const opt = document.createElement('option');
             opt.value = ref; opt.textContent = ref;
@@ -12961,7 +12947,7 @@ function populateNationalRouteSelect() {
         if (ref) refs.add(ref);
     });
 
-    selectEl.innerHTML = '<option value="">Selectionner...</option>';
+    selectEl.innerHTML = '<option value="__all__">Tout afficher</option><option value="">Selectionner...</option>';
     getSortedRouteRefs(refs).forEach(ref => {
         const option = document.createElement('option');
         option.value = ref;
@@ -13007,6 +12993,10 @@ function processNationalRouteData(ref, forceBadge = true) {
 async function addSingleNationalRoute() {
     await loadNationalRoutesData();
     const ref = document.getElementById('national-route-select')?.value;
+    if (ref === '__all__') {
+        await addAllNationalRoutes();
+        return;
+    }
     if (processNationalRouteData(ref, true)) refreshUINationalRoutes();
 }
 
@@ -13199,8 +13189,12 @@ async function setAutoCaptureRoutesForPoint(lat, lon) {
 }
 
 // addSingleRoute : ajoute unique route.
-function addSingleRoute() {
+async function addSingleRoute() {
     const ref = document.getElementById('spatial-route-select').value;
+    if (ref === '__all__') {
+        await addLogisticsRoutes();
+        return;
+    }
     if (processRouteData(ref, true)) refreshUIAutoroute(); // Ajout manuel = avec badge
 }
 
