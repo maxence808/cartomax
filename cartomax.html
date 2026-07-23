@@ -2561,7 +2561,7 @@ body.auto-capture #sidebar-toggle {
 
 <script>
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibWF4ZW5jZTgwOCIsImEiOiJjbW9neWZlcWUwMDVhMnFzM2s2ZmpvN2hhIn0.akI0T4a00JcZogcmS9ikGA';
+mapboxgl.accessToken = 'pk.eyJ1IjoibWF4ZW5jZTgwOCIsImEiOiJjbXJ4aHo1a3kwOXZhMnpzNGc3Mm9nY3hkIn0.SaNJtKZqFTDzbotgMb-iIA';
 let exportOverlayDepth = 0;
 
 function showExportOverlay(message = 'Export en cours') {
@@ -5705,9 +5705,6 @@ async function refreshPersonalStyleList() {
 }
 
 async function savePersonalStyleFile(styleName, styleData) {
-    const projectStyleName = await savePersonalStyleToProjectFolder(styleName, styleData);
-    if (projectStyleName) return projectStyleName;
-
     const directory = await getPersonalStyleDirectory(true);
     const finalStyleName = await resolvePersonalStyleSaveName(directory, styleName);
     const fileHandle = await directory.getFileHandle(`${finalStyleName}.json`, { create: true });
@@ -5738,26 +5735,6 @@ async function resolvePersonalStyleSaveName(directory, styleName) {
         candidate = `${styleName}_${index}`;
     }
     return candidate;
-}
-
-async function savePersonalStyleToProjectFolder(styleName, styleData) {
-    try {
-        const response = await fetch('/api/personal-style', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: styleName, style: styleData })
-        });
-
-        if ([404, 405, 501].includes(response.status)) return null;
-
-        const result = await response.json().catch(() => ({}));
-        if (!response.ok) throw new Error(result.error || "Impossible d'enregistrer le style dans le dossier du projet.");
-
-        return sanitizePersonalStyleName(result.name || styleName);
-    } catch (error) {
-        if (location.protocol === 'file:' || error instanceof TypeError) return null;
-        throw error;
-    }
 }
 
 async function savePersonalStyle() {
@@ -7328,48 +7305,6 @@ function downloadCanvas(canvas, filename) {
     });
 }
 
-function canvasToPngBlob(canvas) {
-    return new Promise(resolve => {
-        if (!canvas.toBlob) {
-            fetch(canvas.toDataURL('image/png')).then(response => response.blob()).then(resolve);
-            return;
-        }
-        canvas.toBlob(blob => resolve(blob), 'image/png');
-    });
-}
-
-function downloadBlob(blob, filename) {
-    const link = document.createElement('a');
-    const url = URL.createObjectURL(blob);
-    link.download = filename;
-    link.href = url;
-    link.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-}
-
-async function processFranceTransparentCanvasWithPython(canvas) {
-    const blob = await canvasToPngBlob(canvas);
-    if (!blob) throw new Error('Capture PNG impossible.');
-
-    const keyColor = TRANSPARENT_FRANCE_EXPORT_KEY_COLOR.replace('#', '');
-    const response = await fetch(`/api/france-transparent?keyColor=${encodeURIComponent(keyColor)}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'image/png' },
-        body: blob
-    });
-
-    if (!response.ok) {
-        let message = 'Traitement Python impossible.';
-        try {
-            const payload = await response.json();
-            if (payload?.error) message = payload.error;
-        } catch {}
-        throw new Error(message);
-    }
-
-    return response.blob();
-}
-
 function hexToRgb(hex) {
     const cleanHex = String(hex || '').replace('#', '').trim();
     if (!/^[0-9a-f]{6}$/i.test(cleanHex)) return null;
@@ -8458,18 +8393,10 @@ async function exportTransparentFranceMapImage() {
         drawAddedAddressMarkers(ctx, scaleX, scaleY, mapDraw, restoreExportMapSize.exportScale || EXPORT_PIXEL_RATIO);
 
         const filename = `carte-france-transparent-${new Date().toISOString().slice(0, 10)}.png`;
-        try {
-            setStatus('Traitement Python : suppression du fond vert et des contours...');
-            const processedBlob = await processFranceTransparentCanvasWithPython(outputCanvas);
-            downloadBlob(processedBlob, filename);
-            setStatus('PNG France transparent exporte via Python.');
-        } catch (pythonError) {
-            console.warn('Traitement Python indisponible, fallback navigateur', pythonError);
-            setStatus('Python indisponible : detourage navigateur...');
-            makeCanvasColorTransparent(outputCanvas, TRANSPARENT_FRANCE_EXPORT_KEY_COLOR);
-            await downloadCanvas(outputCanvas, filename);
-            setStatus('PNG France transparent exporte sans Python.');
-        }
+        setStatus('Suppression du fond et creation du PNG transparent...');
+        makeCanvasColorTransparent(outputCanvas, TRANSPARENT_FRANCE_EXPORT_KEY_COLOR);
+        await downloadCanvas(outputCanvas, filename);
+        setStatus('PNG France transparent exporte.');
     } catch (error) {
         console.error('Erreur export France transparent', error);
         setStatus("Erreur pendant l'export France transparent.");
@@ -12947,7 +12874,7 @@ function populateNationalRouteSelect() {
         if (ref) refs.add(ref);
     });
 
-    selectEl.innerHTML = '<option value="__all__">Tout afficher</option><option value="">Selectionner...</option>';
+    selectEl.innerHTML = '<option value="__all__">Tout afficher</option><option value="">-- Choisir --</option>';
     getSortedRouteRefs(refs).forEach(ref => {
         const option = document.createElement('option');
         option.value = ref;
