@@ -2242,11 +2242,11 @@ body.auto-capture #sidebar-toggle {
                         <div class="route-tool route-color-tool">
                             <button type="button" class="route-tool-btn" title="Contour isochrone" onclick="toggleRouteToolPopup(this)">
                                 <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 18 C6 11, 12 7, 18 8 C25 9, 28 15, 24 21 C20 27, 10 26, 8 18Z" fill="none" stroke="#1f2937" stroke-width="2"/><path d="M18 22 L27 13 L29 15 L20 24 L17 25 Z" fill="#2563eb"/></svg>
-                                <span class="route-color-bar" id="toolbar-iso-line-color-bar" style="--route-tool-color:#2563eb"></span>
+                                <span class="route-color-bar" id="toolbar-iso-line-color-bar" style="--route-tool-color:#030303"></span>
                             </button>
                             <div class="route-tool-popup">
                                 <p class="route-tool-title">Contour</p>
-                                <input type="color" class="route-popup-color-input" value="#2563eb" oninput="setIsochroneStyleInput({ lineColor: this.value })">
+                                <input type="color" id="toolbar-iso-line-color-input" class="route-popup-color-input" value="#030303" oninput="setIsochroneStyleInput({ lineColor: this.value })">
                             </div>
                         </div>
                         <div class="route-tool">
@@ -2257,11 +2257,11 @@ body.auto-capture #sidebar-toggle {
                         <div class="route-tool route-color-tool">
                             <button type="button" class="route-tool-btn" title="Remplissage isochrone" onclick="toggleRouteToolPopup(this)">
                                 <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10 6 L22 18 L13 27 L3 17 Z" fill="none" stroke="#1f2937" stroke-width="2"/><path d="M14 4 L25 15" stroke="#1f2937" stroke-width="2"/><path d="M22 20 C25 23, 27 25, 27 27 C27 29, 24 29, 24 27 C24 25, 26 23, 22 20Z" fill="#3b82f6"/></svg>
-                                <span class="route-color-bar" id="toolbar-iso-fill-color-bar" style="--route-tool-color:#2563eb"></span>
+                                <span class="route-color-bar" id="toolbar-iso-fill-color-bar" style="--route-tool-color:#E1E1E2"></span>
                             </button>
                             <div class="route-tool-popup">
                                 <p class="route-tool-title">Remplissage</p>
-                                <input type="color" class="route-popup-color-input" value="#2563eb" oninput="setIsochroneStyleInput({ fillColor: this.value })">
+                                <input type="color" id="toolbar-iso-fill-color-input" class="route-popup-color-input" value="#E1E1E2" oninput="setIsochroneStyleInput({ fillColor: this.value })">
                             </div>
                         </div>
                         <div class="route-tool">
@@ -2281,11 +2281,11 @@ body.auto-capture #sidebar-toggle {
                     </div>
                     <div class="road-row" style="display:none; margin-bottom:8px;">
                         <span>Contour</span>
-                        <input type="color" id="iso-line-color-input" value="#2563eb">
+                        <input type="color" id="iso-line-color-input" value="#030303">
                     </div>
                     <div class="road-row" style="display:none; margin-bottom:8px;">
                         <span>Remplissage</span>
-                        <input type="color" id="iso-fill-color-input" value="#2563eb">
+                        <input type="color" id="iso-fill-color-input" value="#E1E1E2">
                     </div>
                     <div class="filter-item" style="display:none; margin-bottom:8px;">
                         <span>Afficher le remplissage</span>
@@ -3302,6 +3302,8 @@ function syncIsochroneStyleToolbar() {
     const fillEnabled = getCheckboxChecked('#iso-fill-enabled-input', true);
     setRouteColorBars(['toolbar-iso-line-color-bar'], lineColor);
     setRouteColorBars(['toolbar-iso-fill-color-bar'], fillColor);
+    setInputValue('toolbar-iso-line-color-input', lineColor);
+    setInputValue('toolbar-iso-fill-color-input', fillColor);
     setInputValue('toolbar-iso-fill-opacity-input', Math.round((parseFloat(fillOpacity) || 0) * 100));
     updateToolbarBadgeButton(
         'toolbar-iso-fill-toggle-btn',
@@ -8983,6 +8985,15 @@ let nearbyBusPopupRegistered = false;
 let nearbyServiceFeatures = [];
 let nearbyServicesPopupRegistered = false;
 let isochroneFeatures = [];
+const ISOCHRONE_STYLE_PRESETS = [
+    { fillColor: '#E1E1E2', lineColor: '#030303' },
+    { fillColor: '#D1D1D1', lineColor: '#676767' }
+];
+
+function selectNextIsochroneStylePreset() {
+    const preset = ISOCHRONE_STYLE_PRESETS[isochroneFeatures.length % ISOCHRONE_STYLE_PRESETS.length];
+    setIsochroneStyleInput(preset);
+}
 let editingIsochroneId = null;
 let isochroneDataFilterEnabled = false;
 let selectedIsochroneDataFilterId = 'latest';
@@ -10454,6 +10465,7 @@ async function showIsochrone() {
         updateIsochroneLayer();
         renderIsochroneTable();
         refreshIsochroneDataFilterSelect();
+        selectNextIsochroneStylePreset();
         status.textContent = `${getIsoMeasureLabel(settings)} ${wasEditing ? 'modifie' : 'enregistre'}. Lance ensuite "Rechercher dans la vue" si tu veux le tableau des services.`;
     } catch (error) {
         console.error('Erreur isochrone', error);
@@ -10498,6 +10510,7 @@ function updateIsochroneLayer() {
 function clearIsochroneServices() {
     isochroneFeatures = [];
     editingIsochroneId = null;
+    selectNextIsochroneStylePreset();
     updateIsochroneLayer();
     renderIsochroneTable();
     updateIsochroneEditButtons();
@@ -10515,6 +10528,7 @@ function deleteIsochrone(id) {
     updateIsochroneLayer();
     renderIsochroneTable();
     refreshIsochroneDataFilterSelect();
+    selectNextIsochroneStylePreset();
 }
 
 // updateIsochroneEditButtons : met a jour isochrone edit buttons.
@@ -10529,6 +10543,7 @@ function updateIsochroneEditButtons() {
 function cancelIsochroneEdit() {
     editingIsochroneId = null;
     updateIsochroneEditButtons();
+    selectNextIsochroneStylePreset();
     const status = document.getElementById('iso-status');
     if (status) status.textContent = 'Modification annulee.';
     renderIsochroneTable();
